@@ -1,0 +1,1032 @@
+/* --- NUEVA PALETA DE COLORES (Basada en el Logo) --- */
+:root {
+    --brand-blue: #1E4E8C;       /* Azul corporativo (Dominante) */
+    --brand-blue-dark: #153663;  /* Azul más oscuro para hovers/nav */
+    --brand-red: #E53935;        /* Rojo de acento (Llamados a la acción) */
+    --brand-red-hover: #C62828;  /* Rojo oscuro para hover */
+    
+    --dark-bg: #1A2536;          /* Gris azulado muy oscuro (Reemplaza al antracita) */
+    --light-bg: #F4F7FA;         /* Fondo gris claro limpio */
+    --text-main: #2C3E50;        /* Texto principal legible */
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* --- APLICACIÓN EN COMPONENTES --- */
+
+/* Navegación: Usamos el azul oscuro para dar seriedad */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background: #1E4E8C;
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0.85;
+    transition: opacity 0.3s, color 0.3s;
+}
+
+/* El elemento activo o hover se ilumina sutilmente */
+.nav-links a:hover, .nav-links a.active {
+    opacity: 1;
+    color: var(--white);
+    border-bottom: 2px solid var(--brand-red); /* Detalle en rojo */
+}
+
+.logo {
+    background-color: white;
+    border-radius: 8px;
+    padding: 0px 8px;
+}
+
+.logo-img{
+    width: 2.5rem;
+}
+
+/* Hero Section: Fondo oscuro que hace contrastar el texto */
+.hero {
+    height: 80vh;
+    background: var(--brand-blue) url('img/hero-section-image.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    color: var(--white);
+    padding-left: 10vw;
+    padding-right: 10vw;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #1E4E8C; /* #5C8DCB con opacidad 60% */
+  opacity: 0.8;
+}
+
+.hero-bolt-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0.9;
+}
+
+.bolt-img {
+    width: 44rem;
+    animation: slideVertical 2s ease-in-out infinite alternate;
+}
+
+@keyframes slideVertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px); /* Moves down 100 pixels */
+  }
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 3;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 9vw, 8rem);
+    line-height: clamp(2.5rem, 9vw, 8rem);
+}
+
+.hero-content h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    line-height: clamp(1.5rem, 4vw, 3rem);
+}
+
+@media (max-width: 1266px) {
+  .bolt-img {
+    opacity: 0.3;
+  }
+
+  .hero{
+    padding-right: 0vw;
+  }
+}
+
+@media (max-width: 815px) {
+
+  .hero{
+    justify-content: center;
+    text-align: center;
+    padding-left: 0vw;
+  }
+
+  .bolt-img {
+    display: none;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+}
+
+}
+
+.brand {
+    background-color: white;
+    border-radius: 8px;
+    padding: 0px 10px;
+}
+
+.brand-img{
+    max-width: 9rem;
+    width: 100%;
+}
+
+.large-brand-img{
+    max-width: 20rem;
+    width: 100%;
+}
+
+/* Botón Principal: Aquí el Rojo se lleva toda la atención (Call to Action) */
+.btn {
+    display: inline-block;
+    padding: 14px 36px;
+    background: var(--brand-red);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(229, 57, 149, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--brand-red-hover);
+    box-shadow: 0 6px 20px rgba(229, 57, 149, 0.4);
+}
+
+/* Secciones y Grid */
+.features {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjetas de Características */
+.card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(26, 37, 54, 0.06);
+    border-top: 4px solid var(--brand-blue); /* Borde superior azul por defecto */
+    transition: transform 0.3s, border-top-color 0.3s;
+}
+
+/* Al pasar el mouse, la tarjeta se activa con el rojo del logo */
+.card:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--brand-red);
+}
+
+/* --- CLASES PARA ANIMACIÓN CON SCROLL --- */
+
+/* Estado inicial: invisible y un poco desplazado hacia abajo */
+.fade-in-two {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 3s ease-out, transform 1.6s ease-out;
+}
+
+/* Estado activo: cuando JS detecta que entra a la pantalla */
+.fade-in-two.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- CLASES PARA ANIMACIÓN CON SCROLL --- */
+
+/* Estado inicial: invisible y un poco desplazado hacia abajo */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Estado activo: cuando JS detecta que entra a la pantalla */
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Contenedor que recorta lo que se sale de la pantalla */
+.bolt-marquee {
+    overflow: hidden;
+    width: 100%;
+    background-color: var(--light-bg); /* O el color de fondo que prefieras */
+    padding: 12px 0;
+    display: flex;
+    position: relative;
+}
+
+/* La pista que contiene ambos grupos */
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scrollRight 40s linear infinite; /* Controla la velocidad aquí (20s) */
+}
+
+/* Cada grupo individual de pernos */
+.marquee-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px; /* Espacio entre cada perno */
+    padding-right: 30px; /* Debe ser igual al gap para mantener la simetría */
+}
+
+/* Estilo y tamaño de la imagen del perno */
+.marquee-group img {
+    height: 10px; /* Ajusta el tamaño horizontal/vertical de tu icono */
+    width: auto;
+    object-fit: contain;
+    opacity: 0.8; /* Un tono sutil para que no compita con el contenido principal */
+    transition: opacity 0.3s;
+}
+
+/* Efecto interactivo por si el usuario pasa el mouse */
+.marquee-group img:hover {
+    opacity: 1;
+}
+
+/* Pausar la animación cuando el usuario pasa el mouse por encima de la cinta */
+.bolt-marquee:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* --- ANIMACIÓN PARA MOVER DE IZQUIERDA A DERECHA --- */
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-50%); /* Empieza desplazado a la mitad */
+    }
+    100% {
+        transform: translateX(0%);  /* Se mueve hacia la derecha hasta llegar al origen */
+    }
+}
+
+
+
+/* Contenedor principal de la sección */
+.gallery-section {
+    padding: 60px 10%;
+}
+
+/* Configuración del Grid de 2 columnas */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea exactamente 2 columnas iguales */
+    gap: 30px; /* Espacio entre las cartas */
+}
+
+/* Contenedor de la Carta */
+.card-gallery {
+    position: relative; /* Esencial para que el texto absoluto se alinee aquí dentro */
+    height: 350px;      /* Define la altura fija que tendrán todas las cartas */
+    border-radius: 8px;
+    overflow: hidden;   /* Esconde los bordes de la imagen que sobresalgan */
+    box-shadow: 0 4px 15px rgba(26, 37, 54, 0.1);
+    background-color: var(--dark-bg); /* Fondo de respaldo por si tarda en cargar la imagen */
+}
+
+/* Estilo inteligente de la Imagen */
+.card-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta e integra cualquier proporción de imagen sin deformarla */
+    object-position: center; /* Centra el encuadre del recorte */
+    transition: transform 0.5s ease; /* Suavizado para el efecto hover */
+}
+
+/* Efecto visual al pasar el cursor sobre la carta */
+.card-gallery:hover img {
+    transform: scale(1.05); /* Zoom sutil a la imagen */
+}
+
+/* Capa oscura de fondo y contenedor del texto (Overlay) */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradiente oscuro abajo para asegurar que el texto blanco siempre sea legible */
+    background: linear-gradient(to top, rgba(26, 37, 54, 0.8) 0%, rgba(26, 37, 54, 0.2) 60%, transparent 100%);
+    
+    /* Alineación del texto en la esquina inferior izquierda */
+    display: flex;
+    align-items: flex-end; /* Empuja el contenido al fondo */
+    justify-content: flex-start; /* Empuja el contenido a la izquierda */
+    padding: 25px; /* Margen interno desde las esquinas */
+    box-sizing: border-box;
+}
+
+/* Estilo del texto superpuesto */
+.card-overlay h3 {
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* Refuerzo de lectura */
+    position: relative;
+}
+
+/* Detalle opcional: Una pequeña línea roja debajo del texto al hacer hover */
+.card-gallery:hover .card-overlay h3::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--brand-red);
+    border-radius: 2px;
+    animation: fadeInLine 0.3s ease forwards;
+}
+
+@keyframes fadeInLine {
+    from { width: 0; opacity: 0; }
+    to { width: 40px; opacity: 1; }
+}
+
+/* --- RESPONSIVE DESIGN --- */
+/* Si se ve en celulares, el grid pasa automáticamente a 1 sola columna */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .card-gallery {
+        height: 250px; /* Bajamos un poco la altura en pantallas pequeñas */
+    }
+}
+
+
+
+/* Sección de la Misión */
+.mission-section {
+    background-color: var(--white); /* Fondo blanco para contrastar con las otras secciones grises o azules */
+    padding: 100px 10%; /* Espaciado generoso para dar aire y elegancia */
+    position: relative;
+}
+
+/* Contenedor en Flexbox/Grid para las dos columnas */
+.mission-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Columna Izquierda: Título */
+.mission-title-block {
+    flex: 1;
+    position: relative;
+}
+
+/* Pequeña etiqueta arriba del título */
+.mission-tag {
+    display: block;
+    color: var(--brand-red); /* Tu rojo de acento */
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.mission-title-block h2 {
+    color: var(--brand-blue); /* Tu azul dominante */
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+}
+
+/* Columna Derecha: El bloque de texto */
+.mission-text-block {
+    flex: 2; /* Toma el doble de espacio que el título */
+    position: relative;
+    padding-left: 40px;
+    /* Línea vertical izquierda elegante en color azul corporativo */
+    border-left: 4px solid var(--brand-blue); 
+}
+
+/* Estilo del párrafo */
+.mission-text-block p {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    line-height: 1.7;
+    font-style: italic; /* El toque italic le da carácter de declaración o cita importante */
+    margin: 0;
+}
+
+/* Elemento decorativo opcional: unas comillas gigantes transparentes de fondo */
+/* .mission-text-block::before {
+    content: '“';
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    font-size: 8rem;
+    color: rgba(30, 78, 140, 0.05);
+    font-family: Georgia, serif;
+    line-height: 1;
+    z-index: 0;
+} */
+
+/* --- RESPONSIVE --- */
+/* En tablets y celulares, las columnas se apilan verticalmente */
+@media (max-width: 768px) {
+    .mission-container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+    }
+    
+    .mission-title-block h2 {
+        font-size: 2.5rem;
+    }
+    
+    .mission-text-block {
+        padding-left: 20px;
+    }
+    
+    .mission-text-block p {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/* --- ESTILOS DEL FOOTER --- */
+
+.main-footer {
+    background-color: #2E2E2E; /* Fondo solicitado */
+    color: #FFFFFF;            /* Texto blanco */
+    padding: 60px 0 20px 0;
+    font-size: 0.95rem;
+    border-top: 4px solid var(--brand-blue); /* Línea azul superior para amarrar el diseño */
+}
+
+/* Contenedor de las columnas */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Permite que se acomode en pantallas chicas */
+}
+
+/* Cada columna individual */
+.footer-column {
+    flex: 1;
+    min-width: 250px; /* Evita que se compriman demasiado */
+}
+
+/* Títulos de las columnas */
+.footer-column h4 {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* Línea roja decorativa debajo de los títulos */
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 3px;
+    background-color: var(--brand-red); /* Tu rojo de acento */
+    border-radius: 2px;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer-description {
+    line-height: 1.6;
+    color: #B3B3B3; /* Gris claro para el texto secundario, mejora la legibilidad */
+}
+
+/* Listas de enlaces e información */
+.footer-links, .footer-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li, .footer-info li {
+    margin-bottom: 12px;
+    color: #B3B3B3;
+}
+
+/* Estilo de los links interactivos */
+.footer-links a {
+    color: #B3B3B3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding-left: 0.3s ease;
+}
+
+/* Animación sutil al pasar el mouse por los links */
+.footer-links a:hover {
+    color: var(--brand-red); /* Cambia al rojo del logo */
+    padding-left: 5px;       /* Se desplaza levemente a la derecha */
+}
+
+/* Fila inferior de Copyright */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 20px 10% 0 10%;
+    border-top: 1px solid #444444; /* Línea divisoria muy sutil */
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #888888;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Se apilan en una sola columna en celulares */
+        gap: 30px;
+    }
+    
+    .footer-bottom {
+        margin-top: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- ESTILOS GENERALES DE LA FICHA TÉCNICA --- */
+
+.technical-sheet-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 10%;
+}
+
+/* Encabezado */
+.page-header {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.page-header h1 {
+    color: var(--brand-blue);
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Secciones de Grupos */
+.tech-group-section {
+    margin-bottom: 60px;
+}
+
+/* Títulos de cada grupo */
+.group-title {
+    color: var(--brand-blue);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #EAEAEA;
+    position: relative;
+}
+
+/* Detalle visual en el título: pequeña pestaña roja de marca */
+.group-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--brand-red);
+}
+
+/* --- CONFIGURACIÓN DEL GRID (4 CARTAS POR FILA) --- */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas idénticas */
+    gap: 25px; /* Espaciado entre cartas */
+}
+
+/* --- ESTILO DE LAS CARTAS INTERACTIVAS (Enlaces) --- */
+.tech-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none; /* Elimina el subrayado por defecto de los enlaces */
+    color: inherit;        /* Hereda el color de texto del proyecto */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #EDEDED;
+}
+
+/* Efectos Hover al interactuar con la carta */
+.tech-card:hover {
+    transform: translateY(-5px); /* Pequeño salto hacia arriba */
+    box-shadow: 0 10px 20px rgba(30, 78, 140, 0.12); /* Sombra azulada más suave */
+    border-color: rgba(30, 78, 140, 0.2);
+}
+
+/* Espacio reservado para la imagen (Placeholder) */
+.card-image-placeholder {
+    height: 150px;
+    background-color: #F5F7FA; /* Gris claro de fondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem; /* Tamaño del emoji temporal */
+    border-bottom: 1px solid #EDEDED;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Cuando agregues la etiqueta <img> real, este estilo se aplicará automáticamente */
+.card-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la foto sin deformaciones */
+    object-position: center;
+}
+
+/* Contenido de texto dentro de la carta */
+.card-content {
+    padding: 20px;
+    flex-grow: 1; /* Permite que el contenedor llene el espacio uniformemente */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    color: var(--brand-blue);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    transition: color 0.3s ease;
+}
+
+/* Si el usuario hace hover en la carta, el título cambia levemente de color */
+.tech-card:hover .card-content h3 {
+    color: var(--brand-red);
+}
+
+.card-content p {
+    color: var(--text-main);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- DISEÑO ADAPTABLE (RESPONSIVE) --- */
+@media (max-width: 1024px) {
+    /* Pantallas medianas/tablets: pasamos a 2 cartas por fila */
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    /* Pantallas chicas/celulares: 1 sola carta por fila */
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    .technical-sheet-container {
+        padding: 40px 5%; /* Menos márgenes laterales en pantallas compactas */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- CONFIGURACIÓN DE LA PÁGINA DE DETALLE --- */
+
+/* Fondo completo usando la imagen de planos de construcción azul */
+.tech-detail-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: sans-serif; /* O la tipografía de tu proyecto */
+    background-image: url('img/hero-section-image.png'); /* Tu imagen de fondo de planos */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
+    color: var(--text-main);
+}
+
+/* Encabezado del Detalle */
+.detail-header {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 3.5vw 10px 3.5vw; /* Margen superior y lateral */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
+.company-logo {
+    color: var(--brand-blue);
+    font-size: 1.6rem;
+    font-weight: 700;
+    /* Si es texto sobre el fondo azul, puedes cambiarlo a blanco o usar tu logo */
+}
+
+/* Botón Volver (Estilo interactivo elegante) */
+.btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--brand-red);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-back:hover {
+    background-color: var(--brand-red-hover); /* Cambia a tu rojo corporativo al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+/* Contenedor Principal (MAIN) */
+.detail-main-content {
+    max-width: 1000px; /* Ancho ideal para lectura y para calzar en una hoja A4/Carta */
+    margin: 0 auto 60px auto;
+    padding: 0 1rem; /* Asegura un margen limpio a los lados en la pantalla */
+    box-sizing: border-box;
+}
+
+/* Caja blanca que contiene los datos técnicos (Simula una hoja de papel en pantalla) */
+.technical-document {
+    background-color: rgba(255, 255, 255, 0.95); /* Blanco con leve transparencia para que se intuya el fondo */
+    padding: 40px 3vw;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Ocultar elementos de impresión en la pantalla normal */
+.print-only-footer {
+    display: none;
+}
+
+
+/* ==========================================================================
+   3. REGLAS ESPECÍFICAS PARA IMPRESIÓN (Ctrl + P / Guardar como PDF)
+   ========================================================================== */
+@media print {
+    /* 1. Forzar márgenes físicos en la hoja de papel */
+    @page {
+        margin: 1.5cm; /* Margen estándar ideal para que las impresoras no corten texto */
+    }
+
+    /* 2. Quitar el fondo de planos de construcción y dejar fondo blanco puro para ahorrar tinta */
+    .tech-detail-body {
+        background-image: none !important;
+        background-color: #FFFFFF !important;
+        color: #000000 !important;
+    }
+
+    /* Quitar sombras y transparencias del documento principal */
+    .technical-document {
+        background-color: #FFFFFF !important;
+        padding: 0 !important; /* Aprovecha el margen de la página */
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    /* Ajustar márgenes del contenedor al imprimir */
+    .detail-header, .detail-main-content {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .detail-header {
+        margin-bottom: 30px !important;
+        border-bottom: 2px solid #333333; /* Línea divisoria negra y sobria bajo el logo */
+        padding-bottom: 15px !important;
+    }
+
+    /* 3. ESCONDER elementos innecesarios (Botón Volver y utilidades de navegación) */
+    .no-print, .btn-back {
+        display: none !important;
+    }
+
+    /* Mostrar pie de página de impresión */
+    .print-only-footer {
+        display: block !important;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 0.8rem;
+        color: #555555;
+        border-top: 1px solid #DDDDDD;
+        padding-top: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor con scroll para pantallas chicas */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+}
+
+/* Estilo Base de la Tabla */
+.tech-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem; /* Ajustado para datos densos */
+    color: #333333;
+    background-color: #FFFFFF;
+}
+
+/* Tipografía monoespaciada para alinear decimales */
+.font-monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Celdas y Encabezados */
+.tech-table th, .tech-table td {
+    padding: 8px 10px;
+    border: 1px solid #D6D6D6;
+    white-space: nowrap; /* Evita que los números se partan en dos líneas */
+}
+
+/* Encabezados Principales */
+.tech-table th {
+    background-color: var(--brand-blue, #1E4E8C);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: sans-serif; /* Títulos limpios */
+}
+
+.tech-table th small {
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+/* Alineaciones útiles */
+.text-center {
+    text-align: center;
+}
+
+/* Filas alternas para lectura ágil */
+.tech-table tbody tr:nth-child(even) {
+    background-color: #F8F9FA;
+}
+
+/* Resaltado al pasar el mouse por una fila entera */
+.tech-table tbody tr:hover {
+    background-color: #F1F5F9;
+}
+
+/* Estilo para las Notas del pie de página */
+.table-notes td {
+    background-color: #F5F5F5;
+    font-weight: bold;
+    color: #555555;
+    font-size: 0.8rem;
+    padding: 10px;
+}
