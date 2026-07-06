@@ -1,6 +1,6 @@
 /* --- NUEVA PALETA DE COLORES (Basada en el Logo) --- */
 :root {
-    --brand-blue: #1E4E8C;       /* Azul corporativo (Dominante) */
+    --brand-blue: #0069c4;       /* Azul corporativo (Dominante) */
     --brand-blue-dark: #153663;  /* Azul más oscuro para hovers/nav */
     --brand-red: #E53935;        /* Rojo de acento (Llamados a la acción) */
     --brand-red-hover: #C62828;  /* Rojo oscuro para hover */
@@ -32,7 +32,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 10%;
-    background: #1E4E8C;
+    background: var(--brand-blue);
     color: var(--white);
     position: sticky;
     top: 0;
@@ -72,12 +72,12 @@ body {
 
 /* Hero Section: Fondo oscuro que hace contrastar el texto */
 .hero {
-    height: 80vh;
-    background: var(--brand-blue) url('img/hero-section-image.png') no-repeat center center/cover;
+    height: 78dvh;
+    background: var(--brand-blue) url('img/main-hero-section.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
     color: var(--white);
     padding-left: 10vw;
     padding-right: 10vw;
@@ -89,7 +89,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #1E4E8C; /* #5C8DCB con opacidad 60% */
+  background-color: #0069c4; /* #5C8DCB con opacidad 60% */
   opacity: 0.8;
 }
 
@@ -97,7 +97,7 @@ body {
     position: relative;
     z-index: 2;
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: flex-end;
     opacity: 0.9;
 }
@@ -119,16 +119,27 @@ body {
 .hero-content {
     position: absolute;
     z-index: 3;
+    max-width: clamp(23rem, 50dvw, 50rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .hero-content h1 {
-    font-size: clamp(2.5rem, 9vw, 8rem);
-    line-height: clamp(2.5rem, 9vw, 8rem);
+    font-size: clamp(2.5rem, 7vw, 6rem);
+    line-height: clamp(2.5rem, 7vw, 6rem);
 }
 
 .hero-content h2 {
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    line-height: clamp(1.5rem, 4vw, 3rem);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    line-height: clamp(1.5rem, 2vw, 2rem);
+}
+
+.hero-section-text {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: nowrap;
 }
 
 @media (max-width: 1266px) {
@@ -155,7 +166,11 @@ body {
 
   .hero-content {
     padding: 0 1rem;
-}
+  }
+
+  .hero-section-text {
+    flex-wrap: wrap;
+  }
 
 }
 
@@ -171,7 +186,7 @@ body {
 }
 
 .large-brand-img{
-    max-width: 20rem;
+    max-width: 100%;
     width: 100%;
 }
 
@@ -267,17 +282,21 @@ body {
 .bolt-marquee {
     overflow: hidden;
     width: 100%;
-    background-color: var(--light-bg); /* O el color de fondo que prefieras */
+    /* background-color: var(--light-bg); */
     padding: 12px 0;
     display: flex;
-    position: relative;
+    /* position: relative; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
 }
 
 /* La pista que contiene ambos grupos */
 .marquee-track {
     display: flex;
     width: max-content;
-    animation: scrollRight 40s linear infinite; /* Controla la velocidad aquí (20s) */
+    animation: scrollRight 200s linear infinite; /* Controla la velocidad aquí (20s) */
 }
 
 /* Cada grupo individual de pernos */
@@ -285,13 +304,13 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 30px; /* Espacio entre cada perno */
-    padding-right: 30px; /* Debe ser igual al gap para mantener la simetría */
+/*     gap: 30px;
+    padding-right: 30px; */
 }
 
 /* Estilo y tamaño de la imagen del perno */
 .marquee-group img {
-    height: 10px; /* Ajusta el tamaño horizontal/vertical de tu icono */
+    height: 60px; /* Ajusta el tamaño horizontal/vertical de tu icono */
     width: auto;
     object-fit: contain;
     opacity: 0.8; /* Un tono sutil para que no compita con el contenido principal */
@@ -515,7 +534,7 @@ body {
 /* --- ESTILOS DEL FOOTER --- */
 
 .main-footer {
-    background-color: #2E2E2E; /* Fondo solicitado */
+    background-color: #242424; /* Fondo solicitado */
     color: #FFFFFF;            /* Texto blanco */
     padding: 60px 0 20px 0;
     font-size: 0.95rem;
@@ -537,6 +556,7 @@ body {
 .footer-column {
     flex: 1;
     min-width: 250px; /* Evita que se compriman demasiado */
+    max-width: 17rem; /* Limita el ancho para mantener legibilidad */
 }
 
 /* Títulos de las columnas */
@@ -880,6 +900,33 @@ body {
 /* Ocultar elementos de impresión en la pantalla normal */
 .print-only-footer {
     display: none;
+}
+
+.detail-page-section-container {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.detail-page-section-1{
+    
+    width: 100%;
+    max-width: clamp(74%, 100vw, 75rem);
+    flex-grow: 1;
+
+}
+
+.detail-page-section-2{
+    
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+
 }
 
 
