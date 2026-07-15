@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Técnico - Indusper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="tech-detail-body">
+
+    <div class="detail-page-section-container">
+        <div class="detail-page-section-1">
+
+            <main class="detail-main-content">
+
+                <article class="technical-document">
+                    <div class="technical-header-container">
+                        <div class="detail-header">
+                            <div class="header-left">
+                                <!-- <span class="company-logo">🔩 PernosPro</span> -->
+                                <div class="logo">
+                                    <img src="img/indusper-brand.png" alt="Indusper - Brand" class="brand-img">
+                                </div>
+                            </div>
+                            <div class="header-right no-print">
+                                <a href="ficha-tecnica.html" class="btn-back">← Volver a la Ficha Técnica</a>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 id="titulo-documento" style="height: 10%;">Perno Cabeza Hexagonal Estándar</h2>
+                            <hr>
+                            <div style="width: 100%; height: 90%;">
+                                <img src="" id="detail-image" style="width: 100%; height: 100%;"
+                                    alt="Imagen del detalle técnico" class="tech-image" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-fixed-height"></div>
+                </article>
+
+            </main>
+
+            <footer class="print-only-footer">
+                <p>Documento descargado desde indusper.cl - Copia Controlada.</p>
+            </footer>
+        </div>
+
+        <div class="detail-page-section-2 no-print">
+
+            <div class="catalogo-sugerencias-wrapper">
+                <h2 class="seccion-titulo">Otros pernos disponibles en el catálogo</h2>
+                <div id="tarjetas-sugeridas-container" class="grid-tarjetas-sugeridas">
+                    <!-- Aquí JavaScript inyectará dinámicamente las tarjetas del resto del catálogo -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        paginaDetalleTecnico.init();
+    </script>
+
+</body>
+
+</html>

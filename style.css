@@ -1,13 +1,20 @@
 /* --- NUEVA PALETA DE COLORES (Basada en el Logo) --- */
 :root {
-    --brand-blue: #0069c4;       /* Azul corporativo (Dominante) */
-    --brand-blue-dark: #153663;  /* Azul más oscuro para hovers/nav */
-    --brand-red: #E53935;        /* Rojo de acento (Llamados a la acción) */
-    --brand-red-hover: #C62828;  /* Rojo oscuro para hover */
-    
-    --dark-bg: #1A2536;          /* Gris azulado muy oscuro (Reemplaza al antracita) */
-    --light-bg: #F4F7FA;         /* Fondo gris claro limpio */
-    --text-main: #2C3E50;        /* Texto principal legible */
+    --brand-blue: #0069c4;
+    /* Azul corporativo (Dominante) */
+    --brand-blue-dark: #153663;
+    /* Azul más oscuro para hovers/nav */
+    --brand-red: #E53935;
+    /* Rojo de acento (Llamados a la acción) */
+    --brand-red-hover: #C62828;
+    /* Rojo oscuro para hover */
+
+    --dark-bg: #1A2536;
+    /* Gris azulado muy oscuro (Reemplaza al antracita) */
+    --light-bg: #F4F7FA;
+    /* Fondo gris claro limpio */
+    --text-main: #2C3E50;
+    /* Texto principal legible */
     --white: #FFFFFF;
 }
 
@@ -54,26 +61,30 @@ body {
 }
 
 /* El elemento activo o hover se ilumina sutilmente */
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
     opacity: 1;
     color: var(--white);
-    border-bottom: 2px solid var(--brand-red); /* Detalle en rojo */
+    border-bottom: 2px solid var(--brand-red);
+    /* Detalle en rojo */
 }
 
 .logo {
     background-color: white;
     border-radius: 8px;
     padding: 0px 8px;
+    width: 100%;
+    max-width: 7rem;
 }
 
-.logo-img{
+.logo-img {
     width: 2.5rem;
 }
 
 /* Hero Section: Fondo oscuro que hace contrastar el texto */
 .hero {
     height: 78dvh;
-    background: var(--brand-blue) url('img/main-hero-section.png') no-repeat center center/cover;
+    /* background: var(--brand-blue) url('img/main-hero-section.png') no-repeat center center/cover; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,11 +97,26 @@ body {
 }
 
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: #0069c4; /* #5C8DCB con opacidad 60% */
-  opacity: 0.8;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #0069c4;
+    /* #5C8DCB con opacidad 60% */
+    opacity: 0.8;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    /* Ensures video scales without stretching */
+    z-index: -1;
 }
 
 .hero-bolt-container {
@@ -108,12 +134,14 @@ body {
 }
 
 @keyframes slideVertical {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(10px); /* Moves down 100 pixels */
-  }
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10px);
+        /* Moves down 100 pixels */
+    }
 }
 
 .hero-content {
@@ -126,51 +154,51 @@ body {
 }
 
 .hero-content h1 {
-    font-size: clamp(2.5rem, 7vw, 6rem);
-    line-height: clamp(2.5rem, 7vw, 6rem);
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: clamp(2.5rem, 6vw, 5rem);
 }
 
 .hero-content h2 {
-    font-size: clamp(1.5rem, 2vw, 2rem);
-    line-height: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 1vw, 1rem);
+    line-height: clamp(1.5rem, 1vw, 1rem);
 }
 
 .hero-section-text {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1rem;
     flex-wrap: nowrap;
 }
 
 @media (max-width: 1266px) {
-  .bolt-img {
-    opacity: 0.3;
-  }
+    .bolt-img {
+        opacity: 0.3;
+    }
 
-  .hero{
-    padding-right: 0vw;
-  }
+    .hero {
+        padding-right: 0vw;
+    }
 }
 
 @media (max-width: 815px) {
 
-  .hero{
-    justify-content: center;
-    text-align: center;
-    padding-left: 0vw;
-  }
+    .hero {
+        justify-content: center;
+        text-align: center;
+        padding-left: 0vw;
+    }
 
-  .bolt-img {
-    display: none;
-  }
+    .bolt-img {
+        display: none;
+    }
 
-  .hero-content {
-    padding: 0 1rem;
-  }
+    .hero-content {
+        padding: 0 1rem;
+    }
 
-  .hero-section-text {
-    flex-wrap: wrap;
-  }
+    .hero-section-text {
+        flex-wrap: wrap;
+    }
 
 }
 
@@ -180,12 +208,11 @@ body {
     padding: 0px 10px;
 }
 
-.brand-img{
-    max-width: 9rem;
+.brand-img {
     width: 100%;
 }
 
-.large-brand-img{
+.large-brand-img {
     max-width: 100%;
     width: 100%;
 }
@@ -237,7 +264,8 @@ body {
     padding: 40px 30px;
     border-radius: 6px;
     box-shadow: 0 4px 12px rgba(26, 37, 54, 0.06);
-    border-top: 4px solid var(--brand-blue); /* Borde superior azul por defecto */
+    border-top: 4px solid var(--brand-blue);
+    /* Borde superior azul por defecto */
     transition: transform 0.3s, border-top-color 0.3s;
 }
 
@@ -296,7 +324,8 @@ body {
 .marquee-track {
     display: flex;
     width: max-content;
-    animation: scrollRight 200s linear infinite; /* Controla la velocidad aquí (20s) */
+    animation: scrollRight 200s linear infinite;
+    /* Controla la velocidad aquí (20s) */
 }
 
 /* Cada grupo individual de pernos */
@@ -304,16 +333,18 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-/*     gap: 30px;
+    /*     gap: 30px;
     padding-right: 30px; */
 }
 
 /* Estilo y tamaño de la imagen del perno */
 .marquee-group img {
-    height: 60px; /* Ajusta el tamaño horizontal/vertical de tu icono */
+    height: 60px;
+    /* Ajusta el tamaño horizontal/vertical de tu icono */
     width: auto;
     object-fit: contain;
-    opacity: 0.8; /* Un tono sutil para que no compita con el contenido principal */
+    opacity: 0.8;
+    /* Un tono sutil para que no compita con el contenido principal */
     transition: opacity 0.3s;
 }
 
@@ -330,10 +361,13 @@ body {
 /* --- ANIMACIÓN PARA MOVER DE IZQUIERDA A DERECHA --- */
 @keyframes scrollRight {
     0% {
-        transform: translateX(-50%); /* Empieza desplazado a la mitad */
+        transform: translateX(-50%);
+        /* Empieza desplazado a la mitad */
     }
+
     100% {
-        transform: translateX(0%);  /* Se mueve hacia la derecha hasta llegar al origen */
+        transform: translateX(0%);
+        /* Se mueve hacia la derecha hasta llegar al origen */
     }
 }
 
@@ -347,32 +381,42 @@ body {
 /* Configuración del Grid de 2 columnas */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Crea exactamente 2 columnas iguales */
-    gap: 30px; /* Espacio entre las cartas */
+    grid-template-columns: repeat(2, 1fr);
+    /* Crea exactamente 2 columnas iguales */
+    gap: 30px;
+    /* Espacio entre las cartas */
 }
 
 /* Contenedor de la Carta */
 .card-gallery {
-    position: relative; /* Esencial para que el texto absoluto se alinee aquí dentro */
-    height: 350px;      /* Define la altura fija que tendrán todas las cartas */
+    position: relative;
+    /* Esencial para que el texto absoluto se alinee aquí dentro */
+    height: 350px;
+    /* Define la altura fija que tendrán todas las cartas */
     border-radius: 8px;
-    overflow: hidden;   /* Esconde los bordes de la imagen que sobresalgan */
+    overflow: hidden;
+    /* Esconde los bordes de la imagen que sobresalgan */
     box-shadow: 0 4px 15px rgba(26, 37, 54, 0.1);
-    background-color: var(--dark-bg); /* Fondo de respaldo por si tarda en cargar la imagen */
+    background-color: var(--dark-bg);
+    /* Fondo de respaldo por si tarda en cargar la imagen */
 }
 
 /* Estilo inteligente de la Imagen */
 .card-gallery img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta e integra cualquier proporción de imagen sin deformarla */
-    object-position: center; /* Centra el encuadre del recorte */
-    transition: transform 0.5s ease; /* Suavizado para el efecto hover */
+    object-fit: cover;
+    /* Ajusta e integra cualquier proporción de imagen sin deformarla */
+    object-position: center;
+    /* Centra el encuadre del recorte */
+    transition: transform 0.5s ease;
+    /* Suavizado para el efecto hover */
 }
 
 /* Efecto visual al pasar el cursor sobre la carta */
 .card-gallery:hover img {
-    transform: scale(1.05); /* Zoom sutil a la imagen */
+    transform: scale(1.05);
+    /* Zoom sutil a la imagen */
 }
 
 /* Capa oscura de fondo y contenedor del texto (Overlay) */
@@ -384,12 +428,15 @@ body {
     height: 100%;
     /* Gradiente oscuro abajo para asegurar que el texto blanco siempre sea legible */
     background: linear-gradient(to top, rgba(26, 37, 54, 0.8) 0%, rgba(26, 37, 54, 0.2) 60%, transparent 100%);
-    
+
     /* Alineación del texto en la esquina inferior izquierda */
     display: flex;
-    align-items: flex-end; /* Empuja el contenido al fondo */
-    justify-content: flex-start; /* Empuja el contenido a la izquierda */
-    padding: 25px; /* Margen interno desde las esquinas */
+    align-items: flex-end;
+    /* Empuja el contenido al fondo */
+    justify-content: flex-start;
+    /* Empuja el contenido a la izquierda */
+    padding: 25px;
+    /* Margen interno desde las esquinas */
     box-sizing: border-box;
 }
 
@@ -399,7 +446,8 @@ body {
     font-size: 1.4rem;
     font-weight: 600;
     margin: 0;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* Refuerzo de lectura */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    /* Refuerzo de lectura */
     position: relative;
 }
 
@@ -417,8 +465,15 @@ body {
 }
 
 @keyframes fadeInLine {
-    from { width: 0; opacity: 0; }
-    to { width: 40px; opacity: 1; }
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 40px;
+        opacity: 1;
+    }
 }
 
 /* --- RESPONSIVE DESIGN --- */
@@ -428,8 +483,10 @@ body {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+
     .card-gallery {
-        height: 250px; /* Bajamos un poco la altura en pantallas pequeñas */
+        height: 250px;
+        /* Bajamos un poco la altura en pantallas pequeñas */
     }
 }
 
@@ -437,8 +494,10 @@ body {
 
 /* Sección de la Misión */
 .mission-section {
-    background-color: var(--white); /* Fondo blanco para contrastar con las otras secciones grises o azules */
-    padding: 100px 10%; /* Espaciado generoso para dar aire y elegancia */
+    background-color: var(--white);
+    /* Fondo blanco para contrastar con las otras secciones grises o azules */
+    padding: 3rem 10%;
+    /* Espaciado generoso para dar aire y elegancia */
     position: relative;
 }
 
@@ -460,7 +519,8 @@ body {
 /* Pequeña etiqueta arriba del título */
 .mission-tag {
     display: block;
-    color: var(--brand-red); /* Tu rojo de acento */
+    color: var(--brand-red);
+    /* Tu rojo de acento */
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -469,7 +529,8 @@ body {
 }
 
 .mission-title-block h2 {
-    color: var(--brand-blue); /* Tu azul dominante */
+    color: var(--brand-blue);
+    /* Tu azul dominante */
     font-size: 3rem;
     font-weight: 800;
     line-height: 1.1;
@@ -478,11 +539,12 @@ body {
 
 /* Columna Derecha: El bloque de texto */
 .mission-text-block {
-    flex: 2; /* Toma el doble de espacio que el título */
+    flex: 2;
+    /* Toma el doble de espacio que el título */
     position: relative;
     padding-left: 40px;
     /* Línea vertical izquierda elegante en color azul corporativo */
-    border-left: 4px solid var(--brand-blue); 
+    border-left: 4px solid var(--brand-blue);
 }
 
 /* Estilo del párrafo */
@@ -490,7 +552,8 @@ body {
     color: var(--text-main);
     font-size: 1.2rem;
     line-height: 1.7;
-    font-style: italic; /* El toque italic le da carácter de declaración o cita importante */
+    font-style: italic;
+    /* El toque italic le da carácter de declaración o cita importante */
     margin: 0;
 }
 
@@ -515,15 +578,15 @@ body {
         gap: 30px;
         align-items: flex-start;
     }
-    
+
     .mission-title-block h2 {
         font-size: 2.5rem;
     }
-    
+
     .mission-text-block {
         padding-left: 20px;
     }
-    
+
     .mission-text-block p {
         font-size: 1.1rem;
     }
@@ -534,11 +597,14 @@ body {
 /* --- ESTILOS DEL FOOTER --- */
 
 .main-footer {
-    background-color: #242424; /* Fondo solicitado */
-    color: #FFFFFF;            /* Texto blanco */
+    background-color: #242424;
+    /* Fondo solicitado */
+    color: #FFFFFF;
+    /* Texto blanco */
     padding: 60px 0 20px 0;
     font-size: 0.95rem;
-    border-top: 4px solid var(--brand-blue); /* Línea azul superior para amarrar el diseño */
+    border-top: 4px solid var(--brand-blue);
+    /* Línea azul superior para amarrar el diseño */
 }
 
 /* Contenedor de las columnas */
@@ -549,14 +615,17 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 40px;
-    flex-wrap: wrap; /* Permite que se acomode en pantallas chicas */
+    flex-wrap: wrap;
+    /* Permite que se acomode en pantallas chicas */
 }
 
 /* Cada columna individual */
 .footer-column {
     flex: 1;
-    min-width: 250px; /* Evita que se compriman demasiado */
-    max-width: 17rem; /* Limita el ancho para mantener legibilidad */
+    min-width: 250px;
+    /* Evita que se compriman demasiado */
+    max-width: 17rem;
+    /* Limita el ancho para mantener legibilidad */
 }
 
 /* Títulos de las columnas */
@@ -576,7 +645,8 @@ body {
     left: 0;
     width: 35px;
     height: 3px;
-    background-color: var(--brand-red); /* Tu rojo de acento */
+    background-color: var(--brand-red);
+    /* Tu rojo de acento */
     border-radius: 2px;
 }
 
@@ -588,17 +658,20 @@ body {
 
 .footer-description {
     line-height: 1.6;
-    color: #B3B3B3; /* Gris claro para el texto secundario, mejora la legibilidad */
+    color: #B3B3B3;
+    /* Gris claro para el texto secundario, mejora la legibilidad */
 }
 
 /* Listas de enlaces e información */
-.footer-links, .footer-info {
+.footer-links,
+.footer-info {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-links li, .footer-info li {
+.footer-links li,
+.footer-info li {
     margin-bottom: 12px;
     color: #B3B3B3;
 }
@@ -613,8 +686,10 @@ body {
 
 /* Animación sutil al pasar el mouse por los links */
 .footer-links a:hover {
-    color: var(--brand-red); /* Cambia al rojo del logo */
-    padding-left: 5px;       /* Se desplaza levemente a la derecha */
+    color: var(--brand-red);
+    /* Cambia al rojo del logo */
+    padding-left: 5px;
+    /* Se desplaza levemente a la derecha */
 }
 
 /* Fila inferior de Copyright */
@@ -622,7 +697,8 @@ body {
     max-width: 1200px;
     margin: 40px auto 0 auto;
     padding: 20px 10% 0 10%;
-    border-top: 1px solid #444444; /* Línea divisoria muy sutil */
+    border-top: 1px solid #444444;
+    /* Línea divisoria muy sutil */
     text-align: center;
 }
 
@@ -635,10 +711,11 @@ body {
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column; /* Se apilan en una sola columna en celulares */
+        flex-direction: column;
+        /* Se apilan en una sola columna en celulares */
         gap: 30px;
     }
-    
+
     .footer-bottom {
         margin-top: 30px;
     }
@@ -670,8 +747,8 @@ body {
 /* --- ESTILOS GENERALES DE LA FICHA TÉCNICA --- */
 
 .technical-sheet-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 1200px;
+    margin: 0 auto; */
     padding: 60px 10%;
 }
 
@@ -725,8 +802,9 @@ body {
 /* --- CONFIGURACIÓN DEL GRID (4 CARTAS POR FILA) --- */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas idénticas */
-    gap: 25px; /* Espaciado entre cartas */
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 0px;
+    /* Espaciado entre cartas */
 }
 
 /* --- ESTILO DE LAS CARTAS INTERACTIVAS (Enlaces) --- */
@@ -734,8 +812,10 @@ body {
     background-color: var(--white);
     border-radius: 8px;
     overflow: hidden;
-    text-decoration: none; /* Elimina el subrayado por defecto de los enlaces */
-    color: inherit;        /* Hereda el color de texto del proyecto */
+    text-decoration: none;
+    /* Elimina el subrayado por defecto de los enlaces */
+    color: inherit;
+    /* Hereda el color de texto del proyecto */
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -745,19 +825,23 @@ body {
 
 /* Efectos Hover al interactuar con la carta */
 .tech-card:hover {
-    transform: translateY(-5px); /* Pequeño salto hacia arriba */
-    box-shadow: 0 10px 20px rgba(30, 78, 140, 0.12); /* Sombra azulada más suave */
+    transform: translateY(-5px);
+    /* Pequeño salto hacia arriba */
+    box-shadow: 0 10px 20px rgba(30, 78, 140, 0.12);
+    /* Sombra azulada más suave */
     border-color: rgba(30, 78, 140, 0.2);
 }
 
 /* Espacio reservado para la imagen (Placeholder) */
 .card-image-placeholder {
     height: 150px;
-    background-color: #F5F7FA; /* Gris claro de fondo */
-    display: flex;
+    background-color: #F5F7FA;
+    /* Gris claro de fondo */
+    display: none;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem; /* Tamaño del emoji temporal */
+    font-size: 2.5rem;
+    /* Tamaño del emoji temporal */
     border-bottom: 1px solid #EDEDED;
     overflow: hidden;
     position: relative;
@@ -767,14 +851,16 @@ body {
 .card-image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la foto sin deformaciones */
+    object-fit: cover;
+    /* Ajusta la foto sin deformaciones */
     object-position: center;
 }
 
 /* Contenido de texto dentro de la carta */
 .card-content {
     padding: 20px;
-    flex-grow: 1; /* Permite que el contenedor llene el espacio uniformemente */
+    flex-grow: 1;
+    /* Permite que el contenedor llene el espacio uniformemente */
     display: flex;
     flex-direction: column;
 }
@@ -783,7 +869,7 @@ body {
     color: var(--brand-blue);
     font-size: 1.15rem;
     font-weight: 600;
-    margin: 0 0 10px 0;
+    /* margin: 0 0 10px 0; */
     transition: color 0.3s ease;
 }
 
@@ -801,6 +887,7 @@ body {
 
 /* --- DISEÑO ADAPTABLE (RESPONSIVE) --- */
 @media (max-width: 1024px) {
+
     /* Pantallas medianas/tablets: pasamos a 2 cartas por fila */
     .tech-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -808,12 +895,15 @@ body {
 }
 
 @media (max-width: 600px) {
+
     /* Pantallas chicas/celulares: 1 sola carta por fila */
     .tech-grid {
         grid-template-columns: 1fr;
     }
+
     .technical-sheet-container {
-        padding: 40px 5%; /* Menos márgenes laterales en pantallas compactas */
+        padding: 40px 5%;
+        /* Menos márgenes laterales en pantallas compactas */
     }
 }
 
@@ -836,23 +926,33 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    font-family: sans-serif; /* O la tipografía de tu proyecto */
-    background-image: url('img/hero-section-image.png'); /* Tu imagen de fondo de planos */
+    font-family: sans-serif;
+    /* O la tipografía de tu proyecto */
+    background-image: url('img/hero-section-image.png');
+    /* Tu imagen de fondo de planos */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
+    background-attachment: fixed;
+    /* Mantiene el fondo quieto al hacer scroll */
     color: var(--text-main);
 }
 
 /* Encabezado del Detalle */
 .detail-header {
-    max-width: 1000px;
+    /* max-width: 1000px;
     margin: 0 auto;
-    padding: 30px 3.5vw 10px 3.5vw; /* Margen superior y lateral */
+    padding: 30px 3.5vw 10px 3.5vw; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: .5rem;
+    flex-direction: column;
+}
+
+.technical-header-container {
+    display: flex;
+    flex-direction: row;
+    height: 47dvh;
 }
 
 .company-logo {
@@ -877,24 +977,28 @@ body {
 }
 
 .btn-back:hover {
-    background-color: var(--brand-red-hover); /* Cambia a tu rojo corporativo al pasar el mouse */
+    background-color: var(--brand-red-hover);
+    /* Cambia a tu rojo corporativo al pasar el mouse */
     transform: translateY(-2px);
 }
 
 /* Contenedor Principal (MAIN) */
 .detail-main-content {
-    max-width: 1000px; /* Ancho ideal para lectura y para calzar en una hoja A4/Carta */
-    margin: 0 auto 60px auto;
-    padding: 0 1rem; /* Asegura un margen limpio a los lados en la pantalla */
+    /* max-width: 1000px; */
+    /* margin: 0 auto 60px auto; */
+    /* padding: 0 1rem; */
     box-sizing: border-box;
 }
 
 /* Caja blanca que contiene los datos técnicos (Simula una hoja de papel en pantalla) */
 .technical-document {
-    background-color: rgba(255, 255, 255, 0.95); /* Blanco con leve transparencia para que se intuya el fondo */
-    padding: 40px 3vw;
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Blanco con leve transparencia para que se intuya el fondo */
+    /* padding: 40px 3vw; */
+    padding: 2dvh 1dvw;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    height: 100dvh;
 }
 
 /* Ocultar elementos de impresión en la pantalla normal */
@@ -910,23 +1014,56 @@ body {
 
 }
 
-.detail-page-section-1{
-    
+.detail-page-section-1 {
+
     width: 100%;
-    max-width: clamp(74%, 100vw, 75rem);
+    /* max-width: clamp(74%, 100vw, 74rem); */
+    max-width: clamp(75%, 62rem, 100%);
     flex-grow: 1;
+    margin: auto;
 
 }
 
-.detail-page-section-2{
-    
-    padding: 1rem;
+.detail-page-section-2 {
+
+    /* padding: 1rem; */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     flex: 1;
+    height: 100%;
+    max-height: 100dvh;
 
+}
+
+
+/* --- CLASES UTILITARIAS PARA COMPONENTES STICKY --- */
+
+/* 1. Para las columnas fijas (Eje Horizontal) */
+.col-sticky {
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    background-color: var(--white);
+    /* Fondo obligatorio para que no se traslome el texto de atrás */
+}
+
+/* 2. Para las filas fijas (Eje Vertical - Comúnmente en thead) */
+.row-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+/* 3. ¡CRÍTICO! Intersección (Celdas que son fila fija y columna fija a la vez) 
+      Estas celdas van en el thead y necesitan el z-index más alto de todos (30) */
+.intersection {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    background-color: var(--brand-blue) !important;
 }
 
 
@@ -934,9 +1071,11 @@ body {
    3. REGLAS ESPECÍFICAS PARA IMPRESIÓN (Ctrl + P / Guardar como PDF)
    ========================================================================== */
 @media print {
+
     /* 1. Forzar márgenes físicos en la hoja de papel */
     @page {
-        margin: 1.5cm; /* Margen estándar ideal para que las impresoras no corten texto */
+        margin: 1.5cm;
+        /* Margen estándar ideal para que las impresoras no corten texto */
     }
 
     /* 2. Quitar el fondo de planos de construcción y dejar fondo blanco puro para ahorrar tinta */
@@ -949,26 +1088,30 @@ body {
     /* Quitar sombras y transparencias del documento principal */
     .technical-document {
         background-color: #FFFFFF !important;
-        padding: 0 !important; /* Aprovecha el margen de la página */
+        padding: 0 !important;
+        /* Aprovecha el margen de la página */
         box-shadow: none !important;
         border: none !important;
     }
 
     /* Ajustar márgenes del contenedor al imprimir */
-    .detail-header, .detail-main-content {
+    .detail-header,
+    .detail-main-content {
         max-width: 100% !important;
         padding: 0 !important;
         margin: 0 !important;
     }
-    
+
     .detail-header {
         margin-bottom: 30px !important;
-        border-bottom: 2px solid #333333; /* Línea divisoria negra y sobria bajo el logo */
+        border-bottom: 2px solid #333333;
+        /* Línea divisoria negra y sobria bajo el logo */
         padding-bottom: 15px !important;
     }
 
     /* 3. ESCONDER elementos innecesarios (Botón Volver y utilidades de navegación) */
-    .no-print, .btn-back {
+    .no-print,
+    .btn-back {
         display: none !important;
     }
 
@@ -983,6 +1126,21 @@ body {
         color: #555555;
         border-top: 1px solid #DDDDDD;
         padding-top: 8px;
+    }
+
+
+    /* Desactivamos el comportamiento sticky para una impresión natural */
+    .col-sticky,
+    .row-sticky,
+    .intersection {
+        position: static !important;
+        background-color: transparent !important;
+    }
+
+    /* Si es necesario, puedes forzar que los divs internos se expandan al 100% en papel */
+    .tech-table th div,
+    .tech-table td div {
+        display: block !important;
     }
 }
 
@@ -1020,11 +1178,21 @@ body {
     border-radius: 6px;
 }
 
+.table-fixed-height {
+    width: 100%;
+    overflow-x: auto;
+    margin: 2dvh 0 0 0;
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    height: 47dvh;
+}
+
 /* Estilo Base de la Tabla */
 .tech-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.85rem; /* Ajustado para datos densos */
+    font-size: 0.85rem;
+    /* Ajustado para datos densos */
     color: #333333;
     background-color: #FFFFFF;
 }
@@ -1035,10 +1203,13 @@ body {
 }
 
 /* Celdas y Encabezados */
-.tech-table th, .tech-table td {
+.tech-table th,
+.tech-table td {
     padding: 8px 10px;
-    border: 1px solid #D6D6D6;
-    white-space: nowrap; /* Evita que los números se partan en dos líneas */
+    /* border: 1px solid #D6D6D6; */
+    box-shadow: inset -1px 0px 0px 1px #e1e1e1;
+    white-space: nowrap;
+    /* Evita que los números se partan en dos líneas */
 }
 
 /* Encabezados Principales */
@@ -1046,7 +1217,8 @@ body {
     background-color: var(--brand-blue, #1E4E8C);
     color: #FFFFFF;
     font-weight: 600;
-    font-family: sans-serif; /* Títulos limpios */
+    font-family: sans-serif;
+    /* Títulos limpios */
 }
 
 .tech-table th small {
@@ -1076,4 +1248,177 @@ body {
     color: #555555;
     font-size: 0.8rem;
     padding: 10px;
+}
+
+
+/* --- GRID DE DOS COLUMNAS PARA SECCIONES DE DETALLE --- */
+
+.grid-two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.grid-three-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 3em;
+}
+
+.grid-two-rows {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+}
+
+.grid-three-rows {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+}
+
+
+.border-top-white {
+    border-top: 1px solid var(--white);
+}
+
+.gap-3-em {
+    gap: 3em;
+}
+
+
+/* --- CONTENEDORES FLEXBOX RECURSIVOS --- */
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.flex-direction-row {
+    flex-direction: column;
+    /* "row" en tu JSON significa filas visuales (apiladas verticalmente) */
+}
+
+.flex-direction-column {
+    flex-direction: row;
+    /* "column" en tu JSON significa columnas visuales (repartidas horizontalmente) */
+}
+
+/* Hijos mecánicos: se estiran equitativamente */
+.flex-item {
+    flex: 1 1 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: column;
+    /* Por defecto, los hijos internos se apilan verticalmente */
+}
+
+/* Bordes Decorativos Inteligentes */
+/* Si están apilados verticalmente, ponemos una línea blanca divisoria arriba de cada hijo excepto el primero */
+.flex-direction-row>.flex-item+.flex-item {
+    border-top: 1px solid var(--white, #FFFFFF);
+}
+
+.flex-direction-row>.flex-item:not(:first-child):not(:last-child) {
+    /* Tus estilos aquí */
+    padding: 5px 0;
+    /* Ajusta el padding según tu diseño */
+}
+
+/* Si están repartidos horizontalmente, ponemos una línea blanca divisoria a la izquierda de cada hijo excepto el primero */
+.flex-direction-column>.flex-item {
+    padding: 0 10px;
+    /* Reemplaza el gap pesado dándole aire a las columnas */
+}
+
+.flex-direction-column>.flex-item+.flex-item {
+    border-left: 1px solid var(--white, #FFFFFF);
+}
+
+/* Forzar que los textos dentro del tbody tengan bordes oscuros en su flex interno si es necesario */
+tbody .flex-direction-row>.flex-item+.flex-item {
+    border-top: 1px solid #D6D6D6;
+}
+
+tbody .flex-direction-column>.flex-item+.flex-item {
+    border-left: 1px solid #D6D6D6;
+}
+
+.tech-table td:not(.col-sticky) {
+    min-width: 90px;
+    /* Ajusta este valor en píxeles hasta que veas que se alinean en tu pantalla */
+    width: 1%;
+    /* Truco CSS para que se distribuyan de la forma más equitativa posible */
+}
+
+/* Contenedor de Sugerencias de Productos Relacionados */
+
+.catalogo-sugerencias-wrapper {
+    /* margin-top: 50px;
+    padding: 20px;
+    border-top: 1px solid #e2e8f0; */
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.seccion-titulo {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Rejilla elástica para las tarjetas */
+.grid-tarjetas-sugeridas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .technical-document {
+        height: auto;
+    }
+
+    .technical-header-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .detail-header {
+        flex-direction: row;
+    }
+
+    .table-fixed-height {
+        height: auto;
+    }
+
+    .intersection {
+        position: static !important;
+    }
+
+    .row-sticky {
+        position: static !important;
+    }
+
+    .col-sticky {
+        position: static !important;
+    }
+}
+
+@media (max-width: 1300px) {
+    .detail-page-section-2{
+        max-height: auto;
+    }
+    .catalogo-sugerencias-wrapper{
+        overflow-y: unset;
+    }
 }
