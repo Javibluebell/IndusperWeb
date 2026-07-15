@@ -129,7 +129,7 @@ const paginaDetalleTecnico = {
 
             // Creamos la tarjeta dinámicamente con su enlace href correspondiente
             htmlTarjetas += `
-                <a href="ficha-tecnica.html?id=${key}" class="tech-card">
+                <a href="detalle-tecnico.html?tipo=${key}" class="tech-card">
                 <div class="card-image-placeholder"><span>🔩</span></div>
                 <div class="card-content">
                 <h3>${perno.titulo}</h3>
