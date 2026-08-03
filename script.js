@@ -26,32 +26,32 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.getElementById("main-navbar");
-    const heroSection = document.getElementById("hero");
+  const navbar = document.getElementById("main-navbar");
+  const heroSection = document.getElementById("hero");
 
-    // Ejecutamos la lógica solo si existen el navbar y la sección hero en la página actual
-    if (navbar && heroSection) {
-        
-        const checkScroll = () => {
-            // Obtenemos la altura total de la sección Hero
-            const heroHeight = heroSection.offsetHeight;
-            
-            // Si el scroll vertical pasa la altura del hero (menos un pequeño margen)
-            if (window.scrollY > (heroHeight - 80)) {
-                navbar.classList.remove("navbar-transparent");
-                navbar.classList.add("navbar-solid");
-            } else {
-                navbar.classList.add("navbar-transparent");
-                navbar.classList.remove("navbar-solid");
-            }
-        };
+  // Ejecutamos la lógica solo si existen el navbar y la sección hero en la página actual
+  if (navbar && heroSection) {
 
-        // Escuchar el evento de scroll en la ventana
-        window.addEventListener("scroll", checkScroll);
-        
-        // Ejecutar una vez al cargar por si la página se recarga ya con scroll
-        checkScroll();
-    }
+    const checkScroll = () => {
+      // Obtenemos la altura total de la sección Hero
+      const heroHeight = heroSection.offsetHeight;
+
+      // Si el scroll vertical pasa la altura del hero (menos un pequeño margen)
+      if (window.scrollY > (heroHeight - 80)) {
+        navbar.classList.remove("navbar-transparent");
+        navbar.classList.add("navbar-solid");
+      } else {
+        navbar.classList.add("navbar-transparent");
+        navbar.classList.remove("navbar-solid");
+      }
+    };
+
+    // Escuchar el evento de scroll en la ventana
+    window.addEventListener("scroll", checkScroll);
+
+    // Ejecutar una vez al cargar por si la página se recarga ya con scroll
+    checkScroll();
+  }
 });
 
 const paginaDetalleTecnico = {
@@ -61,13 +61,35 @@ const paginaDetalleTecnico = {
       // Simulación de captura de parámetro de URL (?tipo=perno-normal)
       const params = new URLSearchParams(window.location.search);
       const tipoPerno = params.get("tipo") || "perno-normal";
+      const tipoVisual = params.get("visual") || "default";
 
       const infoPerno = especificacionesPernos[tipoPerno];
-      if (!infoPerno) return;
+      if (!infoPerno && !tipoVisual) return;
 
       // Cambiar título de la página
       document.getElementById("titulo-documento").textContent = `Especificación de ${infoPerno.titulo}`;
-      document.getElementById("detail-image").src = `img/detalle-tecnico/${infoPerno.image}`;
+
+      let headerContainer = document.getElementById("header-content-container");
+      headerContainer.classList.add("technical-header-container");
+
+      if (tipoVisual === "1") {
+        headerContainer.classList.add("fixed-h");
+
+
+        let image_element = document.createElement("img");
+        image_element.classList.add("tech-image");
+        image_element.alt = `Imagen de ${infoPerno.titulo}`;
+        image_element.src = `img/detalle-tecnico/${infoPerno.image}`;
+
+        document.getElementById("detail-image-container").innerHTML = ""; // Limpiar contenedor
+        document.getElementById("detail-image-container").appendChild(image_element);
+
+        // document.getElementById("detail-image").src = `img/detalle-tecnico/${infoPerno.image}`;
+      }
+
+      if (tipoVisual === "2") {
+        document.getElementById("dv-detail-header").classList.add("row");
+      }
 
       const tableContainer = document.querySelector(".table-fixed-height");
 
@@ -152,20 +174,20 @@ const paginaDetalleTecnico = {
 
     // Recorremos todo el objeto del catálogo usando Object.keys()
     Object.keys(especificacionesPernos).forEach(key => {
-        // La magia: excluimos el perno que el usuario está viendo actualmente
-        if (key !== pernoExcluido) {
-            const perno = especificacionesPernos[key];
+      // La magia: excluimos el perno que el usuario está viendo actualmente
+      if (key !== pernoExcluido) {
+        const perno = especificacionesPernos[key];
 
-            // Creamos la tarjeta dinámicamente con su enlace href correspondiente
-            htmlTarjetas += `
-                <a href="detalle-tecnico.html?tipo=${key}" class="tech-card">
+        // Creamos la tarjeta dinámicamente con su enlace href correspondiente
+        htmlTarjetas += `
+                <a href="detalle-tecnico.html?tipo=${key}&visual=${perno.tipo}" class="tech-card">
                 <div class="card-image-placeholder"><span>🔩</span></div>
                 <div class="card-content">
                 <h3>${perno.titulo}</h3>
                 </div>
                 </a>
             `;
-        }
+      }
     });
 
     contenedorTarjetas.innerHTML = htmlTarjetas;
@@ -180,6 +202,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "perno-cabeza-hexagonal-estandar.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -478,6 +501,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "perno-cabeza-hexagonal-reforzada.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -563,7 +587,7 @@ const especificacionesPernos = {
             "colspan": 2,
             "direction": "row",
             "contenido": [
-              { "contenido": "L<sub>T</sub>" },
+              { "contenido": "<div>L<sub>T</sub></div>" },
               { "contenido": "Longitud de Rosca" },
               {
                 "direction": "column",
@@ -712,6 +736,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "perno-cabeza-hexagonal-estructural.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -803,7 +828,7 @@ const especificacionesPernos = {
             "colspan": 1,
             "direction": "row",
             "contenido": [
-              { "contenido": "L<sub>T</sub>" },
+              { "contenido": "<div>L<sub>T</sub></div>" },
               { "contenido": "Longitud de Rosca" },
               { "contenido": "Básico" }
             ]
@@ -909,6 +934,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "perno-cabeza-cuadrada.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -994,7 +1020,7 @@ const especificacionesPernos = {
             "colspan": 2,
             "direction": "row",
             "contenido": [
-              { "contenido": "L<sub>T</sub>" },
+              { "contenido": "<div>L<sub>T</sub></div>" },
               { "contenido": "Longitud de Rosca" },
               {
                 "direction": "column",
@@ -1127,6 +1153,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "perno-coche.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -1345,6 +1372,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "perno-cabeza-plana.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -1554,6 +1582,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "perno-cuello-ovalado.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -1615,7 +1644,7 @@ const especificacionesPernos = {
             "colspan": 1,
             "direction": "row",
             "contenido": [
-              { "contenido": "r<sub>1</sub>" },
+              { "contenido": "<div>r<sub>1</sub></div>" },
               { "contenido": "Radio de Curvatura de la Cabeza" }
             ]
           },
@@ -1623,7 +1652,7 @@ const especificacionesPernos = {
             "colspan": 1,
             "direction": "row",
             "contenido": [
-              { "contenido": "r<sub>2</sub>" },
+              { "contenido": "<div>r<sub>2</sub></div>" },
               { "contenido": "Radio del Borde de la Cabeza" }
             ]
           },
@@ -1671,7 +1700,7 @@ const especificacionesPernos = {
             "colspan": 1,
             "direction": "row",
             "contenido": [
-              { "contenido": "r<sub>3</sub>" },
+              { "contenido": "<div>r<sub>3</sub></div>" },
               { "contenido": "Radio de Arista del Cuello" }
             ]
           },
@@ -1695,7 +1724,7 @@ const especificacionesPernos = {
             "colspan": 1,
             "direction": "row",
             "contenido": [
-              { "contenido": "L<sub>T</sub>" },
+              { "contenido": "<div>L<sub>T</sub></div>" },
               { "contenido": "Longitud de Rosca Mín" }
             ]
           }
@@ -1770,6 +1799,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "perno-12-puntas.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -1877,7 +1907,7 @@ const especificacionesPernos = {
             "colspan": 1,
             "direction": "row",
             "contenido": [
-              { "contenido": "L<sub>a</sub>" },
+              { "contenido": "<div>L<sub>a</sub></div>" },
               { "contenido": "Longitud del Entallado<br><small>Máx</small>" }
             ]
           },
@@ -1931,7 +1961,7 @@ const especificacionesPernos = {
             "colspan": 1,
             "direction": "row",
             "contenido": [
-              { "contenido": "L<sub>T</sub>" },
+              { "contenido": "<div>L<sub>T</sub></div>" },
               { "contenido": "Longitud de Rosca<br><small>Básico</small>" }
             ]
           },
@@ -2080,6 +2110,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "perno-parker-cabeza-cilindrica.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -2465,6 +2496,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "perno-parker-cabeza-plana.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -2769,6 +2801,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "prisionero-allen.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -3006,6 +3039,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "tuerca-cuadrada.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -3198,6 +3232,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "tuerca-hexagonal.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -3257,7 +3292,7 @@ const especificacionesPernos = {
             "colspan": 2,
             "direction": "row",
             "contenido": [
-              { "contenido": "H<sup>1</sup>" },
+              { "contenido": "<div>H<sup>1</sup></div>" },
               { "contenido": "Espesor de Tuerca Hexagonal de Seguridad (Perfil Bajo)" },
               {
                 "direction": "column",
@@ -3502,6 +3537,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "tuerca-cuadrada.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -3695,6 +3731,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "tuerca-hexagonal.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -3756,7 +3793,7 @@ const especificacionesPernos = {
             "colspan": 3,
             "direction": "row",
             "contenido": [
-              { "contenido": "H<sub>1</sub>" },
+              { "contenido": "<div>H<sub>1</sub></div>" },
               { "contenido": "Espesor de Tuerca Hexagonal Pesada de Seguridad" },
               {
                 "direction": "column",
@@ -4002,6 +4039,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "tuerca-seguro-nylon.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -4231,6 +4269,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "image": "perno-u.png",
+    "tipo": 1,
     "filas": [
       {
         "columnas": [
@@ -4469,6 +4508,1669 @@ const especificacionesPernos = {
           { "direction": "column", "contenido": [{ "contenido": "<strong>24</strong>" }, { "contenido": "1 - 25,4" }] },
           { "contenido": "612,7" }, { "contenido": "638,1" }, { "contenido": "396,8" }, { "contenido": "120,6" }, { "contenido": "66,6" },
           { "contenido": "304,8" }, { "contenido": "19" }, { "contenido": "330,2" }, { "contenido": "1796" }, { "contenido": "7,143" }, { "contenido": "7,815" }
+        ]
+      }
+    ]
+  },
+
+  "requerimientos-mecanicos-pernos": {
+    "titulo": "Requermientos Mecanicos de Pernos SAE J429",
+    "fixedHeader": true,
+    "fixedFirstColumn": false,
+    "fixedIntersection": false,
+    "tipo": 2,
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Designación de Grado" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Productos" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Diámetro Nominal" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Esfuerzo de Carga de Prueba" },
+              { "contenido": "Tamaño Real Bajo Carga de Prueba Mín.<br><small>psi</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Resistencia a la Tracción" },
+              { "contenido": "Tamaño Real Tracción Mín.<br><small>psi</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Límite Elástico" },
+              { "contenido": "Probeta Mecanizada Límite Elástico Mín.<br><small>psi</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Resistencia a la Tracción Probeta" },
+              { "contenido": "Probeta Mecanizada Tracción Mín.<br><small>psi</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Alargamiento" },
+              { "contenido": "Probeta Mecanizada Alargamiento Mín.<br><small>%</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Reducción de Área" },
+              { "contenido": "Probeta Mecanizada Reducción de Área Mín.<br><small>%</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Dureza Superficial" },
+              { "contenido": "Rockwell 30N<br><small>Máx</small>" }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Dureza de Núcleo" },
+              { "contenido": "Rockwell" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Mín" },
+                  { "contenido": "Máx" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Marca de Grado" },
+              { "contenido": "Identificación de Cabeza / Marca" }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          // { "direction": "column", "contenido": [{ "contenido": "<strong>Grado 1</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }] },
+          { "contenido": "<strong>Grado 1</strong>" },
+          { "contenido": "Pernos, Tornillos, Espárragos" },
+          { "contenido": "1/4 a 1-1/2 pulg." },
+          { "contenido": "33,000" }, { "contenido": "60,000" }, { "contenido": "36,000" }, { "contenido": "60,000" },
+          { "contenido": "18" }, { "contenido": "35" }, { "contenido": "-" }, { "contenido": "B70" }, { "contenido": "B100" },
+          { "contenido": "Ninguna" }
+        ]
+      },
+      {
+        "columnas": [
+          // { "direction": "column", "contenido": [{ "contenido": "<strong>Grado 2</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 3/4 pulg." }] },
+          { "contenido": "<strong>Grado 2</strong>", "rowspan": 2 },
+          { "contenido": "Pernos, Tornillos, Espárragos", "rowspan": 2 },
+          { "contenido": "1/4 a 3/4 pulg." },
+          { "contenido": "55,000" }, { "contenido": "74,000" }, { "contenido": "57,000" }, { "contenido": "74,000" },
+          { "contenido": "18" }, { "contenido": "35" }, { "contenido": "-" }, { "contenido": "B80" }, { "contenido": "B100" },
+          { "contenido": "Ninguna" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 2</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "Sobre 3/4 a 1-1/2 pulg." }] },
+          { "contenido": "Sobre 3/4 a 1-1/2 pulg." },
+          { "contenido": "33,000" }, { "contenido": "60,000" }, { "contenido": "36,000" }, { "contenido": "60,000" },
+          { "contenido": "18" }, { "contenido": "35" }, { "contenido": "-" }, { "contenido": "B70" }, { "contenido": "B100" },
+          { "contenido": "Ninguna" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 4</strong>" }, { "contenido": "Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }] },
+          { "contenido": "<strong>Grado 4</strong>" },
+          { "contenido": "Espárragos" },
+          { "contenido": "1/4 a 1-1/2 pulg." },
+          { "contenido": "65,000" }, { "contenido": "115,000" }, { "contenido": "100,000" }, { "contenido": "115,000" },
+          { "contenido": "10" }, { "contenido": "35" }, { "contenido": "-" }, { "contenido": "C22" }, { "contenido": "C32" },
+          { "contenido": "Ninguna" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 5</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 1 pulg." }] },
+          { "contenido": "<strong>Grado 5</strong>", "rowspan": 2 },
+          { "contenido": "Pernos, Tornillos, Espárragos", "rowspan": 2 },
+          { "contenido": "1/4 a 1 pulg." },
+          { "contenido": "85,000" }, { "contenido": "120,000" }, { "contenido": "92,000" }, { "contenido": "120,000" },
+          { "contenido": "14" }, { "contenido": "35" }, { "contenido": "54" }, { "contenido": "C25" }, { "contenido": "C34" },
+          { "contenido": "3 líneas radiales (120°)" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 5</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "Sobre 1 a 1-1/2 pulg." }] },
+          { "contenido": "Sobre 1 a 1-1/2 pulg." },
+          { "contenido": "74,000" }, { "contenido": "105,000" }, { "contenido": "81,000" }, { "contenido": "105,000" },
+          { "contenido": "14" }, { "contenido": "35" }, { "contenido": "50" }, { "contenido": "C19" }, { "contenido": "C30" },
+          { "contenido": "3 líneas radiales (120°)" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 5.1</strong>" }, { "contenido": "SEMS" }, { "contenido": "No. 4 a 5/8 pulg." }] },
+          { "contenido": "<strong>Grado 5.1</strong>" }, { "contenido": "SEMS" }, { "contenido": "No. 4 a 5/8 pulg." },
+          { "contenido": "85,000" }, { "contenido": "120,000" }, { "contenido": "-" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "-" }, { "contenido": "59.5" }, { "contenido": "C25" }, { "contenido": "C40" },
+          { "contenido": "2 líneas verticales paralelas" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 5.2</strong>" }, { "contenido": "Pernos, Tornillos" }, { "contenido": "1/4 a 1 pulg." }] },
+          { "contenido": "<strong>Grado 5.2</strong>" }, { "contenido": "Pernos, Tornillos" }, { "contenido": "1/4 a 1 pulg." },
+          { "contenido": "85,000" }, { "contenido": "120,000" }, { "contenido": "92,000" }, { "contenido": "120,000" },
+          { "contenido": "14" }, { "contenido": "35" }, { "contenido": "56" }, { "contenido": "C26" }, { "contenido": "C36" },
+          { "contenido": "3 líneas radiales con guion" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 8</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }] },
+          { "contenido": "<strong>Grado 8</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." },
+          { "contenido": "120,000" }, { "contenido": "150,000" }, { "contenido": "130,000" }, { "contenido": "150,000" },
+          { "contenido": "12" }, { "contenido": "35" }, { "contenido": "58.6" }, { "contenido": "C33" }, { "contenido": "C39" },
+          { "contenido": "6 líneas radiales (60°)" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 8.1</strong>" }, { "contenido": "Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }] },
+          { "contenido": "<strong>Grado 8.1</strong>" }, { "contenido": "Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." },
+          { "contenido": "120,000" }, { "contenido": "150,000" }, { "contenido": "130,000" }, { "contenido": "150,000" },
+          { "contenido": "10" }, { "contenido": "35" }, { "contenido": "58.6" }, { "contenido": "C33" }, { "contenido": "C39" },
+          { "contenido": "Ninguna" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 8.2</strong>" }, { "contenido": "Pernos, Tornillos" }, { "contenido": "1/4 a 1 pulg." }] },
+          { "contenido": "<strong>Grado 8.2</strong>" }, { "contenido": "Pernos, Tornillos" }, { "contenido": "1/4 a 1 pulg." },
+          { "contenido": "120,000" }, { "contenido": "150,000" }, { "contenido": "130,000" }, { "contenido": "150,000" },
+          { "contenido": "10" }, { "contenido": "35" }, { "contenido": "58.6" }, { "contenido": "C33" }, { "contenido": "C39" },
+          { "contenido": "6 líneas radiales en grupo" }
+        ]
+      }
+    ]
+  },
+
+  "requerimientos-quimicos-pernos-sae-j429": {
+    "titulo": "Requerimientos Químicos (SAE J429)",
+    "fixedHeader": true,
+    "fixedFirstColumn": false,
+    "fixedIntersection": false,
+    "tipo": 2,
+    "filas": [
+      {
+        "columnas": [
+          // {
+          //   "colspan": 1,
+          //   "direction": "column",
+          //   "contenido": [
+          //     { "contenido": "Designación de Grado, Productos, Diámetro Nominal, Material y Tratamiento" }
+          //   ]
+          // },
+          {
+            "colspan": 1,
+            "contenido": "Designación de Grado"
+          },
+          {
+            "colspan": 1,
+            "contenido": "Productos"
+          },
+          {
+            "colspan": 1,
+            "contenido": "Diámetro Nominal"
+          },
+          {
+            "colspan": 1,
+            "contenido": "Material"
+          },
+          {
+            "colspan": 1,
+            "contenido": "Tratamiento"
+          },
+          {
+            "colspan": 6,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Análisis Químico del Producto (% en Peso)" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Carbono (C) Mín" },
+                  { "contenido": "Carbono (C) Máx" },
+                  { "contenido": "Fósforo (P) Máx" },
+                  { "contenido": "Azufre (S) Máx" },
+                  { "contenido": "Boro (B) Mín" },
+                  { "contenido": "Boro (B) Máx" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Temperatura de Revenido" },
+              { "contenido": "°C (°F) Mín" }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 1</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero de Bajo o Medio Carbono" }, { "contenido": "Ver 4.4" }] },
+          { "contenido": "<strong>Grado 1</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero de Bajo o Medio Carbono" }, { "contenido": "Ver 4.4" },
+          { "contenido": "-" }, { "contenido": "0.55" }, { "contenido": "0.025" }, { "contenido": "0.025" }, { "contenido": "-" }, { "contenido": "-" },
+          { "contenido": "Ver 4.4" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 2</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero de Bajo o Medio Carbono" }, { "contenido": "Ver 4.4" }] },
+          { "contenido": "<strong>Grado 2</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero de Bajo o Medio Carbono" }, { "contenido": "Ver 4.4" },
+          { "contenido": "0.15" }, { "contenido": "0.55" }, { "contenido": "0.025" }, { "contenido": "0.025<sup>(2)</sup>" }, { "contenido": "-" }, { "contenido": "-" },
+          { "contenido": "Ver 4.4" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 4</strong>" }, { "contenido": "Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero de Medio Carbono" }, { "contenido": "Estirado en Frío" }] },
+          { "contenido": "<strong>Grado 4</strong>" }, { "contenido": "Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero de Medio Carbono" }, { "contenido": "Estirado en Frío" },
+          { "contenido": "0.28" }, { "contenido": "0.55" }, { "contenido": "0.025" }, { "contenido": "0.13" }, { "contenido": "-" }, { "contenido": "-" },
+          { "contenido": "Ver 4.4" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 5</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero de Medio Carbono" }, { "contenido": "Templado y Revenido" }] },
+          { "rowspan": 2, "contenido": "<strong>Grado 5</strong>" }, { "rowspan": 2, "contenido": "Pernos, Tornillos, Espárragos" }, { "rowspan": 2, "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero de Medio Carbono" }, { "contenido": "Templado y Revenido" },
+          { "contenido": "0.25" }, { "contenido": "0.55" }, { "contenido": "0.025" }, { "contenido": "0.025<sup>(4)</sup>" }, { "contenido": "-" }, { "contenido": "-" },
+          { "contenido": "425°C (800°F)" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 5</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero al Carbono con Aditivos (ej. Boro, Cr o Mn)" }, { "contenido": "Templado y Revenido" }] },
+          { "contenido": "Acero al Carbono con Aditivos (ej. Boro, Cr o Mn)" }, { "contenido": "Templado y Revenido" },
+          { "contenido": "0.15" }, { "contenido": "0.40" }, { "contenido": "0.025" }, { "contenido": "0.025<sup>(4)</sup>" }, { "contenido": "0.0005" }, { "contenido": "0.003" },
+          { "contenido": "425°C (800°F)" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 5.1<sup>(5)</sup></strong>" }, { "contenido": "SEMS" }, { "contenido": "No. 4 a 5/8 pulg." }, { "contenido": "Acero de Bajo o Medio Carbono" }, { "contenido": "Templado y Revenido" }] },
+          { "contenido": "<strong>Grado 5.1<sup>(5)</sup></strong>" }, { "contenido": "SEMS" }, { "contenido": "No. 4 a 5/8 pulg." }, { "contenido": "Acero de Bajo o Medio Carbono" }, { "contenido": "Templado y Revenido" },
+          { "contenido": "0.15" }, { "contenido": "0.30" }, { "contenido": "0.025" }, { "contenido": "0.025" }, { "contenido": "-" }, { "contenido": "0.003" },
+          { "contenido": "340°C (650°F)" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 5.2</strong>" }, { "contenido": "Pernos, Tornillos" }, { "contenido": "1/4 a 1 pulg." }, { "contenido": "Acero al Boro de Bajo Carbono" }, { "contenido": "Templado y Revenido" }] },
+          { "contenido": "<strong>Grado 5.2</strong>" }, { "contenido": "Pernos, Tornillos" }, { "contenido": "1/4 a 1 pulg." }, { "contenido": "Acero al Boro de Bajo Carbono" }, { "contenido": "Templado y Revenido" },
+          { "contenido": "0.15" }, { "contenido": "0.25" }, { "contenido": "0.025" }, { "contenido": "0.025" }, { "contenido": "0.0005" }, { "contenido": "0.003" },
+          { "contenido": "425°C (800°F)" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 8</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero al Carbono con Aditivos (ej. Boro, Cr o Mn)" }, { "contenido": "Templado y Revenido" }] },
+          { "rowspan": 3, "contenido": "<strong>Grado 8</strong>" }, { "rowspan": 3, "contenido": "Pernos, Tornillos, Espárragos" }, { "rowspan": 3, "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero al Carbono con Aditivos (ej. Boro, Cr o Mn)" }, { "contenido": "Templado y Revenido" },
+          { "contenido": "0.25" }, { "contenido": "0.55" }, { "contenido": "0.025" }, { "contenido": "0.025<sup>(4)</sup>" }, { "contenido": "-" }, { "contenido": "0.003" },
+          { "contenido": "425°C (800°F)" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 8</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero de Medio Carbono" }, { "contenido": "Templado y Revenido" }] },
+          { "contenido": "Acero de Medio Carbono" }, { "contenido": "Templado y Revenido" },
+          { "contenido": "0.25" }, { "contenido": "0.55" }, { "contenido": "0.025" }, { "contenido": "0.025<sup>(4)</sup>" }, { "contenido": "-" }, { "contenido": "-" },
+          { "contenido": "425°C (800°F)" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 8</strong>" }, { "contenido": "Pernos, Tornillos, Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero Aleado" }, { "contenido": "Templado y Revenido" }] },
+          { "contenido": "Acero Aleado" }, { "contenido": "Templado y Revenido" },
+          { "contenido": "0.25" }, { "contenido": "0.55" }, { "contenido": "0.025<sup>(10)</sup>" }, { "contenido": "0.025<sup>(10)</sup>" }, { "contenido": "-" }, { "contenido": "-" },
+          { "contenido": "425°C (800°F)" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 8.1</strong>" }, { "contenido": "Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero de Medio Carbono o SAE 1541" }, { "contenido": "Estirado a Alta Temperatura" }] },
+          { "contenido": "<strong>Grado 8.1</strong>" }, { "contenido": "Espárragos" }, { "contenido": "1/4 a 1-1/2 pulg." }, { "contenido": "Acero de Medio Carbono o SAE 1541" }, { "contenido": "Estirado a Alta Temperatura" },
+          { "contenido": "0.28" }, { "contenido": "0.55" }, { "contenido": "0.025" }, { "contenido": "0.040" }, { "contenido": "-" }, { "contenido": "-" },
+          { "contenido": "425°C (800°F)" }
+        ]
+      },
+      {
+        "columnas": [
+          //{ "direction": "column", "contenido": [{ "contenido": "<strong>Grado 8.2</strong>" }, { "contenido": "Pernos, Tornillos" }, { "contenido": "1/4 a 1 pulg." }, { "contenido": "Acero al Boro de Bajo Carbono" }, { "contenido": "Templado y Revenido" }] },
+          { "contenido": "<strong>Grado 8.2</strong>" }, { "contenido": "Pernos, Tornillos" }, { "contenido": "1/4 a 1 pulg." }, { "contenido": "Acero al Boro de Bajo Carbono" }, { "contenido": "Templado y Revenido" },
+          { "contenido": "0.15" }, { "contenido": "0.25" }, { "contenido": "0.025" }, { "contenido": "0.025" }, { "contenido": "0.0005" }, { "contenido": "0.003" },
+          { "contenido": "340°C (650°F)" }
+        ]
+      }
+    ]
+  },
+
+  "req-mecanico-aceros-ferriticos-astm-a193": {
+    "titulo": "Requerimientos Mecánicos de Aceros Ferríticos (ASTM A193)",
+    "fixedHeader": true,
+    "fixedFirstColumn": false,
+    "fixedIntersection": false,
+    "tipo": 2,
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Grado y Diámetro" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Temperatura Mínima de Revenido" },
+              { "contenido": "°F" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Resistencia a la Tracción Mín" },
+              { "contenido": "ksi" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Límite Elástico Mín" },
+              { "contenido": "0.2% Offset, ksi" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Alargamiento Mín" },
+              { "contenido": "en 4D, %" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Reducción de Área Mín" },
+              { "contenido": "%" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Dureza Máxima" },
+              { "contenido": "HBW / HRC / HRB" }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>B5</strong><br><small>4 a 6% Cromo</small>" }, { "contenido": "Hasta 4 pulg., incl." }] },
+          { "contenido": "1100" }, { "contenido": "100" }, { "contenido": "80" }, { "contenido": "16" }, { "contenido": "50" },
+          { "contenido": "..." }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>B6</strong><br><small>13% Cromo</small>" }, { "contenido": "Hasta 4 pulg., incl." }] },
+          { "contenido": "1100" }, { "contenido": "110" }, { "contenido": "85" }, { "contenido": "15" }, { "contenido": "50" },
+          { "contenido": "..." }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>B6X</strong><br><small>13% Cromo</small>" }, { "contenido": "Hasta 4 pulg., incl." }] },
+          { "contenido": "1100" }, { "contenido": "90" }, { "contenido": "70" }, { "contenido": "16" }, { "contenido": "50" },
+          { "contenido": "26 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>B7</strong><br><small>Cromo-Molibdeno</small>" }, { "contenido": "2-1/2 pulg. y menor" }] },
+          { "contenido": "1100" }, { "contenido": "125" }, { "contenido": "105" }, { "contenido": "16" }, { "contenido": "50" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>B7</strong><br><small>Cromo-Molibdeno</small>" }, { "contenido": "Sobre 2-1/2 a 4 pulg." }] },
+          { "contenido": "1100" }, { "contenido": "115" }, { "contenido": "95" }, { "contenido": "16" }, { "contenido": "50" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>B7</strong><br><small>Cromo-Molibdeno</small>" }, { "contenido": "Sobre 4 a 7 pulg." }] },
+          { "contenido": "1100" }, { "contenido": "100" }, { "contenido": "75" }, { "contenido": "18" }, { "contenido": "50" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>B7M<sup>A</sup></strong><br><small>Cromo-Molibdeno</small>" }, { "contenido": "4 pulg. y menor" }] },
+          { "contenido": "1150" }, { "contenido": "100" }, { "contenido": "80" }, { "contenido": "18" }, { "contenido": "50" },
+          { "contenido": "235 HBW o 99 HRB" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>B7M<sup>A</sup></strong><br><small>Cromo-Molibdeno</small>" }, { "contenido": "Sobre 4 a 7 pulg." }] },
+          { "contenido": "1150" }, { "contenido": "100" }, { "contenido": "75" }, { "contenido": "18" }, { "contenido": "50" },
+          { "contenido": "235 HBW o 99 HRB" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>B16</strong><br><small>Cromo-Molibdeno-Vanadio</small>" }, { "contenido": "2-1/2 pulg. y menor" }] },
+          { "contenido": "1200" }, { "contenido": "125" }, { "contenido": "105" }, { "contenido": "18" }, { "contenido": "50" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>B16</strong><br><small>Cromo-Molibdeno-Vanadio</small>" }, { "contenido": "Sobre 2-1/2 a 4 pulg." }] },
+          { "contenido": "1200" }, { "contenido": "110" }, { "contenido": "95" }, { "contenido": "17" }, { "contenido": "45" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>B16</strong><br><small>Cromo-Molibdeno-Vanadio</small>" }, { "contenido": "Sobre 4 a 8 pulg." }] },
+          { "contenido": "1200" }, { "contenido": "100" }, { "contenido": "85" }, { "contenido": "16" }, { "contenido": "45" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      }
+    ]
+  },
+
+  "req-mecanico-aceros-austeniticos-astm-a193": {
+    "titulo": "Requerimientos Mecánicos de Aceros Austeníticos (ASTM A193)",
+    "fixedHeader": true,
+    "fixedFirstColumn": false,
+    "fixedIntersection": false,
+    "tipo": 2,
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Grado, Clase y Diámetro" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Tratamiento Térmico" },
+              { "contenido": "Especificación" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Resistencia a la Tracción Mín" },
+              { "contenido": "ksi" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Límite Elástico Mín" },
+              { "contenido": "0.2% Offset, ksi" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Alargamiento Mín" },
+              { "contenido": "en 4D, %" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Reducción de Área Mín" },
+              { "contenido": "%" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Dureza Máxima" },
+              { "contenido": "HBW / HRB / HRC" }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clases 1 y 1D: B8, B8M, B8P, B8LN, B8MLN, B8CLN</strong>" }, { "contenido": "Todos los diámetros" }] },
+          { "contenido": "Tratado por solución de carburos" }, { "contenido": "75" }, { "contenido": "30" }, { "contenido": "30" }, { "contenido": "50" },
+          { "contenido": "223 HBW o 96 HRB" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 1: B8C, B8T</strong>" }, { "contenido": "Todos los diámetros" }] },
+          { "contenido": "Tratado por solución de carburos" }, { "contenido": "75" }, { "contenido": "30" }, { "contenido": "30" }, { "contenido": "50" },
+          { "contenido": "223 HBW o 96 HRB" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 1A: B8A, B8CA, B8CLNA, B8MA, B8PA, B8TA, B8LNA, B8MLNA, B8NA, B8MNA, B8MLCuNA</strong>" }, { "contenido": "Todos los diámetros" }] },
+          { "contenido": "Tratado por solución de carburos en condición final" }, { "contenido": "75" }, { "contenido": "30" }, { "contenido": "30" }, { "contenido": "50" },
+          { "contenido": "192 HBW o 90 HRB" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clases 1B y 1D: B8N, B8MN, B8MLCuN</strong>" }, { "contenido": "Todos los diámetros" }] },
+          { "contenido": "Tratado por solución de carburos" }, { "contenido": "80" }, { "contenido": "35" }, { "contenido": "30" }, { "contenido": "40" },
+          { "contenido": "223 HBW o 96 HRB" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clases 1C y 1D: B8R</strong>" }, { "contenido": "Todos los diámetros" }] },
+          { "contenido": "Tratado por solución de carburos" }, { "contenido": "100" }, { "contenido": "55" }, { "contenido": "35" }, { "contenido": "55" },
+          { "contenido": "271 HBW o 28 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 1C: B8RA</strong>" }, { "contenido": "Todos los diámetros" }] },
+          { "contenido": "Tratado por solución de carburos en condición final" }, { "contenido": "100" }, { "contenido": "55" }, { "contenido": "35" }, { "contenido": "55" },
+          { "contenido": "271 HBW o 28 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clases 1C y 1D: B8S</strong>" }, { "contenido": "Todos los diámetros" }] },
+          { "contenido": "Tratado por solución de carburos" }, { "contenido": "95" }, { "contenido": "50" }, { "contenido": "35" }, { "contenido": "55" },
+          { "contenido": "271 HBW o 28 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 1C: B8SA</strong>" }, { "contenido": "Todos los diámetros" }] },
+          { "contenido": "Tratado por solución de carburos en condición final" }, { "contenido": "95" }, { "contenido": "50" }, { "contenido": "35" }, { "contenido": "55" },
+          { "contenido": "271 HBW o 28 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 2: B8, B8C, B8P, B8T, B8N<sup>D</sup></strong>" }, { "contenido": "3/4 pulg. y menor" }] },
+          { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "contenido": "125" }, { "contenido": "100" }, { "contenido": "12" }, { "contenido": "35" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 2: B8, B8C, B8P, B8T, B8N<sup>D</sup></strong>" }, { "contenido": "Sobre 3/4 a 1 pulg., incl." }] },
+          { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "contenido": "115" }, { "contenido": "80" }, { "contenido": "15" }, { "contenido": "35" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 2: B8, B8C, B8P, B8T, B8N<sup>D</sup></strong>" }, { "contenido": "Sobre 1 a 1-1/4 pulg., incl." }] },
+          { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "contenido": "105" }, { "contenido": "65" }, { "contenido": "20" }, { "contenido": "35" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 2: B8, B8C, B8P, B8T, B8N<sup>D</sup></strong>" }, { "contenido": "Sobre 1-1/4 a 1-1/2 pulg., incl." }] },
+          { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "contenido": "100" }, { "contenido": "50" }, { "contenido": "28" }, { "contenido": "45" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 2: B8M, B8MN, B8MLCuN<sup>D</sup></strong>" }, { "contenido": "3/4 pulg. y menor" }] },
+          { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "contenido": "110" }, { "contenido": "95" }, { "contenido": "15" }, { "contenido": "45" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 2: B8M, B8MN, B8MLCuN<sup>D</sup></strong>" }, { "contenido": "Sobre 3/4 a 1 pulg., incl." }] },
+          { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "contenido": "100" }, { "contenido": "80" }, { "contenido": "20" }, { "contenido": "45" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 2: B8M, B8MN, B8MLCuN<sup>D</sup></strong>" }, { "contenido": "Sobre 1 a 1-1/4 pulg., incl." }] },
+          { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "contenido": "95" }, { "contenido": "65" }, { "contenido": "25" }, { "contenido": "45" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 2: B8M, B8MN, B8MLCuN<sup>D</sup></strong>" }, { "contenido": "Sobre 1-1/4 a 1-1/2 pulg., incl." }] },
+          { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "contenido": "90" }, { "contenido": "50" }, { "contenido": "30" }, { "contenido": "45" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 2B: B8, B8M2<sup>D</sup></strong>" }, { "contenido": "2 pulg. y menor" }] },
+          { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "contenido": "95" }, { "contenido": "75" }, { "contenido": "25" }, { "contenido": "40" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 2B: B8, B8M2<sup>D</sup></strong>" }, { "contenido": "Sobre 2 a 2-1/2 pulg., incl." }] },
+          { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "contenido": "90" }, { "contenido": "65" }, { "contenido": "30" }, { "contenido": "40" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 2B: B8, B8M2<sup>D</sup></strong>" }, { "contenido": "Sobre 2-1/2 a 3 pulg., incl." }] },
+          { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "contenido": "80" }, { "contenido": "55" }, { "contenido": "30" }, { "contenido": "40" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 2C: B8M3<sup>D</sup></strong>" }, { "contenido": "2 pulg. y menor" }] },
+          { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "contenido": "85" }, { "contenido": "65" }, { "contenido": "30" }, { "contenido": "60" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 2C: B8M3<sup>D</sup></strong>" }, { "contenido": "Sobre 2 pulg." }] },
+          { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "contenido": "85" }, { "contenido": "60" }, { "contenido": "30" }, { "contenido": "60" },
+          { "contenido": "321 HBW o 35 HRC" }
+        ]
+      }
+    ]
+  },
+
+  "req-quimico-astm-a193": {
+    "titulo": "Requerimientos Químicos (ASTM A193)",
+    "fixedHeader": false,
+    "fixedFirstColumn": false,
+    "fixedIntersection": false,
+    "tipo": 2,
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 5,
+            "contenido": "<strong>Composición Química</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Tipo / Type</strong>" },
+          { "colspan": 4, "contenido": "<strong>Aceros Ferríticos</strong>" },
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Grado / Grade</strong>" },
+          { "colspan": 2, "contenido": "<strong>B5</strong>" },
+          { "colspan": 2, "contenido": "<strong>B6 y B6X</strong>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Descripción / Description</strong>" },
+          { "colspan": 2, "contenido": "5% Cromo" },
+          { "colspan": 2, "contenido": "12% Cromo" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Designación UNS</strong>" },
+          { "colspan": 2, "contenido": "-" },
+          { "colspan": 2, "contenido": "S41000 (410)" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Elemento (%)</strong>" },
+          { "contenido": "Rango (%)" },
+          { "contenido": "Variación de Producto (Sobre o Bajo)<sup>B</sup>" },
+          { "contenido": "Rango (%)" },
+          { "contenido": "Variación de Producto (Sobre o Bajo)<sup>B</sup>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Carbono, máx" }, { "contenido": "0.10 mín" }, { "contenido": "0.01 bajo" }, { "contenido": "0.08 - 0.15" }, { "contenido": "0.01 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Manganeso, máx" }, { "contenido": "1.00" }, { "contenido": "0.03 sobre" }, { "contenido": "1.00" }, { "contenido": "0.03 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Fósforo, máx" }, { "contenido": "0.040" }, { "contenido": "0.005 sobre" }, { "contenido": "0.040" }, { "contenido": "0.005 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Azufre, máx" }, { "contenido": "0.030" }, { "contenido": "0.005 sobre" }, { "contenido": "0.030" }, { "contenido": "0.005 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Silicio, máx" }, { "contenido": "1.00 máx" }, { "contenido": "0.05 sobre" }, { "contenido": "1.00 máx" }, { "contenido": "0.05 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Cromo" }, { "contenido": "4.0 - 6.0" }, { "contenido": "0.10" }, { "contenido": "11.5 - 13.5" }, { "contenido": "0.15" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Molibdeno" }, { "contenido": "0.40 - 0.65" }, { "contenido": "0.05" }, { "contenido": "-" }, { "contenido": "-" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Tipo / Type</strong>" },
+          { "colspan": 4, "contenido": "<strong>Aceros Ferríticos</strong>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Grado / Grade</strong>" },
+          { "colspan": 2, "contenido": "<strong>B7, B7M</strong>" },
+          { "colspan": 2, "contenido": "<strong>B16</strong>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Descripción / Description</strong>" },
+          { "colspan": 2, "contenido": "Cromo-Molibdeno<sup>C</sup>" },
+          { "colspan": 2, "contenido": "Cromo-Molibdeno-Vanadio" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Elemento (%)</strong>" },
+          { "contenido": "Rango (%)" },
+          { "contenido": "Variación de Producto (Sobre o Bajo)<sup>B</sup>" },
+          { "contenido": "Rango (%)" },
+          { "contenido": "Variación de Producto (Sobre o Bajo)<sup>B</sup>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Carbono" }, { "contenido": "0.37 - 0.49<sup>D</sup>" }, { "contenido": "0.02" }, { "contenido": "0.36 - 0.47" }, { "contenido": "0.02" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Manganeso" }, { "contenido": "0.65 - 1.10" }, { "contenido": "0.04" }, { "contenido": "0.45 - 0.70" }, { "contenido": "0.03" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Fósforo, máx" }, { "contenido": "0.035" }, { "contenido": "0.005 sobre" }, { "contenido": "0.035" }, { "contenido": "0.005 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Azufre, máx" }, { "contenido": "0.040" }, { "contenido": "0.005 sobre" }, { "contenido": "0.040" }, { "contenido": "0.005 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Silicio" }, { "contenido": "0.15 - 0.35" }, { "contenido": "0.02" }, { "contenido": "0.15 - 0.35" }, { "contenido": "0.02" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Cromo" }, { "contenido": "0.75 - 1.20" }, { "contenido": "0.05" }, { "contenido": "0.80 - 1.15" }, { "contenido": "0.05" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Molibdeno" }, { "contenido": "0.15 - 0.25" }, { "contenido": "0.02" }, { "contenido": "0.50 - 0.65" }, { "contenido": "0.03" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Vanadio" }, { "contenido": "-" }, { "contenido": "-" }, { "contenido": "0.25 - 0.35" }, { "contenido": "0.03" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Aluminio, máx %" }, { "contenido": "-" }, { "contenido": "-" }, { "contenido": "0.015" }, { "contenido": "-" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Tipo / Type</strong>" },
+          {
+            "colspan": 4,
+            "contenido": "<strong>Aceros Austeníticos<sup>F</sup> - Clases 1, 1A, 1D y 2</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Grado / Grade</strong>" },
+          { "contenido": "<strong>B8, B8A</strong>" },
+          { "contenido": "<strong>B8C, B8CA</strong>" },
+          { "contenido": "<strong>B8M, B8MA, B8M2, B8M3</strong>" },
+          { "contenido": "<strong>B8P, B8PA</strong>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Designación UNS</strong>" },
+          { "contenido": "S30400 (304)" },
+          { "contenido": "S34700 (347)" },
+          { "contenido": "S31600 (316)" },
+          { "contenido": "S30500" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Elemento (%)</strong>" },
+          { "direction": "column", "contenido": [{ "contenido": "Rango (%)" }, { "contenido": "Variación" }]  },
+          { "direction": "column", "contenido": [{ "contenido": "Rango (%)" }, { "contenido": "Variación" }]  },
+          { "direction": "column", "contenido": [{ "contenido": "Rango (%)" }, { "contenido": "Variación" }]  },
+          { "direction": "column", "contenido": [{ "contenido": "Rango (%)" }, { "contenido": "Variación" }]  }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Carbono, máx" }, 
+          { "direction": "column", "contenido": [{ "contenido": "0.08" }, { "contenido": "0.01 sobre" }]},
+          { "direction": "column", "contenido": [{ "contenido": "0.08" }, { "contenido": "0.01 sobre" }]},
+          { "direction": "column", "contenido": [{ "contenido": "0.08" }, { "contenido": "0.01 sobre" }]},
+          { "direction": "column", "contenido": [{ "contenido": "0.12" }, { "contenido": "0.01 sobre" }]}
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Manganeso, máx" },
+          { "direction": "column", "contenido": [{ "contenido": "2.00" }, { "contenido": "0.04 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.00" }, { "contenido": "0.04 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.00" }, { "contenido": "0.04 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.00" }, { "contenido": "0.04 sobre" }] }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Fósforo, máx" },
+          { "direction": "column", "contenido": [{ "contenido": "0.045" }, { "contenido": "0.010 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.045" }, { "contenido": "0.010 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.045" }, { "contenido": "0.010 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.045" }, { "contenido": "0.010 sobre" }] }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Azufre, máx" },
+          { "direction": "column", "contenido": [{ "contenido": "0.030" }, { "contenido": "0.005 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.030" }, { "contenido": "0.005 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.030" }, { "contenido": "0.005 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.030" }, { "contenido": "0.005 sobre" }] }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Silicio, máx" },
+          { "direction": "column", "contenido": [{ "contenido": "1.00" }, { "contenido": "0.05 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.00" }, { "contenido": "0.05 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.00" }, { "contenido": "0.05 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.00" }, { "contenido": "0.05 sobre" }] }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Cromo" },
+          { "direction": "column", "contenido": [{ "contenido": "18.0 - 20.0" }, { "contenido": "0.20" }] },
+          { "direction": "column", "contenido": [{ "contenido": "17.0 - 19.0" }, { "contenido": "0.20" }] },
+          { "direction": "column", "contenido": [{ "contenido": "16.0 - 18.0" }, { "contenido": "0.20" }] },
+          { "direction": "column", "contenido": [{ "contenido": "17.0 - 19.0" }, { "contenido": "0.20" }] }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Níquel" },
+          { "direction": "column", "contenido": [{ "contenido": "8.0 - 11.0" }, { "contenido": "0.15" }] },
+          { "direction": "column", "contenido": [{ "contenido": "9.0 - 12.0" }, { "contenido": "0.15" }] },
+          { "direction": "column", "contenido": [{ "contenido": "10.0 - 14.0" }, { "contenido": "0.15" }] },
+          { "direction": "column", "contenido": [{ "contenido": "11.0 - 13.0" }, { "contenido": "0.15" }] }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Molibdeno" },
+          { "direction": "column", "contenido": [{ "contenido": "-" }, { "contenido": "-" }] },
+          { "direction": "column", "contenido": [{ "contenido": "-" }, { "contenido": "-" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.00 - 3.00" }, { "contenido": "0.10" }] },
+          { "direction": "column", "contenido": [{ "contenido": "-" }, { "contenido": "-" }] }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Columbio + Tántalo" },
+          { "direction": "column", "contenido": [{ "contenido": "-" }, { "contenido": "-" }] },
+          { "direction": "column", "contenido": [{ "contenido": "10 x contenido C mín, 1.10 máx" }, { "contenido": "0.05 bajo" }] },
+          { "direction": "column", "contenido": [{ "contenido": "-" }, { "contenido": "-" }] },
+          { "direction": "column", "contenido": [{ "contenido": "-" }, { "contenido": "-" }] }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Tipo / Type</strong>" },
+          {
+            "colspan": 4,
+            "contenido": "<strong>Aceros Austeníticos<sup>F</sup> - Clases 1A, 1B, 1D y 2</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Grado / Grade</strong>" },
+          { "contenido": "<strong>B8N, B8NA</strong>" },
+          { "contenido": "<strong>B8MN, B8MNA</strong>" },
+          { "colspan": 2, "contenido": "<strong>B8MLCuN, B8MLCuNA</strong>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Designación UNS</strong>" },
+          { "contenido": "S30451 (304N)" },
+          { "contenido": "S31651 (316N)" },
+          { "colspan": 2, "contenido": "S31254" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Elemento (%)</strong>" },
+          { "direction": "column", "contenido": [{ "contenido": "Rango (%)" }, { "contenido": "Variación" }] },
+          { "direction": "column", "contenido": [{ "contenido": "Rango (%)" }, { "contenido": "Variación" }]},
+          { "contenido": "Rango (%)" }, { "contenido": "Variación" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Carbono, máx" },
+          { "direction": "column", "contenido": [{ "contenido": "0.08" }, { "contenido": "0.01 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.08" }, { "contenido": "0.01 sobre" }]},
+          { "contenido": "0.020" }, { "contenido": "0.005 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Manganeso, máx" },
+          { "direction": "column", "contenido": [{ "contenido": "2.00" }, { "contenido": "0.04 sobre" }]},
+          { "direction": "column", "contenido": [{ "contenido": "2.00" }, { "contenido": "0.04 sobre" }]},
+          { "contenido": "1.00" }, { "contenido": "0.03 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Fósforo, máx" },
+          { "direction": "column", "contenido": [{ "contenido": "0.045" }, { "contenido": "0.010 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.045" }, { "contenido": "0.010 sobre" }] },
+          { "contenido": "0.030" }, { "contenido": "0.005 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Azufre, máx" },
+          { "direction": "column", "contenido": [{ "contenido": "0.030" }, { "contenido": "0.005 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.030" }, { "contenido": "0.005 sobre" }]},
+          { "contenido": "0.010" }, { "contenido": "0.002 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Silicio, máx" },
+          { "direction": "column", "contenido": [{ "contenido": "1.00" }, { "contenido": "0.05 sobre" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.00" }, { "contenido": "0.05 sobre" }] },
+          { "contenido": "0.80" }, { "contenido": "0.05 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Cromo" },
+          { "direction": "column", "contenido": [{ "contenido": "18.0 - 20.0" }, { "contenido": "0.20" }] },
+          { "direction": "column", "contenido": [{ "contenido": "16.0 - 18.0" }, { "contenido": "0.20" }] },
+          { "contenido": "19.5 - 20.5" }, { "contenido": "0.20" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Níquel" },
+          { "direction": "column", "contenido": [{ "contenido": "8.0 - 11.0" }, { "contenido": "0.15" }]},
+          { "direction": "column", "contenido": [{ "contenido": "10.0 - 13.0" }, { "contenido": "0.15" }]},
+          { "contenido": "17.5 - 18.5" }, { "contenido": "0.15" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Molibdeno" },
+          { "direction": "column", "contenido": [{ "contenido": "-" }, { "contenido": "-" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.00 - 3.00" }, { "contenido": "0.10" }] },
+          { "contenido": "6.0 - 6.5" }, { "contenido": "0.10" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Nitrógeno" },
+          { "direction": "column", "contenido": [{ "contenido": "0.10 - 0.16" }, { "contenido": "0.01" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.10 - 0.16" }, { "contenido": "0.01" }]},
+          { "contenido": "0.18 - 0.22" }, { "contenido": "0.01" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Cobre" },
+          { "direction": "column", "contenido": [{ "contenido": "-" }, { "contenido": "-" }] },
+          { "direction": "column", "contenido": [{ "contenido": "-" }, { "contenido": "-" }]},
+          { "contenido": "0.50 - 1.00" }, { "contenido": "0.04" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Tipo / Type</strong>" },
+          {
+            "colspan": 4,
+            "contenido": "<strong>Aceros Austeníticos<sup>F</sup> - Clases 1, 1A y 2</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Grado / Grade</strong>" },
+          { "colspan": 4, "contenido": "<strong>B8T, B8TA</strong>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Designación UNS</strong>" },
+          { "colspan": 4, "contenido": "S32100 (321)" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Elemento (%)</strong>" },
+          { "colspan": 2, "contenido": "Rango (%)" },
+          { "colspan": 2, "contenido": "Variación de Producto (Sobre o Bajo)<sup>B</sup>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Carbono, máx" },
+          { "colspan": 2, "contenido": "0.08" }, { "colspan": 2, "contenido": "0.01 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Manganeso, máx" }, { "colspan": 2, "contenido": "2.00" }, { "colspan": 2, "contenido": "0.04 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Fósforo, máx" }, { "colspan": 2, "contenido": "0.045" }, { "colspan": 2, "contenido": "0.010 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Azufre, máx" }, { "colspan": 2, "contenido": "0.030" }, { "colspan": 2, "contenido": "0.005 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Silicio, máx" }, { "colspan": 2, "contenido": "1.00" }, { "colspan": 2, "contenido": "0.05 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Cromo" }, { "colspan": 2, "contenido": "17.0 - 19.0" }, { "colspan": 2, "contenido": "0.20" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Níquel" }, { "colspan": 2, "contenido": "9.0 - 12.0" }, { "colspan": 2, "contenido": "0.15" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Titanio" }, { "colspan": 2, "contenido": "5 x (C + N), mín, 0.70 máx" }, { "colspan": 2, "contenido": "0.05 bajo" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Nitrógeno" }, { "colspan": 2, "contenido": "0.10 máx" }, { "colspan": 2, "contenido": "-" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Tipo / Type</strong>" },
+          {
+            "colspan": 4,
+            "contenido": "<strong>Aceros Austeníticos<sup>F</sup> - Clases 1C y 1D</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Grado / Grade</strong>" },
+          { "colspan": 2, "contenido": "<strong>B8R, B8RA</strong>" },
+          { "colspan": 2, "contenido": "<strong>B8S, B8SA</strong>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Designación UNS</strong>" },
+          { "colspan": 2, "contenido": "S20910" },
+          { "colspan": 2, "contenido": "S21800" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Elemento (%)</strong>" },
+          { "contenido": "Rango (%)" }, { "contenido": "Variación" },
+          { "contenido": "Rango (%)" }, { "contenido": "Variación" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Carbono, máx" }, { "contenido": "0.06" }, { "contenido": "0.01 sobre" }, { "contenido": "0.10" }, { "contenido": "0.01 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Manganeso" }, { "contenido": "4.0 - 6.0" }, { "contenido": "0.05" }, { "contenido": "7.0 - 9.0" }, { "contenido": "0.06" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Fósforo, máx" }, { "contenido": "0.045" }, { "contenido": "0.005 sobre" }, { "contenido": "0.060" }, { "contenido": "0.005 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Azufre, máx" }, { "contenido": "0.030" }, { "contenido": "0.005 sobre" }, { "contenido": "0.030" }, { "contenido": "0.005 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Silicio" }, { "contenido": "1.00 máx" }, { "contenido": "0.05" }, { "contenido": "3.5 - 4.5" }, { "contenido": "0.15" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Cromo" }, { "contenido": "20.5 - 23.5" }, { "contenido": "0.25" }, { "contenido": "16.0 - 18.0" }, { "contenido": "0.20" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Níquel" }, { "contenido": "11.5 - 13.5" }, { "contenido": "0.15" }, { "contenido": "8.0 - 9.0" }, { "contenido": "0.10" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Molibdeno" }, { "contenido": "1.50 - 3.00" }, { "contenido": "0.10" }, { "contenido": "-" }, { "contenido": "-" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Nitrógeno" }, { "contenido": "0.20 - 0.40" }, { "contenido": "0.02" }, { "contenido": "0.08 - 0.18" }, { "contenido": "0.01" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Columbio + Tántalo" }, { "contenido": "0.10 - 0.30" }, { "contenido": "0.05" }, { "contenido": "-" }, { "contenido": "-" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Vanadio" }, { "contenido": "0.10 - 0.30" }, { "contenido": "0.02" }, { "contenido": "-" }, { "contenido": "-" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Tipo / Type</strong>" },
+          {
+            "colspan": 4,
+            "contenido": "<strong>Aceros Austeníticos<sup>F</sup> - Clases 1, 1A y 1D</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Grado / Grade</strong>" },
+          { "colspan": 2, "contenido": "<strong>B8LN, B8LNA</strong>" },
+          { "colspan": 2, "contenido": "<strong>B8MLN, B8MLNA</strong>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Designación UNS</strong>" },
+          { "colspan": 2, "contenido": "S30453" },
+          { "colspan": 2, "contenido": "S31653" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Elemento (%)</strong>" },
+          { "contenido": "Rango (%)" }, { "contenido": "Variación" },
+          { "contenido": "Rango (%)" }, { "contenido": "Variación" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Carbono, máx" }, { "contenido": "0.030" }, { "contenido": "0.005 sobre" }, { "contenido": "0.030" }, { "contenido": "0.005 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Manganeso" }, { "contenido": "2.00" }, { "contenido": "0.04 sobre" }, { "contenido": "2.00" }, { "contenido": "0.04 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Fósforo, máx" }, { "contenido": "0.045" }, { "contenido": "0.010 sobre" }, { "contenido": "0.045" }, { "contenido": "0.010 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Azufre, máx" }, { "contenido": "0.030" }, { "contenido": "0.005 sobre" }, { "contenido": "0.030" }, { "contenido": "0.005 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Silicio" }, { "contenido": "1.00" }, { "contenido": "0.05 sobre" }, { "contenido": "1.00" }, { "contenido": "0.05 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Cromo" }, { "contenido": "18.0 - 20.0" }, { "contenido": "0.20" }, { "contenido": "16.0 - 18.0" }, { "contenido": "0.20" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Níquel" }, { "contenido": "8.0 - 11.0" }, { "contenido": "0.15" }, { "contenido": "10.0 - 13.0" }, { "contenido": "0.15" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Molibdeno" }, { "contenido": "-" }, { "contenido": "-" }, { "contenido": "2.00 - 3.00" }, { "contenido": "0.10" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Nitrógeno" }, { "contenido": "0.10 - 0.16" }, { "contenido": "0.01" }, { "contenido": "0.10 - 0.16" }, { "contenido": "0.01" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Tipo / Type</strong>" },
+          {
+            "colspan": 2,
+            "contenido": "<strong>Aceros Austeníticos<sup>F</sup> - Clases 1, 1A y 1D</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Grado / Grade</strong>" },
+          { "colspan": 2, "contenido": "<strong>B8CLN, B8CLNA</strong>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Designación UNS</strong>" },
+          { "colspan": 2, "contenido": "S34751 (347LN)" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Elemento (%)</strong>" },
+          { "contenido": "Rango (%)" },
+          { "contenido": "Variación de Producto (Sobre o Bajo)<sup>B</sup>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Carbono, máx" }, { "contenido": "0.005 - 0.020" }, { "contenido": "0.002 bajo, 0.005 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Manganeso, máx" }, { "contenido": "2.00" }, { "contenido": "0.04 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Fósforo, máx" }, { "contenido": "0.045" }, { "contenido": "0.01 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Azufre, máx" }, { "contenido": "0.030" }, { "contenido": "0.005 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Silicio, máx" }, { "contenido": "1.00" }, { "contenido": "0.05 sobre" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Cromo" }, { "contenido": "17.0 - 19.0" }, { "contenido": "0.20" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Níquel" }, { "contenido": "9.0 - 13.0" }, { "contenido": "0.15" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Columbio" }, { "contenido": "0.20 - 0.50, 15 x contenido carbono mín" }, { "contenido": "0.05" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "Nitrógeno" }, { "contenido": "0.06 - 0.10" }, { "contenido": "0.01" }
+        ]
+      }
+    ]
+  },
+
+  "req-mecanico-astm-a193": {
+    "titulo": "Requerimientos Mecánicos (ASTM A193)",
+    "fixedHeader": false,
+    "fixedFirstColumn": false,
+    "fixedIntersection": false,
+    "tipo": 2,
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 8,
+            "contenido": "<strong>Requerimientos Mecánicos (ASTM A193)</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          {
+            "colspan": 8,
+            "contenido": "<strong>Aceros Ferríticos</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Grado / Grade</strong>" },
+          { "contenido": "<strong>Diámetro / Diameter (pulg.)</strong>" },
+          { "contenido": "<strong>Temp. Mínima de Revenido (°F)</strong>" },
+          { "contenido": "<strong>Resistencia a Tracción Mín. (ksi)</strong>" },
+          { "contenido": "<strong>Límite Elástico Mín. (0.2% offset, ksi)</strong>" },
+          { "contenido": "<strong>Alargamiento Mín. (en 4D, %)</strong>" },
+          { "contenido": "<strong>Reducción de Área Mín. (%)</strong>" },
+          { "contenido": "<strong>Dureza Máxima (HBW / HRC / HRB)</strong>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>B5</strong><br><small>4 a 6% Cromo</small>" }, { "contenido": "Hasta 4, incl." }, { "contenido": "1100" }, { "contenido": "100" }, { "contenido": "80" }, { "contenido": "16" }, { "contenido": "50" }, { "contenido": "..." }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>B6</strong><br><small>13% Cromo</small>" }, { "contenido": "Hasta 4, incl." }, { "contenido": "1100" }, { "contenido": "110" }, { "contenido": "85" }, { "contenido": "15" }, { "contenido": "50" }, { "contenido": "..." }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>B6X</strong><br><small>13% Cromo</small>" }, { "contenido": "Hasta 4, incl." }, { "contenido": "1100" }, { "contenido": "90" }, { "contenido": "70" }, { "contenido": "16" }, { "contenido": "50" }, { "contenido": "26 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>B7</strong><br><small>Cromo-Molibdeno</small>" }, { "contenido": "2-1/2 y menor" }, { "contenido": "1100" }, { "contenido": "125" }, { "contenido": "105" }, { "contenido": "16" }, { "contenido": "50" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>B7</strong><br><small>Cromo-Molibdeno</small>" }, { "contenido": "Sobre 2-1/2 a 4" }, { "contenido": "1100" }, { "contenido": "115" }, { "contenido": "95" }, { "contenido": "16" }, { "contenido": "50" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>B7</strong><br><small>Cromo-Molibdeno</small>" }, { "contenido": "Sobre 4 a 7" }, { "contenido": "1100" }, { "contenido": "100" }, { "contenido": "75" }, { "contenido": "18" }, { "contenido": "50" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>B7M<sup>A</sup></strong><br><small>Cromo-Molibdeno</small>" }, { "contenido": "4 y menor" }, { "contenido": "1150" }, { "contenido": "100" }, { "contenido": "80" }, { "contenido": "18" }, { "contenido": "50" }, { "contenido": "235 HBW o 99 HRB" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>B7M<sup>A</sup></strong><br><small>Cromo-Molibdeno</small>" }, { "contenido": "Sobre 4 a 7" }, { "contenido": "1150" }, { "contenido": "100" }, { "contenido": "75" }, { "contenido": "18" }, { "contenido": "50" }, { "contenido": "235 HBW o 99 HRB" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>B16</strong><br><small>Cromo-Molibdeno-Vanadio</small>" }, { "contenido": "2-1/2 y menor" }, { "contenido": "1200" }, { "contenido": "125" }, { "contenido": "105" }, { "contenido": "18" }, { "contenido": "50" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>B16</strong><br><small>Cromo-Molibdeno-Vanadio</small>" }, { "contenido": "Sobre 2-1/2 a 4" }, { "contenido": "1200" }, { "contenido": "110" }, { "contenido": "95" }, { "contenido": "17" }, { "contenido": "45" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>B16</strong><br><small>Cromo-Molibdeno-Vanadio</small>" }, { "contenido": "Sobre 4 a 8" }, { "contenido": "1200" }, { "contenido": "100" }, { "contenido": "85" }, { "contenido": "16" }, { "contenido": "45" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          {
+            "colspan": 8,
+            "contenido": "<strong>Aceros Austeníticos</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Grado, Clase y Diámetro</strong>" },
+          { "contenido": "<strong>Tratamiento Térmico<sup>B</sup></strong>" },
+          { "colspan": 2, "contenido": "<strong>Resistencia a Tracción Mín. (ksi)</strong>" },
+          { "contenido": "<strong>Límite Elástico Mín. (0.2% offset, ksi)</strong>" },
+          { "contenido": "<strong>Alargamiento Mín. (en 4D, %)</strong>" },
+          { "contenido": "<strong>Reducción de Área Mín. (%)</strong>" },
+          { "contenido": "<strong>Dureza Máxima (HBW / HRB / HRC)</strong>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clases 1 y 1D: B8, B8M, B8P, B8LN, B8MLN, B8CLN</strong><br><small>Todos los diámetros</small>" }, { "contenido": "Tratado por solución de carburos" }, { "colspan": 2, "contenido": "75" }, { "contenido": "30" }, { "contenido": "30" }, { "contenido": "50" }, { "contenido": "223 HBW o 96 HRB<sup>C</sup>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 1: B8C, B8T</strong><br><small>Todos los diámetros</small>" }, { "contenido": "Tratado por solución de carburos" }, { "colspan": 2, "contenido": "75" }, { "contenido": "30" }, { "contenido": "30" }, { "contenido": "50" }, { "contenido": "223 HBW o 96 HRB<sup>C</sup>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 1A: B8A, B8CA, B8CLNA, B8MA, B8PA, B8TA, B8LNA, B8MLNA, B8NA, B8MNA, B8MLCuNA</strong><br><small>Todos los diámetros</small>" }, { "contenido": "Tratado por solución de carburos en condición final" }, { "colspan": 2, "contenido": "75" }, { "contenido": "30" }, { "contenido": "30" }, { "contenido": "50" }, { "contenido": "192 HBW o 90 HRB" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clases 1B y 1D: B8N, B8MN, B8MLCuN</strong><br><small>Todos los diámetros</small>" }, { "contenido": "Tratado por solución de carburos" }, { "colspan": 2, "contenido": "80" }, { "contenido": "35" }, { "contenido": "30" }, { "contenido": "40" }, { "contenido": "223 HBW o 96 HRB" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clases 1C y 1D: B8R</strong><br><small>Todos los diámetros</small>" }, { "contenido": "Tratado por solución de carburos" }, { "colspan": 2, "contenido": "100" }, { "contenido": "55" }, { "contenido": "35" }, { "contenido": "55" }, { "contenido": "271 HBW o 28 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 1C: B8RA</strong><br><small>Todos los diámetros</small>" }, { "contenido": "Tratado por solución de carburos en condición final" }, { "colspan": 2, "contenido": "100" }, { "contenido": "55" }, { "contenido": "35" }, { "contenido": "55" }, { "contenido": "271 HBW o 28 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clases 1C y 1D: B8S</strong><br><small>Todos los diámetros</small>" }, { "contenido": "Tratado por solución de carburos" }, { "colspan": 2, "contenido": "95" }, { "contenido": "50" }, { "contenido": "35" }, { "contenido": "55" }, { "contenido": "271 HBW o 28 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 1C: B8SA</strong><br><small>Todos los diámetros</small>" }, { "contenido": "Tratado por solución de carburos en condición final" }, { "colspan": 2, "contenido": "95" }, { "contenido": "50" }, { "contenido": "35" }, { "contenido": "55" }, { "contenido": "271 HBW o 28 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 2: B8, B8C, B8P, B8T, B8N<sup>D</sup></strong><br><small>3/4 y menor</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "125" }, { "contenido": "100" }, { "contenido": "12" }, { "contenido": "35" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 2: B8, B8C, B8P, B8T, B8N<sup>D</sup></strong><br><small>Sobre 3/4 a 1, incl.</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "115" }, { "contenido": "80" }, { "contenido": "15" }, { "contenido": "35" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 2: B8, B8C, B8P, B8T, B8N<sup>D</sup></strong><br><small>Sobre 1 a 1-1/4, incl.</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "105" }, { "contenido": "65" }, { "contenido": "20" }, { "contenido": "35" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 2: B8, B8C, B8P, B8T, B8N<sup>D</sup></strong><br><small>Sobre 1-1/4 a 1-1/2, incl.</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "100" }, { "contenido": "50" }, { "contenido": "28" }, { "contenido": "45" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 2: B8M, B8MN, B8MLCuN<sup>D</sup></strong><br><small>3/4 y menor</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "110" }, { "contenido": "95" }, { "contenido": "15" }, { "contenido": "45" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 2: B8M, B8MN, B8MLCuN<sup>D</sup></strong><br><small>Sobre 3/4 a 1 incl.</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "100" }, { "contenido": "80" }, { "contenido": "20" }, { "contenido": "45" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 2: B8M, B8MN, B8MLCuN<sup>D</sup></strong><br><small>Sobre 1 a 1-1/4, incl.</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "95" }, { "contenido": "65" }, { "contenido": "25" }, { "contenido": "45" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 2: B8M, B8MN, B8MLCuN<sup>D</sup></strong><br><small>Sobre 1-1/4 a 1-1/2, incl.</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "90" }, { "contenido": "50" }, { "contenido": "30" }, { "contenido": "45" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 2B: B8, B8M2<sup>D</sup></strong><br><small>2 y menor</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "95" }, { "contenido": "75" }, { "contenido": "25" }, { "contenido": "40" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 2B: B8, B8M2<sup>D</sup></strong><br><small>Sobre 2 a 2-1/2 incl.</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "90" }, { "contenido": "65" }, { "contenido": "30" }, { "contenido": "40" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 2B: B8, B8M2<sup>D</sup></strong><br><small>Sobre 2-1/2 a 3 incl.</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "80" }, { "contenido": "55" }, { "contenido": "30" }, { "contenido": "40" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 2C: B8M3<sup>D</sup></strong><br><small>2 y menor</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "85" }, { "contenido": "65" }, { "contenido": "30" }, { "contenido": "60" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>Clase 2C: B8M3<sup>D</sup></strong><br><small>Sobre 2</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "85" }, { "contenido": "60" }, { "contenido": "30" }, { "contenido": "60" }, { "contenido": "321 HBW o 35 HRC" }
         ]
       }
     ]
