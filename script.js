@@ -67,7 +67,7 @@ const paginaDetalleTecnico = {
       if (!infoPerno && !tipoVisual) return;
 
       // Cambiar título de la página
-      document.getElementById("titulo-documento").textContent = `Especificación de ${infoPerno.titulo}`;
+      document.getElementById("titulo-documento").textContent = `${infoPerno.titulo}`;
 
       let headerContainer = document.getElementById("header-content-container");
       headerContainer.classList.add("technical-header-container");
@@ -197,7 +197,7 @@ const paginaDetalleTecnico = {
 
 const especificacionesPernos = {
   "pernoHexagonalEstandar": {
-    "titulo": "Perno Cabeza Hexagonal Estándar",
+    "titulo": "Perno Cabeza Hexagonal Estándar (ASME B18.2.1)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -496,7 +496,7 @@ const especificacionesPernos = {
   }
   ,
   "pernoHexagonalReforzado": {
-    "titulo": "Perno Hexagonal Reforzado / Pesado",
+    "titulo": "Perno Hexagonal Reforzado / Pesado (ASME B18.2.1)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -731,7 +731,7 @@ const especificacionesPernos = {
   },
 
   "pernoHexagonalEstructural": {
-    "titulo": "Perno Cabeza Hexagonal Estructural",
+    "titulo": "Perno Cabeza Hexagonal Estructural (ASME B18.2.1)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -929,7 +929,7 @@ const especificacionesPernos = {
   },
 
   "pernoCabezaCuadrada": {
-    "titulo": "Perno de Cabeza Cuadrada",
+    "titulo": "Perno de Cabeza Cuadrada (ASME B18.2.1)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -1148,7 +1148,7 @@ const especificacionesPernos = {
   },
 
   "pernoCoche": {
-    "titulo": "Perno Coche",
+    "titulo": "Perno Coche (ASME B18.5)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -1367,7 +1367,7 @@ const especificacionesPernos = {
   },
 
   "pernoCabezaPlana": {
-    "titulo": "Perno de Cabeza Plana",
+    "titulo": "Perno de Cabeza Plana (ASME B18.2.5)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -1577,7 +1577,7 @@ const especificacionesPernos = {
   },
 
   "pernoCuelloOvalado": {
-    "titulo": "Perno Cuello Ovalado",
+    "titulo": "Perno Cuello Ovalado (ASME B18.5)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -1794,7 +1794,7 @@ const especificacionesPernos = {
   },
 
   "pernoDocePuntas": {
-    "titulo": "Perno de 12 Puntas (Brida)",
+    "titulo": "Perno de 12 Puntas (ASME B18.2.1 / IFI 115)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -2105,7 +2105,7 @@ const especificacionesPernos = {
   },
 
   "pernoParkerCilindrico": {
-    "titulo": "Perno Parker de Cabeza Cilíndrica (Hexágono Interior)",
+    "titulo": "Perno Parker de Cabeza Cilíndrica (Hexágono Interior) (ASME B18.3)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -2491,7 +2491,7 @@ const especificacionesPernos = {
   },
 
   "pernoParkerCabezaPlana": {
-    "titulo": "Perno Parker de Cabeza Plana (Hexágono Interior)",
+    "titulo": "Perno Parker de Cabeza Plana (Hexágono Interior) (ASME B18.3)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -2796,7 +2796,7 @@ const especificacionesPernos = {
   },
 
   "prisioneroAllen": {
-    "titulo": "Prisionero Allen",
+    "titulo": "Prisionero Allen (ASME B18.3)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -3034,7 +3034,7 @@ const especificacionesPernos = {
   },
 
   "tuercaCuadrada": {
-    "titulo": "Tuerca Cuadrada",
+    "titulo": "Tuerca Cuadrada (ASME B18.2.2)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -3227,7 +3227,7 @@ const especificacionesPernos = {
   },
 
   "tuercaHexagonal": {
-    "titulo": "Tuerca Hexagonal",
+    "titulo": "Tuerca Hexagonal (ASME B18.2.2)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -3532,7 +3532,7 @@ const especificacionesPernos = {
   },
 
   "tuercaCuadradaHeavy": {
-    "titulo": "Tuerca Cuadrada Reforzada (Heavy)",
+    "titulo": "Tuerca Cuadrada Reforzada (Heavy) (ASME B18.2.2)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -3726,7 +3726,7 @@ const especificacionesPernos = {
   },
 
   "tuercaHexagonalHeavy": {
-    "titulo": "Tuerca Hexagonal Reoforzada (Heavy)",
+    "titulo": "Tuerca Hexagonal Reoforzada (Heavy) (ASME B18.2.2)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -4034,7 +4034,7 @@ const especificacionesPernos = {
   },
 
   "tuercaSeguroNylon": {
-    "titulo": "Tuerca de Seguridad con Inserto de Nylon",
+    "titulo": "Tuerca de Seguridad con Inserto de Nylon (ASME B18.16.6)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -4264,7 +4264,7 @@ const especificacionesPernos = {
   },
 
   "perno-u": {
-    "titulo": "Perno en U",
+    "titulo": "Perno en U (ASME B18.31.5)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -6171,6 +6171,2200 @@ const especificacionesPernos = {
       {
         "columnas": [
           { "contenido": "<strong>Clase 2C: B8M3<sup>D</sup></strong><br><small>Sobre 2</small>" }, { "contenido": "Tratado por solución de carburos y endurecido por deformación" }, { "colspan": 2, "contenido": "85" }, { "contenido": "60" }, { "contenido": "30" }, { "contenido": "60" }, { "contenido": "321 HBW o 35 HRC" }
+        ]
+      }
+    ]
+  },
+
+  "perno-cabeza-hexagonal-metrico": {
+    "titulo": "Perno Cabeza Hexagonal Métrico (ISO 4014 / DIN 931)",
+    "fixedHeader": true,
+    "fixedFirstColumn": true,
+    "fixedIntersection": true,
+    "tipo": 1,
+    "image": "perno-cabeza-hexagonal-metrico.png",
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Diámetro Nominal (d) y Paso de Rosca (P)<br><small>mm</small>" }
+            ]
+          },
+          {
+            "colspan": 3,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "X" },
+              { "contenido": "Largo de Rosca" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "L ≤ 125" },
+                  { "contenido": "125 < L ≤ 200" },
+                  { "contenido": "L > 200" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "d" },
+              { "contenido": "Diámetro del Cuerpo<br><small>Nominal</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<div>d<sub>1</sub></div>" },
+              { "contenido": "Diámetro del Vástago Reducido / Flanco" }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "k" },
+              { "contenido": "Altura de la Cabeza" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Mín" },
+                  { "contenido": "Máx" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "s" },
+              { "contenido": "Ancho Entre Caras" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "ISO" },
+                  { "contenido": "DIN" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "r" },
+              { "contenido": "Radio Bajo Cabeza<br><small>Mín</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<div>d<sub>a</sub></div>" },
+              { "contenido": "Diámetro de Apoyo Bajo Cabeza<br><small>Máx</small>" }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 8</strong>" }, { "contenido": "1.25" }] },
+          { "contenido": "22" }, { "contenido": "28" }, { "contenido": "-" },
+          { "contenido": "8" }, { "contenido": "7,1" },
+          { "contenido": "5,3" }, { "contenido": "5,5" },
+          { "contenido": "13" }, { "contenido": "13" },
+          { "contenido": "0,4" }, { "contenido": "9,2" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 10</strong>" }, { "contenido": "1.5" }] },
+          { "contenido": "26" }, { "contenido": "32" }, { "contenido": "-" },
+          { "contenido": "10" }, { "contenido": "8,95" },
+          { "contenido": "6,4" }, { "contenido": "7" },
+          { "contenido": "16" }, { "contenido": "17" },
+          { "contenido": "0,4" }, { "contenido": "11,2" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 12</strong>" }, { "contenido": "1.75" }] },
+          { "contenido": "30" }, { "contenido": "36" }, { "contenido": "-" },
+          { "contenido": "12" }, { "contenido": "10,75" },
+          { "contenido": "7,5" }, { "contenido": "8" },
+          { "contenido": "18" }, { "contenido": "19" },
+          { "contenido": "0,6" }, { "contenido": "13,7" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 14</strong>" }, { "contenido": "2" }] },
+          { "contenido": "34" }, { "contenido": "40" }, { "contenido": "-" },
+          { "contenido": "14" }, { "contenido": "12,60" },
+          { "contenido": "8,8" }, { "contenido": "9" },
+          { "contenido": "21" }, { "contenido": "22" },
+          { "contenido": "0,6" }, { "contenido": "15,7" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 16</strong>" }, { "contenido": "2" }] },
+          { "contenido": "38" }, { "contenido": "44" }, { "contenido": "57" },
+          { "contenido": "16" }, { "contenido": "14,60" },
+          { "contenido": "10" }, { "contenido": "10" },
+          { "contenido": "24" }, { "contenido": "24" },
+          { "contenido": "0,6" }, { "contenido": "17,7" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 18</strong>" }, { "contenido": "2.5" }] },
+          { "contenido": "42" }, { "contenido": "48" }, { "contenido": "61" },
+          { "contenido": "18" }, { "contenido": "16,25" },
+          { "contenido": "11,5" }, { "contenido": "12" },
+          { "contenido": "27" }, { "contenido": "27" },
+          { "contenido": "0,6" }, { "contenido": "20,2" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 20</strong>" }, { "contenido": "2.5" }] },
+          { "contenido": "46" }, { "contenido": "52" }, { "contenido": "65" },
+          { "contenido": "20" }, { "contenido": "18,25" },
+          { "contenido": "12,5" }, { "contenido": "13" },
+          { "contenido": "30" }, { "contenido": "30" },
+          { "contenido": "0,8" }, { "contenido": "22,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 22</strong>" }, { "contenido": "2.5" }] },
+          { "contenido": "50" }, { "contenido": "56" }, { "contenido": "69" },
+          { "contenido": "22" }, { "contenido": "20,25" },
+          { "contenido": "14" }, { "contenido": "14" },
+          { "contenido": "34" }, { "contenido": "32" },
+          { "contenido": "0,8" }, { "contenido": "24,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 24</strong>" }, { "contenido": "3" }] },
+          { "contenido": "54" }, { "contenido": "60" }, { "contenido": "73" },
+          { "contenido": "24" }, { "contenido": "21,90" },
+          { "contenido": "15" }, { "contenido": "15" },
+          { "contenido": "36" }, { "contenido": "36" },
+          { "contenido": "0,8" }, { "contenido": "26,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 27</strong>" }, { "contenido": "3" }] },
+          { "contenido": "60" }, { "contenido": "66" }, { "contenido": "79" },
+          { "contenido": "27" }, { "contenido": "24,90" },
+          { "contenido": "17" }, { "contenido": "17" },
+          { "contenido": "41" }, { "contenido": "41" },
+          { "contenido": "1" }, { "contenido": "30,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 30</strong>" }, { "contenido": "3.5" }] },
+          { "contenido": "66" }, { "contenido": "72" }, { "contenido": "85" },
+          { "contenido": "30" }, { "contenido": "27,55" },
+          { "contenido": "18,7" }, { "contenido": "19" },
+          { "contenido": "46" }, { "contenido": "46" },
+          { "contenido": "1" }, { "contenido": "33,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 33</strong>" }, { "contenido": "3.5" }] },
+          { "contenido": "72" }, { "contenido": "78" }, { "contenido": "91" },
+          { "contenido": "33" }, { "contenido": "30,55" },
+          { "contenido": "21" }, { "contenido": "21" },
+          { "contenido": "50" }, { "contenido": "50" },
+          { "contenido": "1" }, { "contenido": "36,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 36</strong>" }, { "contenido": "4" }] },
+          { "contenido": "78" }, { "contenido": "84" }, { "contenido": "97" },
+          { "contenido": "36" }, { "contenido": "33,25" },
+          { "contenido": "22,5" }, { "contenido": "23" },
+          { "contenido": "55" }, { "contenido": "55" },
+          { "contenido": "1" }, { "contenido": "39,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 39</strong>" }, { "contenido": "4" }] },
+          { "contenido": "84" }, { "contenido": "90" }, { "contenido": "103" },
+          { "contenido": "39" }, { "contenido": "36,25" },
+          { "contenido": "25" }, { "contenido": "25" },
+          { "contenido": "60" }, { "contenido": "60" },
+          { "contenido": "1" }, { "contenido": "42,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 42</strong>" }, { "contenido": "4.5" }] },
+          { "contenido": "90" }, { "contenido": "96" }, { "contenido": "109" },
+          { "contenido": "42" }, { "contenido": "-" },
+          { "contenido": "26" }, { "contenido": "26" },
+          { "contenido": "65" }, { "contenido": "65" },
+          { "contenido": "1,2" }, { "contenido": "45,6" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 45</strong>" }, { "contenido": "4.5" }] },
+          { "contenido": "96" }, { "contenido": "102" }, { "contenido": "115" },
+          { "contenido": "45" }, { "contenido": "-" },
+          { "contenido": "28" }, { "contenido": "28" },
+          { "contenido": "70" }, { "contenido": "70" },
+          { "contenido": "1,2" }, { "contenido": "48,6" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 48</strong>" }, { "contenido": "5" }] },
+          { "contenido": "102" }, { "contenido": "108" }, { "contenido": "121" },
+          { "contenido": "48" }, { "contenido": "-" },
+          { "contenido": "30" }, { "contenido": "30" },
+          { "contenido": "75" }, { "contenido": "75" },
+          { "contenido": "1,6" }, { "contenido": "52,6" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 52</strong>" }, { "contenido": "5" }] },
+          { "contenido": "-" }, { "contenido": "116" }, { "contenido": "129" },
+          { "contenido": "52" }, { "contenido": "-" },
+          { "contenido": "33" }, { "contenido": "33" },
+          { "contenido": "80" }, { "contenido": "80" },
+          { "contenido": "1,6" }, { "contenido": "56,6" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 56</strong>" }, { "contenido": "5.5" }] },
+          { "contenido": "-" }, { "contenido": "124" }, { "contenido": "137" },
+          { "contenido": "56" }, { "contenido": "-" },
+          { "contenido": "35" }, { "contenido": "35" },
+          { "contenido": "85" }, { "contenido": "85" },
+          { "contenido": "2" }, { "contenido": "63" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 60</strong>" }, { "contenido": "5.5" }] },
+          { "contenido": "-" }, { "contenido": "132" }, { "contenido": "145" },
+          { "contenido": "60" }, { "contenido": "-" },
+          { "contenido": "38" }, { "contenido": "38" },
+          { "contenido": "90" }, { "contenido": "90" },
+          { "contenido": "2" }, { "contenido": "67" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 64</strong>" }, { "contenido": "6" }] },
+          { "contenido": "-" }, { "contenido": "140" }, { "contenido": "153" },
+          { "contenido": "64" }, { "contenido": "-" },
+          { "contenido": "40" }, { "contenido": "40" },
+          { "contenido": "95" }, { "contenido": "95" },
+          { "contenido": "2" }, { "contenido": "71" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 68</strong>" }, { "contenido": "6" }] },
+          { "contenido": "-" }, { "contenido": "148" }, { "contenido": "161" },
+          { "contenido": "68" }, { "contenido": "-" },
+          { "contenido": "43" }, { "contenido": "43" },
+          { "contenido": "100" }, { "contenido": "100" },
+          { "contenido": "2" }, { "contenido": "75" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 72</strong>" }, { "contenido": "6" }] },
+          { "contenido": "-" }, { "contenido": "156" }, { "contenido": "169" },
+          { "contenido": "72" }, { "contenido": "-" },
+          { "contenido": "45" }, { "contenido": "45" },
+          { "contenido": "105" }, { "contenido": "105" },
+          { "contenido": "2" }, { "contenido": "79" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 76</strong>" }, { "contenido": "6" }] },
+          { "contenido": "-" }, { "contenido": "164" }, { "contenido": "177" },
+          { "contenido": "76" }, { "contenido": "-" },
+          { "contenido": "48" }, { "contenido": "48" },
+          { "contenido": "110" }, { "contenido": "110" },
+          { "contenido": "2" }, { "contenido": "83" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 80</strong>" }, { "contenido": "6" }] },
+          { "contenido": "-" }, { "contenido": "172" }, { "contenido": "185" },
+          { "contenido": "80" }, { "contenido": "-" },
+          { "contenido": "50" }, { "contenido": "50" },
+          { "contenido": "115" }, { "contenido": "115" },
+          { "contenido": "2" }, { "contenido": "87" }
+        ]
+      }
+    ]
+  },
+
+  "perno-parker-cilindrico-metrico": {
+    "titulo": "Perno Parker Cabeza Cilíndrica Métrico (DIN 912 / ISO 4762)",
+    "fixedHeader": true,
+    "fixedFirstColumn": true,
+    "fixedIntersection": true,
+    "tipo": 1,
+    "image": "perno-parker-cabeza-cilindrica-metrico.png",
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Diámetro Nominal (d) y Paso de Rosca (P)<br><small>mm</small>" }
+            ]
+          },
+          {
+            "colspan": 3,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "x" },
+              { "contenido": "Largo de Rosca" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "L ≤ 120" },
+                  { "contenido": "120 < L ≤ 200" },
+                  { "contenido": "L > 200" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "D" },
+              { "contenido": "Diámetro del Cuerpo<br><small>Nominal</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "e" },
+              { "contenido": "Diámetro de la Cabeza" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "c" },
+              { "contenido": "Altura de la Cabeza" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "a" },
+              { "contenido": "Tamaño del Hexágono Interior (Llave Allen)" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "b" },
+              { "contenido": "Profundidad del Hexágono<br><small>Mín</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "r" },
+              { "contenido": "Radio Bajo Cabeza<br><small>Mín</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<div>d<sub>1</sub></div>" },
+              { "contenido": "Diámetro de Apoyo Bajo Cabeza<br><small>Máx</small>" }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 8</strong>" }, { "contenido": "1.25" }] },
+          { "contenido": "22" }, { "contenido": "28" }, { "contenido": "-" },
+          { "contenido": "8" }, { "contenido": "13" }, { "contenido": "8" }, { "contenido": "6" }, { "contenido": "4" }, { "contenido": "0,4" }, { "contenido": "9,2" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 10</strong>" }, { "contenido": "1.5" }] },
+          { "contenido": "26" }, { "contenido": "32" }, { "contenido": "45" },
+          { "contenido": "10" }, { "contenido": "16" }, { "contenido": "10" }, { "contenido": "8" }, { "contenido": "5" }, { "contenido": "0,4" }, { "contenido": "11,2" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 12</strong>" }, { "contenido": "1.75" }] },
+          { "contenido": "30" }, { "contenido": "36" }, { "contenido": "49" },
+          { "contenido": "12" }, { "contenido": "18" }, { "contenido": "12" }, { "contenido": "10" }, { "contenido": "6" }, { "contenido": "0,6" }, { "contenido": "13,7" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 14</strong>" }, { "contenido": "2" }] },
+          { "contenido": "34" }, { "contenido": "40" }, { "contenido": "53" },
+          { "contenido": "14" }, { "contenido": "21" }, { "contenido": "14" }, { "contenido": "12" }, { "contenido": "7" }, { "contenido": "0,6" }, { "contenido": "15,7" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 16</strong>" }, { "contenido": "2" }] },
+          { "contenido": "38" }, { "contenido": "44" }, { "contenido": "57" },
+          { "contenido": "16" }, { "contenido": "24" }, { "contenido": "16" }, { "contenido": "14" }, { "contenido": "8" }, { "contenido": "0,6" }, { "contenido": "17,7" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 18</strong>" }, { "contenido": "2.5" }] },
+          { "contenido": "42" }, { "contenido": "48" }, { "contenido": "61" },
+          { "contenido": "18" }, { "contenido": "27" }, { "contenido": "18" }, { "contenido": "14" }, { "contenido": "9" }, { "contenido": "0,6" }, { "contenido": "20,2" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 20</strong>" }, { "contenido": "2.5" }] },
+          { "contenido": "46" }, { "contenido": "52" }, { "contenido": "65" },
+          { "contenido": "20" }, { "contenido": "30" }, { "contenido": "20" }, { "contenido": "17" }, { "contenido": "10" }, { "contenido": "0,8" }, { "contenido": "22,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 22</strong>" }, { "contenido": "2.5" }] },
+          { "contenido": "50" }, { "contenido": "56" }, { "contenido": "69" },
+          { "contenido": "22" }, { "contenido": "33" }, { "contenido": "22" }, { "contenido": "17" }, { "contenido": "11" }, { "contenido": "0,8" }, { "contenido": "24,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 24</strong>" }, { "contenido": "3" }] },
+          { "contenido": "54" }, { "contenido": "60" }, { "contenido": "73" },
+          { "contenido": "24" }, { "contenido": "36" }, { "contenido": "24" }, { "contenido": "19" }, { "contenido": "12" }, { "contenido": "0,8" }, { "contenido": "26,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 27</strong>" }, { "contenido": "3" }] },
+          { "contenido": "60" }, { "contenido": "66" }, { "contenido": "79" },
+          { "contenido": "27" }, { "contenido": "40" }, { "contenido": "27" }, { "contenido": "19" }, { "contenido": "13,5" }, { "contenido": "1" }, { "contenido": "30,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 30</strong>" }, { "contenido": "3.5" }] },
+          { "contenido": "66" }, { "contenido": "72" }, { "contenido": "85" },
+          { "contenido": "30" }, { "contenido": "45" }, { "contenido": "30" }, { "contenido": "22" }, { "contenido": "15,5" }, { "contenido": "1" }, { "contenido": "33,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 33</strong>" }, { "contenido": "3.5" }] },
+          { "contenido": "72" }, { "contenido": "78" }, { "contenido": "91" },
+          { "contenido": "33" }, { "contenido": "50" }, { "contenido": "33" }, { "contenido": "24" }, { "contenido": "18" }, { "contenido": "1" }, { "contenido": "36,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 36</strong>" }, { "contenido": "4" }] },
+          { "contenido": "78" }, { "contenido": "84" }, { "contenido": "97" },
+          { "contenido": "36" }, { "contenido": "54" }, { "contenido": "36" }, { "contenido": "27" }, { "contenido": "19" }, { "contenido": "1" }, { "contenido": "39,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 39</strong>" }, { "contenido": "4" }] },
+          { "contenido": "84" }, { "contenido": "90" }, { "contenido": "103" },
+          { "contenido": "39" }, { "contenido": "58" }, { "contenido": "39" }, { "contenido": "27" }, { "contenido": "22,9" }, { "contenido": "1" }, { "contenido": "42,4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 42</strong>" }, { "contenido": "4.5" }] },
+          { "contenido": "90" }, { "contenido": "96" }, { "contenido": "109" },
+          { "contenido": "42" }, { "contenido": "63" }, { "contenido": "42" }, { "contenido": "32" }, { "contenido": "24" }, { "contenido": "1,2" }, { "contenido": "45,6" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 45</strong>" }, { "contenido": "4.5" }] },
+          { "contenido": "96" }, { "contenido": "102" }, { "contenido": "115" },
+          { "contenido": "45" }, { "contenido": "68" }, { "contenido": "45" }, { "contenido": "32" }, { "contenido": "27,1" }, { "contenido": "1,2" }, { "contenido": "48,6" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 48</strong>" }, { "contenido": "5" }] },
+          { "contenido": "102" }, { "contenido": "108" }, { "contenido": "121" },
+          { "contenido": "48" }, { "contenido": "72" }, { "contenido": "48" }, { "contenido": "36" }, { "contenido": "28" }, { "contenido": "1,6" }, { "contenido": "52,6" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 52</strong>" }, { "contenido": "5" }] },
+          { "contenido": "-" }, { "contenido": "116" }, { "contenido": "129" },
+          { "contenido": "52" }, { "contenido": "78" }, { "contenido": "52" }, { "contenido": "36" }, { "contenido": "31,9" }, { "contenido": "1,6" }, { "contenido": "56,6" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 56</strong>" }, { "contenido": "5.5" }] },
+          { "contenido": "-" }, { "contenido": "124" }, { "contenido": "137" },
+          { "contenido": "56" }, { "contenido": "84" }, { "contenido": "56" }, { "contenido": "41" }, { "contenido": "34" }, { "contenido": "2" }, { "contenido": "63" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 60</strong>" }, { "contenido": "5.5" }] },
+          { "contenido": "-" }, { "contenido": "132" }, { "contenido": "145" },
+          { "contenido": "60" }, { "contenido": "90" }, { "contenido": "60" }, { "contenido": "41" }, { "contenido": "35" }, { "contenido": "2" }, { "contenido": "67" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 64</strong>" }, { "contenido": "6" }] },
+          { "contenido": "-" }, { "contenido": "140" }, { "contenido": "153" },
+          { "contenido": "64" }, { "contenido": "96" }, { "contenido": "64" }, { "contenido": "46" }, { "contenido": "38" }, { "contenido": "2" }, { "contenido": "71" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 68</strong>" }, { "contenido": "6" }] },
+          { "contenido": "-" }, { "contenido": "148" }, { "contenido": "161" },
+          { "contenido": "68" }, { "contenido": "102" }, { "contenido": "68" }, { "contenido": "50" }, { "contenido": "40" }, { "contenido": "2" }, { "contenido": "75" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 72</strong>" }, { "contenido": "6" }] },
+          { "contenido": "-" }, { "contenido": "156" }, { "contenido": "169" },
+          { "contenido": "72" }, { "contenido": "108" }, { "contenido": "72" }, { "contenido": "55" }, { "contenido": "42" }, { "contenido": "2" }, { "contenido": "79" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 76</strong>" }, { "contenido": "6" }] },
+          { "contenido": "-" }, { "contenido": "164" }, { "contenido": "177" },
+          { "contenido": "76" }, { "contenido": "115" }, { "contenido": "76" }, { "contenido": "60" }, { "contenido": "45" }, { "contenido": "2" }, { "contenido": "83" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 80</strong>" }, { "contenido": "6" }] },
+          { "contenido": "-" }, { "contenido": "172" }, { "contenido": "185" },
+          { "contenido": "80" }, { "contenido": "120" }, { "contenido": "80" }, { "contenido": "65" }, { "contenido": "47" }, { "contenido": "2" }, { "contenido": "87" }
+        ]
+      }
+    ]
+  },
+
+  "perno-parker-cabeza-avellanada-metrico": {
+    "titulo": "Perno Parker Cabeza Avellanada Métrico (DIN 7991 / ISO 10642)",
+    "fixedHeader": true,
+    "fixedFirstColumn": true,
+    "fixedIntersection": true,
+    "tipo": 1,
+    "image": "perno-cabeza-avellanada-parker-metrico.png",
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Diámetro Nominal (d) y Paso de Rosca (P)<br><small>mm</small>" }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "b" },
+              { "contenido": "Largo de Rosca" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "L ≤ 125 (b1)" },
+                  { "contenido": "125 < L ≤ 200 (b2)" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "p" },
+              { "contenido": "Diámetro de la Cabeza<br><small>Máx</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "m" },
+              { "contenido": "Altura de la Cabeza<br><small>Máx</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "α" },
+              { "contenido": "Ángulo del Avellanado" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "s" },
+              { "contenido": "Tamaño del Hexágono Interior (Llave Allen)" }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 3</strong>" }, { "contenido": "0.5" }] },
+          { "contenido": "12" }, { "contenido": "-" },
+          { "contenido": "6" }, { "contenido": "1,7" }, { "contenido": "90°" }, { "contenido": "2" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 4</strong>" }, { "contenido": "0.7" }] },
+          { "contenido": "14" }, { "contenido": "-" },
+          { "contenido": "8" }, { "contenido": "2,3" }, { "contenido": "90°" }, { "contenido": "2,5" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 5</strong>" }, { "contenido": "0.8" }] },
+          { "contenido": "16" }, { "contenido": "-" },
+          { "contenido": "10" }, { "contenido": "2,8" }, { "contenido": "90°" }, { "contenido": "3" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 6</strong>" }, { "contenido": "1" }] },
+          { "contenido": "18" }, { "contenido": "24" },
+          { "contenido": "12" }, { "contenido": "3,3" }, { "contenido": "90°" }, { "contenido": "4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 8</strong>" }, { "contenido": "1.25" }] },
+          { "contenido": "22" }, { "contenido": "28" },
+          { "contenido": "16" }, { "contenido": "4,4" }, { "contenido": "90°" }, { "contenido": "5" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 10</strong>" }, { "contenido": "1.5" }] },
+          { "contenido": "26" }, { "contenido": "32" },
+          { "contenido": "20" }, { "contenido": "5,5" }, { "contenido": "90°" }, { "contenido": "6" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 12</strong>" }, { "contenido": "1.75" }] },
+          { "contenido": "30" }, { "contenido": "36" },
+          { "contenido": "24" }, { "contenido": "6,5" }, { "contenido": "90°" }, { "contenido": "8" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 14</strong>" }, { "contenido": "2" }] },
+          { "contenido": "34" }, { "contenido": "40" },
+          { "contenido": "27" }, { "contenido": "7" }, { "contenido": "90°" }, { "contenido": "10" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 16</strong>" }, { "contenido": "2" }] },
+          { "contenido": "38" }, { "contenido": "44" },
+          { "contenido": "30" }, { "contenido": "7,5" }, { "contenido": "90°" }, { "contenido": "10" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 20</strong>" }, { "contenido": "2.5" }] },
+          { "contenido": "46" }, { "contenido": "52" },
+          { "contenido": "36" }, { "contenido": "8,5" }, { "contenido": "90°" }, { "contenido": "12" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 24</strong>" }, { "contenido": "3" }] },
+          { "contenido": "54" }, { "contenido": "60" },
+          { "contenido": "39" }, { "contenido": "14" }, { "contenido": "60°" }, { "contenido": "14" }
+        ]
+      }
+    ]
+  },
+
+  "tuerca-hexagonal-metrica": {
+    "titulo": "Tuerca Hexagonal Métrica (ISO 4032 / DIN 934)",
+    "fixedHeader": true,
+    "fixedFirstColumn": true,
+    "fixedIntersection": true,
+    "tipo": 1,
+    "image": "tuerca-hexagonal-metrica-2.png",
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Diámetro Nominal (d) y Paso de Rosca (P)<br><small>mm</small>" }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "m" },
+              { "contenido": "Ancho Entre Caras" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Mín" },
+                  { "contenido": "Máx" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 3,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "h" },
+              { "contenido": "Altura Estándar (Tuerca Normal)" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Mín" },
+                  { "contenido": "Máx" },
+                  { "contenido": "Nom" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<div>h<sub>1</sub></div>" },
+              { "contenido": "Altura Baja (Tuerca Perfil Bajo / Seg. Jam)" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Mín" },
+                  { "contenido": "Máx" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 3,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<div>h<sub>2</sub></div>" },
+              { "contenido": "Altura Alta (Tuerca Pesada / Acople)" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Mín" },
+                  { "contenido": "Máx" },
+                  { "contenido": "Nom" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 8</strong>" }, { "contenido": "1.25" }] },
+          { "contenido": "12,73" }, { "contenido": "13" },
+          { "contenido": "6,44" }, { "contenido": "6,8" }, { "contenido": "6,5" },
+          { "contenido": "3,70" }, { "contenido": "4" },
+          { "contenido": "7,14" }, { "contenido": "7,5" }, { "contenido": "8" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 10</strong>" }, { "contenido": "1.5" }] },
+          { "contenido": "15,73" }, { "contenido": "17" },
+          { "contenido": "8,04" }, { "contenido": "8,4" }, { "contenido": "8" },
+          { "contenido": "4,70" }, { "contenido": "5" },
+          { "contenido": "8,94" }, { "contenido": "9,3" }, { "contenido": "10" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 12</strong>" }, { "contenido": "1.75" }] },
+          { "contenido": "17,73" }, { "contenido": "19" },
+          { "contenido": "10,37" }, { "contenido": "10,8" }, { "contenido": "10" },
+          { "contenido": "5,70" }, { "contenido": "6" },
+          { "contenido": "11,57" }, { "contenido": "12,0" }, { "contenido": "-" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 14</strong>" }, { "contenido": "2.0" }] },
+          { "contenido": "20,67" }, { "contenido": "22" },
+          { "contenido": "12,1" }, { "contenido": "12,8" }, { "contenido": "11" },
+          { "contenido": "6,42" }, { "contenido": "7" },
+          { "contenido": "13,40" }, { "contenido": "14,1" }, { "contenido": "14" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 16</strong>" }, { "contenido": "2.0" }] },
+          { "contenido": "23,67" }, { "contenido": "24" },
+          { "contenido": "14,1" }, { "contenido": "14,8" }, { "contenido": "13" },
+          { "contenido": "7,42" }, { "contenido": "8" },
+          { "contenido": "15,70" }, { "contenido": "16,4" }, { "contenido": "16" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 18</strong>" }, { "contenido": "2.5" }] },
+          { "contenido": "26,16" }, { "contenido": "27" },
+          { "contenido": "15,1" }, { "contenido": "15,8" }, { "contenido": "15" },
+          { "contenido": "8,42" }, { "contenido": "9" },
+          { "contenido": "16,90" }, { "contenido": "17,6" }, { "contenido": "18" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 20</strong>" }, { "contenido": "2.5" }] },
+          { "contenido": "29,16" }, { "contenido": "30" },
+          { "contenido": "16,9" }, { "contenido": "18" }, { "contenido": "16" },
+          { "contenido": "9,10" }, { "contenido": "10" },
+          { "contenido": "19,0" }, { "contenido": "20,3" }, { "contenido": "20" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 22</strong>" }, { "contenido": "2.5" }] },
+          { "contenido": "33,0" }, { "contenido": "34" },
+          { "contenido": "17,8" }, { "contenido": "19,4" }, { "contenido": "18" },
+          { "contenido": "9,90" }, { "contenido": "11" },
+          { "contenido": "20,5" }, { "contenido": "21,8" }, { "contenido": "22" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 24</strong>" }, { "contenido": "3.0" }] },
+          { "contenido": "35,0" }, { "contenido": "36" },
+          { "contenido": "20,2" }, { "contenido": "21,5" }, { "contenido": "19" },
+          { "contenido": "10,90" }, { "contenido": "12" },
+          { "contenido": "22,6" }, { "contenido": "23,9" }, { "contenido": "24" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 27</strong>" }, { "contenido": "3.0" }] },
+          { "contenido": "40,0" }, { "contenido": "41" },
+          { "contenido": "22,2" }, { "contenido": "23,8" }, { "contenido": "22" },
+          { "contenido": "12,4" }, { "contenido": "13,5" },
+          { "contenido": "25,4" }, { "contenido": "26,7" }, { "contenido": "27" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 30</strong>" }, { "contenido": "3.5" }] },
+          { "contenido": "45,0" }, { "contenido": "46" },
+          { "contenido": "24,3" }, { "contenido": "25,6" }, { "contenido": "24" },
+          { "contenido": "13,9" }, { "contenido": "15" },
+          { "contenido": "27,3" }, { "contenido": "28,6" }, { "contenido": "30" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 33</strong>" }, { "contenido": "3.5" }] },
+          { "contenido": "49,0" }, { "contenido": "50" },
+          { "contenido": "27,1" }, { "contenido": "28,7" }, { "contenido": "26" },
+          { "contenido": "15,4" }, { "contenido": "16,5" },
+          { "contenido": "30,9" }, { "contenido": "32,5" }, { "contenido": "33" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 36</strong>" }, { "contenido": "4.0" }] },
+          { "contenido": "53,8" }, { "contenido": "55" },
+          { "contenido": "29,4" }, { "contenido": "31" }, { "contenido": "29" },
+          { "contenido": "16,9" }, { "contenido": "18" },
+          { "contenido": "33,1" }, { "contenido": "34,7" }, { "contenido": "36" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 39</strong>" }, { "contenido": "4.0" }] },
+          { "contenido": "58,8" }, { "contenido": "60" },
+          { "contenido": "30,4" }, { "contenido": "32" }, { "contenido": "31" },
+          { "contenido": "18,2" }, { "contenido": "19,5" },
+          { "contenido": "35,9" }, { "contenido": "37,5" }, { "contenido": "39" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 42</strong>" }, { "contenido": "4.5" }] },
+          { "contenido": "63,1" }, { "contenido": "65" },
+          { "contenido": "32,4" }, { "contenido": "34" }, { "contenido": "-" },
+          { "contenido": "19,7" }, { "contenido": "21" },
+          { "contenido": "36,6" }, { "contenido": "38,2" }, { "contenido": "42" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 45</strong>" }, { "contenido": "4.5" }] },
+          { "contenido": "68,1" }, { "contenido": "70" },
+          { "contenido": "34,4" }, { "contenido": "36" }, { "contenido": "-" },
+          { "contenido": "21,2" }, { "contenido": "22,5" },
+          { "contenido": "38,9" }, { "contenido": "40,5" }, { "contenido": "45" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 48</strong>" }, { "contenido": "5.0" }] },
+          { "contenido": "73,1" }, { "contenido": "75" },
+          { "contenido": "36,4" }, { "contenido": "38" }, { "contenido": "-" },
+          { "contenido": "22,7" }, { "contenido": "24" },
+          { "contenido": "41,2" }, { "contenido": "42,8" }, { "contenido": "48" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 52</strong>" }, { "contenido": "5.0" }] },
+          { "contenido": "78,1" }, { "contenido": "80" },
+          { "contenido": "40,4" }, { "contenido": "42" }, { "contenido": "-" },
+          { "contenido": "24,7" }, { "contenido": "26" },
+          { "contenido": "45,6" }, { "contenido": "47,2" }, { "contenido": "52" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 56</strong>" }, { "contenido": "5.5" }] },
+          { "contenido": "82,8" }, { "contenido": "85" },
+          { "contenido": "43,4" }, { "contenido": "45" }, { "contenido": "-" },
+          { "contenido": "26,7" }, { "contenido": "28" },
+          { "contenido": "48,7" }, { "contenido": "50,6" }, { "contenido": "56" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 60</strong>" }, { "contenido": "5.5" }] },
+          { "contenido": "87,8" }, { "contenido": "90" },
+          { "contenido": "46,4" }, { "contenido": "48" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "30" },
+          { "contenido": "52,1" }, { "contenido": "54,0" }, { "contenido": "60" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 64</strong>" }, { "contenido": "6.0" }] },
+          { "contenido": "92,8" }, { "contenido": "95" },
+          { "contenido": "49,1" }, { "contenido": "51" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "32" },
+          { "contenido": "55,5" }, { "contenido": "57,4" }, { "contenido": "64" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 68</strong>" }, { "contenido": "6.0" }] },
+          { "contenido": "97,8" }, { "contenido": "100" },
+          { "contenido": "52,1" }, { "contenido": "54" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "34" },
+          { "contenido": "58,9" }, { "contenido": "60,8" }, { "contenido": "68" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 72</strong>" }, { "contenido": "6.0" }] },
+          { "contenido": "102,8" }, { "contenido": "105" },
+          { "contenido": "56,1" }, { "contenido": "58" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "36" },
+          { "contenido": "63,3" }, { "contenido": "65,2" }, { "contenido": "72" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 76</strong>" }, { "contenido": "6.0" }] },
+          { "contenido": "107,8" }, { "contenido": "110" },
+          { "contenido": "59,1" }, { "contenido": "61" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "38" },
+          { "contenido": "66,7" }, { "contenido": "68,6" }, { "contenido": "76" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 80</strong>" }, { "contenido": "6.0" }] },
+          { "contenido": "112,8" }, { "contenido": "115" },
+          { "contenido": "62,1" }, { "contenido": "64" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "40" },
+          { "contenido": "70,1" }, { "contenido": "72,0" }, { "contenido": "80" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 85</strong>" }, { "contenido": "6.0" }] },
+          { "contenido": "117,8" }, { "contenido": "120" },
+          { "contenido": "66,1" }, { "contenido": "68" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "42,5" },
+          { "contenido": "74,5" }, { "contenido": "76,5" }, { "contenido": "85" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 90</strong>" }, { "contenido": "6.0" }] },
+          { "contenido": "127,5" }, { "contenido": "130" },
+          { "contenido": "70,1" }, { "contenido": "72" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "45" },
+          { "contenido": "78,8" }, { "contenido": "81,0" }, { "contenido": "90" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 100</strong>" }, { "contenido": "6.0" }] },
+          { "contenido": "142,5" }, { "contenido": "145" },
+          { "contenido": "78,1" }, { "contenido": "80" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "50" },
+          { "contenido": "87,8" }, { "contenido": "90,0" }, { "contenido": "100" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 110</strong>" }, { "contenido": "6.0" }] },
+          { "contenido": "152,5" }, { "contenido": "155" },
+          { "contenido": "85,8" }, { "contenido": "88" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "55" },
+          { "contenido": "96,8" }, { "contenido": "99,0" }, { "contenido": "110" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 125</strong>" }, { "contenido": "6.0" }] },
+          { "contenido": "177,5" }, { "contenido": "180" },
+          { "contenido": "97,8" }, { "contenido": "100" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "62,5" },
+          { "contenido": "110,3" }, { "contenido": "112,5" }, { "contenido": "125" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 140</strong>" }, { "contenido": "6.0" }] },
+          { "contenido": "195,4" }, { "contenido": "200" },
+          { "contenido": "109,8" }, { "contenido": "112" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "70" },
+          { "contenido": "123,5" }, { "contenido": "126,0" }, { "contenido": "140" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>M 160</strong>" }, { "contenido": "6.0" }] },
+          { "contenido": "225,4" }, { "contenido": "230" },
+          { "contenido": "125,5" }, { "contenido": "128" }, { "contenido": "-" },
+          { "contenido": "-" }, { "contenido": "80" },
+          { "contenido": "141,5" }, { "contenido": "144,0" }, { "contenido": "160" }
+        ]
+      }
+    ]
+  },
+
+  "req-mecanico-iso-898-1": {
+    "titulo": "Requerimientos mecánicos de Pernos, Tornillos y Espárragos Métrica (ISO 898-1)",
+    "fixedHeader": false,
+    "fixedFirstColumn": false,
+    "fixedIntersection": false,
+    "tipo": 2,
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Clase de Propiedad (Property Class)" }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<div>R<sub>m</sub></div>" },
+              { "contenido": "Resistencia a la Tracción<br><small>N/mm² (MPa)</small>" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Nominal" },
+                  { "contenido": "Mín" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "HV" },
+              { "contenido": "Dureza Vickers (HV F ≥ 98 N)" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Mín" },
+                  { "contenido": "Máx" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "HB" },
+              { "contenido": "Dureza Brinell (HB, F = 30 D²)" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Mín" },
+                  { "contenido": "Máx" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 4,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "HR" },
+              { "contenido": "Dureza Rockwell" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "HRB Mín" },
+                  { "contenido": "HRC Mín" },
+                  { "contenido": "HRB Máx" },
+                  { "contenido": "HRC Máx" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "HV 0.3" },
+              { "contenido": "Dureza Superficial<br><small>Máx</small>" }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<div>R<sub>eL</sub> / R<sub>p0.2</sub></div>" },
+              { "contenido": "Límite Elástico Mín<br><small>N/mm² (MPa)</small>" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Nominal" },
+                  { "contenido": "Mín" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<div>S<sub>p</sub></div>" },
+              { "contenido": "Esfuerzo Carga de Prueba" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "<div>S<sub>p</sub> / R<sub>eL</sub></div>" },
+                  { "contenido": "N/mm² (MPa)" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<div>A<sub>5</sub></div>" },
+              { "contenido": "Alargamiento Mín<br><small>%</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "KV" },
+              { "contenido": "Resistencia al Impacto Mín<br><small>Joule (J)</small>" }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3.6</strong>" }] },
+          { "contenido": "300" }, { "contenido": "330" },
+          { "contenido": "95" }, { "contenido": "-" },
+          { "contenido": "90" }, { "contenido": "-" },
+          { "contenido": "52" }, { "contenido": "-" }, { "contenido": "95" }, { "contenido": "-" },
+          { "contenido": "-" },
+          { "contenido": "180" }, { "contenido": "190" },
+          { "contenido": "0.94" }, { "contenido": "180" },
+          { "contenido": "25" },
+          { "contenido": "-" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>4.6</strong>" }] },
+          { "contenido": "400" }, { "contenido": "400" },
+          { "contenido": "120" }, { "contenido": "220" },
+          { "contenido": "114" }, { "contenido": "209" },
+          { "contenido": "67" }, { "contenido": "-" }, { "contenido": "95" }, { "contenido": "-" },
+          { "contenido": "-" },
+          { "contenido": "240" }, { "contenido": "240" },
+          { "contenido": "0.94" }, { "contenido": "225" },
+          { "contenido": "22" },
+          { "contenido": "-" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>4.8</strong>" }] },
+          { "contenido": "400" }, { "contenido": "420" },
+          { "contenido": "130" }, { "contenido": "220" },
+          { "contenido": "124" }, { "contenido": "209" },
+          { "contenido": "71" }, { "contenido": "-" }, { "contenido": "95" }, { "contenido": "-" },
+          { "contenido": "-" },
+          { "contenido": "320" }, { "contenido": "340" },
+          { "contenido": "0.91" }, { "contenido": "310" },
+          { "contenido": "14" },
+          { "contenido": "-" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>5.6</strong>" }] },
+          { "contenido": "500" }, { "contenido": "500" },
+          { "contenido": "155" }, { "contenido": "220" },
+          { "contenido": "147" }, { "contenido": "209" },
+          { "contenido": "79" }, { "contenido": "-" }, { "contenido": "95" }, { "contenido": "-" },
+          { "contenido": "-" },
+          { "contenido": "300" }, { "contenido": "300" },
+          { "contenido": "0.94" }, { "contenido": "280" },
+          { "contenido": "20" },
+          { "contenido": "25" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>5.8</strong>" }] },
+          { "contenido": "500" }, { "contenido": "520" },
+          { "contenido": "160" }, { "contenido": "220" },
+          { "contenido": "152" }, { "contenido": "209" },
+          { "contenido": "82" }, { "contenido": "-" }, { "contenido": "95" }, { "contenido": "-" },
+          { "contenido": "-" },
+          { "contenido": "400" }, { "contenido": "420" },
+          { "contenido": "0.91" }, { "contenido": "380" },
+          { "contenido": "10" },
+          { "contenido": "-" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>6.8</strong>" }] },
+          { "contenido": "600" }, { "contenido": "600" },
+          { "contenido": "190" }, { "contenido": "250" },
+          { "contenido": "181" }, { "contenido": "238" },
+          { "contenido": "89" }, { "contenido": "-" }, { "contenido": "99" }, { "contenido": "-" },
+          { "contenido": "-" },
+          { "contenido": "480" }, { "contenido": "480" },
+          { "contenido": "0.91" }, { "contenido": "440" },
+          { "contenido": "8" },
+          { "contenido": "-" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>8.8</strong><br><small>d ≤ 16 mm</small>" }] },
+          { "contenido": "800" }, { "contenido": "800" },
+          { "contenido": "230" }, { "contenido": "300" },
+          { "contenido": "219" }, { "contenido": "285" },
+          { "contenido": "-" }, { "contenido": "20" }, { "contenido": "-" }, { "contenido": "30" },
+          { "contenido": "320" },
+          { "contenido": "640" }, { "contenido": "640" },
+          { "contenido": "0.91" }, { "contenido": "580" },
+          { "contenido": "12" },
+          { "contenido": "30" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>8.8</strong><br><small>d > 16 mm</small>" }] },
+          { "contenido": "800" }, { "contenido": "830" },
+          { "contenido": "255" }, { "contenido": "336" },
+          { "contenido": "242" }, { "contenido": "319" },
+          { "contenido": "-" }, { "contenido": "23" }, { "contenido": "-" }, { "contenido": "34" },
+          { "contenido": "356" },
+          { "contenido": "640" }, { "contenido": "660" },
+          { "contenido": "0.91" }, { "contenido": "600" },
+          { "contenido": "12" },
+          { "contenido": "30" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>9.8</strong>" }] },
+          { "contenido": "900" }, { "contenido": "900" },
+          { "contenido": "280" }, { "contenido": "360" },
+          { "contenido": "266" }, { "contenido": "342" },
+          { "contenido": "-" }, { "contenido": "27" }, { "contenido": "-" }, { "contenido": "36" },
+          { "contenido": "380" },
+          { "contenido": "720" }, { "contenido": "720" },
+          { "contenido": "0.91" }, { "contenido": "650" },
+          { "contenido": "10" },
+          { "contenido": "25" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>10.9</strong>" }] },
+          { "contenido": "1000" }, { "contenido": "1040" },
+          { "contenido": "310" }, { "contenido": "382" },
+          { "contenido": "295" }, { "contenido": "363" },
+          { "contenido": "-" }, { "contenido": "31" }, { "contenido": "-" }, { "contenido": "39" },
+          { "contenido": "402" },
+          { "contenido": "900" }, { "contenido": "940" },
+          { "contenido": "0.88" }, { "contenido": "830" },
+          { "contenido": "9" },
+          { "contenido": "20" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>12.9</strong>" }] },
+          { "contenido": "1200" }, { "contenido": "1220" },
+          { "contenido": "372" }, { "contenido": "434" },
+          { "contenido": "353" }, { "contenido": "412" },
+          { "contenido": "-" }, { "contenido": "38" }, { "contenido": "-" }, { "contenido": "44" },
+          { "contenido": "454" },
+          { "contenido": "1080" }, { "contenido": "1100" },
+          { "contenido": "0.88" }, { "contenido": "970" },
+          { "contenido": "8" },
+          { "contenido": "15" }
+        ]
+      }
+    ]
+  },
+
+  "req-mecanico-tuercas-iso-898-2": {
+    "titulo": "Requerimientos mecánicos de Tuercas Métricas (ISO 898-2)",
+    "fixedHeader": false,
+    "fixedFirstColumn": false,
+    "fixedIntersection": false,
+    "tipo": 2,
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Clase de Propiedad y Diámetro Nominal<br><small>mm</small>" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<div>Esfuerzo de Prueba (S<sub>p</sub>)</div>" },
+              { "contenido": "N/mm² (MPa)" }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Dureza Vickers (HV)" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Mín" },
+                  { "contenido": "Máx" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 04</strong>" }, { "contenido": "Hasta 39" }] },
+          { "contenido": "380" }, { "contenido": "188" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 05</strong>" }, { "contenido": "Hasta 39" }] },
+          { "contenido": "500" }, { "contenido": "272" }, { "contenido": "353" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 4</strong>" }, { "contenido": "Sobre 16 hasta 39" }] },
+          { "contenido": "510" }, { "contenido": "117" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 4</strong>" }, { "contenido": "Sobre 39 hasta 100" }] },
+          { "contenido": "-" }, { "contenido": "117" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 5</strong>" }, { "contenido": "Hasta 4" }] },
+          { "contenido": "520" }, { "contenido": "130" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 5</strong>" }, { "contenido": "Sobre 4 hasta 7" }] },
+          { "contenido": "580" }, { "contenido": "130" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 5</strong>" }, { "contenido": "Sobre 7 hasta 10" }] },
+          { "contenido": "590" }, { "contenido": "130" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 5</strong>" }, { "contenido": "Sobre 10 hasta 16" }] },
+          { "contenido": "610" }, { "contenido": "130" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 5</strong>" }, { "contenido": "Sobre 16 hasta 39" }] },
+          { "contenido": "630" }, { "contenido": "146" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 5</strong>" }, { "contenido": "Sobre 39 hasta 100" }] },
+          { "contenido": "-" }, { "contenido": "128" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 6</strong>" }, { "contenido": "Hasta 4" }] },
+          { "contenido": "600" }, { "contenido": "150" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 6</strong>" }, { "contenido": "Sobre 4 hasta 7" }] },
+          { "contenido": "670" }, { "contenido": "150" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 6</strong>" }, { "contenido": "Sobre 7 hasta 10" }] },
+          { "contenido": "680" }, { "contenido": "150" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 6</strong>" }, { "contenido": "Sobre 10 hasta 16" }] },
+          { "contenido": "700" }, { "contenido": "150" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 6</strong>" }, { "contenido": "Sobre 16 hasta 39" }] },
+          { "contenido": "720" }, { "contenido": "170" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 6</strong>" }, { "contenido": "Sobre 39 hasta 100" }] },
+          { "contenido": "-" }, { "contenido": "142" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 8</strong>" }, { "contenido": "Hasta 4" }] },
+          { "contenido": "800" }, { "contenido": "170" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 8</strong>" }, { "contenido": "Sobre 4 hasta 7" }] },
+          { "contenido": "810" }, { "contenido": "188" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 8</strong>" }, { "contenido": "Sobre 7 hasta 10" }] },
+          { "contenido": "830" }, { "contenido": "188" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 8</strong>" }, { "contenido": "Sobre 10 hasta 16" }] },
+          { "contenido": "840" }, { "contenido": "188" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 8</strong>" }, { "contenido": "Sobre 16 hasta 39" }] },
+          { "contenido": "920" }, { "contenido": "233" }, { "contenido": "353" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 8</strong>" }, { "contenido": "Sobre 39 hasta 100" }] },
+          { "contenido": "-" }, { "contenido": "207" }, { "contenido": "353" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 9</strong>" }, { "contenido": "Hasta 4" }] },
+          { "contenido": "900" }, { "contenido": "170" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 9</strong>" }, { "contenido": "Sobre 4 hasta 7" }] },
+          { "contenido": "915" }, { "contenido": "188" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 9</strong>" }, { "contenido": "Sobre 7 hasta 10" }] },
+          { "contenido": "940" }, { "contenido": "188" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 9</strong>" }, { "contenido": "Sobre 10 hasta 16" }] },
+          { "contenido": "950" }, { "contenido": "188" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 9</strong>" }, { "contenido": "Sobre 16 hasta 39" }] },
+          { "contenido": "920" }, { "contenido": "188" }, { "contenido": "302" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 10</strong>" }, { "contenido": "Hasta 4" }] },
+          { "contenido": "1040" }, { "contenido": "272" }, { "contenido": "353" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 10</strong>" }, { "contenido": "Sobre 4 hasta 7" }] },
+          { "contenido": "1040" }, { "contenido": "272" }, { "contenido": "353" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 10</strong>" }, { "contenido": "Sobre 7 hasta 10" }] },
+          { "contenido": "1040" }, { "contenido": "272" }, { "contenido": "353" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 10</strong>" }, { "contenido": "Sobre 10 hasta 16" }] },
+          { "contenido": "1050" }, { "contenido": "272" }, { "contenido": "353" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 10</strong>" }, { "contenido": "Sobre 16 hasta 39" }] },
+          { "contenido": "1060" }, { "contenido": "272" }, { "contenido": "353" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 12</strong>" }, { "contenido": "Hasta 4" }] },
+          { "contenido": "1150" }, { "contenido": "295<sup>1</sup> / 272<sup>2</sup>" }, { "contenido": "353" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 12</strong>" }, { "contenido": "Sobre 4 hasta 7" }] },
+          { "contenido": "1150" }, { "contenido": "295<sup>1</sup> / 272<sup>2</sup>" }, { "contenido": "353" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 12</strong>" }, { "contenido": "Sobre 7 hasta 10" }] },
+          { "contenido": "1160" }, { "contenido": "295<sup>1</sup> / 272<sup>2</sup>" }, { "contenido": "353" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 12</strong>" }, { "contenido": "Sobre 10 hasta 16" }] },
+          { "contenido": "1190" }, { "contenido": "295<sup>1</sup> / 272<sup>2</sup>" }, { "contenido": "353" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>Clase 12</strong>" }, { "contenido": "Sobre 16 hasta 39" }] },
+          { "contenido": "1200" }, { "contenido": "295<sup>1</sup> / 272<sup>2</sup>" }, { "contenido": "353" }
+        ]
+      }
+    ]
+  },
+
+  "torques-pernos-indusper": {
+    "titulo": "Tablas de Torques, Propiedades y Lubricación de Pernos (Aceros Aleados y Carbono)",
+    "fixedHeader": false,
+    "fixedFirstColumn": false,
+    "fixedIntersection": false,
+    "tipo": 2,
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 14,
+            "contenido": "<strong>TABLA 1: TORQUE PERNOS ACEROS ALEADOS</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Diámetro Nominal y Rosca" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Sección Resistente<br><small>mm²</small>" }
+            ]
+          },
+          {
+            "colspan": 4,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Carga en el Límite Elástico 0.2% (Kg)" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "B7M / L7M" },
+                  { "contenido": "A325 Gr. 5" },
+                  { "contenido": "B7 / B16" },
+                  { "contenido": "A490 Gr. 8" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 4,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Fuerza de Pretensado (Kg)<br><small>75% de carga en límite elástico</small>" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "B7M / L7M" },
+                  { "contenido": "A325 Gr. 5" },
+                  { "contenido": "B7 / B16" },
+                  { "contenido": "A490 Gr. 8" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 4,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Torque de Apriete (Kgm)" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "B7M / L7M" },
+                  { "contenido": "A325 Gr. 5" },
+                  { "contenido": "B7 / B16" },
+                  { "contenido": "A490 Gr. 8" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>1/2\"</strong> - 13 UNC" }, { "contenido": "91,5" },
+          { "contenido": "5120" }, { "contenido": "5320" }, { "contenido": "6720" }, { "contenido": "8370" },
+          { "contenido": "3840" }, { "contenido": "4440" }, { "contenido": "5040" }, { "contenido": "6280" },
+          { "contenido": "8" }, { "contenido": "10" }, { "contenido": "11" }, { "contenido": "14" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>9/16\"</strong> - 12 UNC" }, { "contenido": "117" },
+          { "contenido": "6650" }, { "contenido": "7570" }, { "contenido": "8590" }, { "contenido": "10710" },
+          { "contenido": "4910" }, { "contenido": "5680" }, { "contenido": "6440" }, { "contenido": "8030" },
+          { "contenido": "12" }, { "contenido": "14" }, { "contenido": "16" }, { "contenido": "20" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>5/8\"</strong> - 11 UNC" }, { "contenido": "146" },
+          { "contenido": "8180" }, { "contenido": "9540" }, { "contenido": "10720" }, { "contenido": "13360" },
+          { "contenido": "6130" }, { "contenido": "7090" }, { "contenido": "8040" }, { "contenido": "10020" },
+          { "contenido": "17" }, { "contenido": "19" }, { "contenido": "22" }, { "contenido": "27" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>3/4\"</strong> - 10 UNC" }, { "contenido": "215" },
+          { "contenido": "12040" }, { "contenido": "13910" }, { "contenido": "15780" }, { "contenido": "19670" },
+          { "contenido": "9030" }, { "contenido": "10430" }, { "contenido": "11840" }, { "contenido": "14750" },
+          { "contenido": "29" }, { "contenido": "34" }, { "contenido": "38" }, { "contenido": "48" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>7/8\"</strong> - 9 UNC" }, { "contenido": "198" },
+          { "contenido": "16700" }, { "contenido": "19280" }, { "contenido": "21900" }, { "contenido": "27300" },
+          { "contenido": "12520" }, { "contenido": "14460" }, { "contenido": "16400" }, { "contenido": "20450" },
+          { "contenido": "47" }, { "contenido": "55" }, { "contenido": "62" }, { "contenido": "77" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>1\"</strong> - 8 UNC" }, { "contenido": "391" },
+          { "contenido": "21900" }, { "contenido": "25300" }, { "contenido": "28700" }, { "contenido": "35800" },
+          { "contenido": "16420" }, { "contenido": "18970" }, { "contenido": "21520" }, { "contenido": "26800" },
+          { "contenido": "71" }, { "contenido": "82" }, { "contenido": "93" }, { "contenido": "120" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>1 1/8\"</strong> - 8 UN" }, { "contenido": "510" },
+          { "contenido": "28560" }, { "contenido": "29100" }, { "contenido": "37400" }, { "contenido": "46700" },
+          { "contenido": "21420" }, { "contenido": "21800" }, { "contenido": "28100" }, { "contenido": "35000" },
+          { "contenido": "98" }, { "contenido": "100" }, { "contenido": "130" }, { "contenido": "160" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>1 1/4\"</strong> - 8 UN" }, { "contenido": "645" },
+          { "contenido": "36120" }, { "contenido": "36800" }, { "contenido": "47300" }, { "contenido": "59000" },
+          { "contenido": "27100" }, { "contenido": "27600" }, { "contenido": "35500" }, { "contenido": "44300" },
+          { "contenido": "140" }, { "contenido": "140" }, { "contenido": "180" }, { "contenido": "230" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>1 3/8\"</strong> - 8 UN" }, { "contenido": "795" },
+          { "contenido": "44520" }, { "contenido": "45300" }, { "contenido": "58400" }, { "contenido": "72700" },
+          { "contenido": "33400" }, { "contenido": "34000" }, { "contenido": "43800" }, { "contenido": "54600" },
+          { "contenido": "190" }, { "contenido": "190" }, { "contenido": "240" }, { "contenido": "300" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>1 1/2\"</strong> - 8 UN" }, { "contenido": "962" },
+          { "contenido": "53870" }, { "contenido": "54830" }, { "contenido": "70600" }, { "contenido": "88000" },
+          { "contenido": "40400" }, { "contenido": "41100" }, { "contenido": "53000" }, { "contenido": "66000" },
+          { "contenido": "250" }, { "contenido": "250" }, { "contenido": "320" }, { "contenido": "400" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>1 5/8\"</strong> - 8 UN" }, { "contenido": "1145" },
+          { "contenido": "64120" }, { "contenido": "65270" }, { "contenido": "84000" }, { "contenido": "104800" },
+          { "contenido": "48090" }, { "contenido": "48900" }, { "contenido": "63000" }, { "contenido": "78600" },
+          { "contenido": "320" }, { "contenido": "320" }, { "contenido": "400" }, { "contenido": "520" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>1 3/4\"</strong> - 8 UN" }, { "contenido": "1343" },
+          { "contenido": "75210" }, { "contenido": "76600" }, { "contenido": "98600" }, { "contenido": "122900" },
+          { "contenido": "56400" }, { "contenido": "57400" }, { "contenido": "73900" }, { "contenido": "92200" },
+          { "contenido": "400" }, { "contenido": "450" }, { "contenido": "530" }, { "contenido": "660" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>1 7/8\"</strong> - 8 UN" }, { "contenido": "1557" },
+          { "contenido": "87190" }, { "contenido": "88700" }, { "contenido": "114300" }, { "contenido": "142500" },
+          { "contenido": "65400" }, { "contenido": "66600" }, { "contenido": "85700" }, { "contenido": "106800" },
+          { "contenido": "500" }, { "contenido": "510" }, { "contenido": "650" }, { "contenido": "810" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "<strong>2\"</strong> - 8 UN" }, { "contenido": "1788" },
+          { "contenido": "100130" }, { "contenido": "101200" }, { "contenido": "131200" }, { "contenido": "163600" },
+          { "contenido": "75100" }, { "contenido": "76400" }, { "contenido": "98400" }, { "contenido": "122700" },
+          { "contenido": "600" }, { "contenido": "620" }, { "contenido": "800" }, { "contenido": "1000" }
+        ]
+      },
+      {
+        "columnas": [
+          {
+            "colspan": 14,
+            "contenido": "<br><strong>TABLA 2: GRADOS DE DUREZA (SAE) PARA PERNOS BAJO CARBONO, MEDIO CARBONO Y ALEADOS</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "<strong>Grado de Dureza</strong>" },
+          { "colspan": 3, "contenido": "<strong>SAE 2</strong>" },
+          { "colspan": 3, "contenido": "<strong>SAE 5</strong>" },
+          { "colspan": 3, "contenido": "<strong>SAE 7</strong>" },
+          { "colspan": 3, "contenido": "<strong>SAE 8</strong>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "<strong>Marcas en Cabeza</strong>" },
+          { "colspan": 3, "contenido": "Sin Marcas" },
+          { "colspan": 3, "contenido": "3 Líneas" },
+          { "colspan": 3, "contenido": "5 Líneas" },
+          { "colspan": 3, "contenido": "6 Líneas" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "<strong>Material / Capacidad de Tensión Mínima</strong>" },
+          { "colspan": 3, "contenido": "Acero al carbono<br><small>74 libras por pulgada (Ksi)</small>" },
+          { "colspan": 3, "contenido": "Acero al carbono<br><small>120 libras por pulgada (Ksi)</small>" },
+          { "colspan": 3, "contenido": "Acero al carbono templado<br><small>133 libras por pulgada (Ksi)</small>" },
+          { "colspan": 3, "contenido": "Acero al carbono templado<br><small>150 libras por pulgada (Ksi)</small>" }
+        ]
+      },
+      {
+        "columnas": [
+          {
+            "colspan": 14,
+            "contenido": "<br><strong>TABLA 3: APRIETE DE PERNOS (TORQUE) SEGÚN GRADO Y CONDICIÓN DE LUBRICACIÓN</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "<strong>Diámetro (Pulg)</strong>" },
+          { "colspan": 2, "contenido": "<strong>Hilos por Pulgada</strong>" },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<strong>Grado 2</strong>" },
+              { "direction": "column", "contenido": [{ "contenido": "Seco" }, { "contenido": "Aceite" }] }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<strong>Grado 5</strong>" },
+              { "direction": "column", "contenido": [{ "contenido": "Seco" }, { "contenido": "Aceite" }] }
+            ]
+          },
+          {
+            "colspan": 3,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<strong>Grado 7</strong>" },
+              { "direction": "column", "contenido": [{ "contenido": "Seco" }, { "colspan": 2, "contenido": "Aceite" }] }
+            ]
+          },
+          {
+            "colspan": 3,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "<strong>Grado 8</strong>" },
+              { "direction": "column", "contenido": [{ "contenido": "Seco" }, { "colspan": 2, "contenido": "Aceite" }] }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "1/4\"" }, { "colspan": 2, "contenido": "20" },
+          { "colspan": 1, "contenido": "4" }, { "colspan": 1, "contenido": "3" },
+          { "colspan": 1, "contenido": "8" }, { "colspan": 1, "contenido": "6" },
+          { "colspan": 1, "contenido": "10" }, { "colspan": 2, "contenido": "8" },
+          { "colspan": 1, "contenido": "12" }, { "colspan": 2, "contenido": "9" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "1/4\"" }, { "colspan": 2, "contenido": "28" },
+          { "colspan": 1, "contenido": "6" }, { "colspan": 1, "contenido": "4" },
+          { "colspan": 1, "contenido": "10" }, { "colspan": 1, "contenido": "7" },
+          { "colspan": 1, "contenido": "12" }, { "colspan": 2, "contenido": "9" },
+          { "colspan": 1, "contenido": "14" }, { "colspan": 2, "contenido": "10" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "5/16\"" }, { "colspan": 2, "contenido": "18" },
+          { "colspan": 1, "contenido": "9" }, { "colspan": 1, "contenido": "7" },
+          { "colspan": 1, "contenido": "17" }, { "colspan": 1, "contenido": "13" },
+          { "colspan": 1, "contenido": "21" }, { "colspan": 2, "contenido": "16" },
+          { "colspan": 1, "contenido": "25" }, { "colspan": 2, "contenido": "18" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "5/16\"" }, { "colspan": 2, "contenido": "24" },
+          { "colspan": 1, "contenido": "12" }, { "colspan": 1, "contenido": "9" },
+          { "colspan": 1, "contenido": "19" }, { "colspan": 1, "contenido": "14" },
+          { "colspan": 1, "contenido": "24" }, { "colspan": 2, "contenido": "18" },
+          { "colspan": 1, "contenido": "29" }, { "colspan": 2, "contenido": "20" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "3/8\"" }, { "colspan": 2, "contenido": "16" },
+          { "colspan": 1, "contenido": "16" }, { "colspan": 1, "contenido": "12" },
+          { "colspan": 1, "contenido": "30" }, { "colspan": 1, "contenido": "23" },
+          { "colspan": 1, "contenido": "40" }, { "colspan": 2, "contenido": "30" },
+          { "colspan": 1, "contenido": "45" }, { "colspan": 2, "contenido": "35" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "3/8\"" }, { "colspan": 2, "contenido": "24" },
+          { "colspan": 1, "contenido": "22" }, { "colspan": 1, "contenido": "16" },
+          { "colspan": 1, "contenido": "35" }, { "colspan": 1, "contenido": "25" },
+          { "colspan": 1, "contenido": "45" }, { "colspan": 2, "contenido": "35" },
+          { "colspan": 1, "contenido": "50" }, { "colspan": 2, "contenido": "40" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "7/16\"" }, { "colspan": 2, "contenido": "14" },
+          { "colspan": 1, "contenido": "24" }, { "colspan": 1, "contenido": "17" },
+          { "colspan": 1, "contenido": "50" }, { "colspan": 1, "contenido": "35" },
+          { "colspan": 1, "contenido": "60" }, { "colspan": 2, "contenido": "45" },
+          { "colspan": 1, "contenido": "70" }, { "colspan": 2, "contenido": "55" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "7/16\"" }, { "colspan": 2, "contenido": "20" },
+          { "colspan": 1, "contenido": "34" }, { "colspan": 1, "contenido": "26" },
+          { "colspan": 1, "contenido": "55" }, { "colspan": 1, "contenido": "40" },
+          { "colspan": 1, "contenido": "70" }, { "colspan": 2, "contenido": "50" },
+          { "colspan": 1, "contenido": "80" }, { "colspan": 2, "contenido": "60" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "1/2\"" }, { "colspan": 2, "contenido": "13" },
+          { "colspan": 1, "contenido": "38" }, { "colspan": 1, "contenido": "31" },
+          { "colspan": 1, "contenido": "75" }, { "colspan": 1, "contenido": "55" },
+          { "colspan": 1, "contenido": "95" }, { "colspan": 2, "contenido": "70" },
+          { "colspan": 1, "contenido": "110" }, { "colspan": 2, "contenido": "80" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "1/2\"" }, { "colspan": 2, "contenido": "20" },
+          { "colspan": 1, "contenido": "52" }, { "colspan": 1, "contenido": "42" },
+          { "colspan": 1, "contenido": "90" }, { "colspan": 1, "contenido": "65" },
+          { "colspan": 1, "contenido": "100" }, { "colspan": 2, "contenido": "80" },
+          { "colspan": 1, "contenido": "120" }, { "colspan": 2, "contenido": "90" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "9/16\"" }, { "colspan": 2, "contenido": "12" },
+          { "colspan": 1, "contenido": "52" }, { "colspan": 1, "contenido": "42" },
+          { "colspan": 1, "contenido": "110" }, { "colspan": 1, "contenido": "80" },
+          { "colspan": 1, "contenido": "135" }, { "colspan": 2, "contenido": "100" },
+          { "colspan": 1, "contenido": "150" }, { "colspan": 2, "contenido": "110" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "9/16\"" }, { "colspan": 2, "contenido": "18" },
+          { "colspan": 1, "contenido": "71" }, { "colspan": 1, "contenido": "57" },
+          { "colspan": 1, "contenido": "120" }, { "colspan": 1, "contenido": "90" },
+          { "colspan": 1, "contenido": "150" }, { "colspan": 2, "contenido": "110" },
+          { "colspan": 1, "contenido": "170" }, { "colspan": 2, "contenido": "130" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "5/8\"" }, { "colspan": 2, "contenido": "11" },
+          { "colspan": 1, "contenido": "98" }, { "colspan": 1, "contenido": "78" },
+          { "colspan": 1, "contenido": "150" }, { "colspan": 1, "contenido": "110" },
+          { "colspan": 1, "contenido": "140" }, { "colspan": 2, "contenido": "140" },
+          { "colspan": 1, "contenido": "220" }, { "colspan": 2, "contenido": "170" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "5/8\"" }, { "colspan": 2, "contenido": "18" },
+          { "colspan": 1, "contenido": "115" }, { "colspan": 1, "contenido": "93" },
+          { "colspan": 1, "contenido": "180" }, { "colspan": 1, "contenido": "130" },
+          { "colspan": 1, "contenido": "210" }, { "colspan": 2, "contenido": "160" },
+          { "colspan": 1, "contenido": "240" }, { "colspan": 2, "contenido": "180" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "3/4\"" }, { "colspan": 2, "contenido": "10" },
+          { "colspan": 1, "contenido": "157" }, { "colspan": 1, "contenido": "121" },
+          { "colspan": 1, "contenido": "260" }, { "colspan": 1, "contenido": "200" },
+          { "colspan": 1, "contenido": "320" }, { "colspan": 2, "contenido": "240" },
+          { "colspan": 1, "contenido": "380" }, { "colspan": 2, "contenido": "280" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "3/4\"" }, { "colspan": 2, "contenido": "16" },
+          { "colspan": 1, "contenido": "180" }, { "colspan": 1, "contenido": "133" },
+          { "colspan": 1, "contenido": "300" }, { "colspan": 1, "contenido": "220" },
+          { "colspan": 1, "contenido": "360" }, { "colspan": 2, "contenido": "280" },
+          { "colspan": 1, "contenido": "420" }, { "colspan": 2, "contenido": "320" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "7/8\"" }, { "colspan": 2, "contenido": "9" },
+          { "colspan": 1, "contenido": "210" }, { "colspan": 1, "contenido": "160" },
+          { "colspan": 1, "contenido": "430" }, { "colspan": 1, "contenido": "320" },
+          { "colspan": 1, "contenido": "520" }, { "colspan": 2, "contenido": "400" },
+          { "colspan": 1, "contenido": "600" }, { "colspan": 2, "contenido": "460" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "7/8\"" }, { "colspan": 2, "contenido": "14" },
+          { "colspan": 1, "contenido": "230" }, { "colspan": 1, "contenido": "177" },
+          { "colspan": 1, "contenido": "470" }, { "colspan": 1, "contenido": "360" },
+          { "colspan": 1, "contenido": "580" }, { "colspan": 2, "contenido": "440" },
+          { "colspan": 1, "contenido": "660" }, { "colspan": 2, "contenido": "500" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "1\"" }, { "colspan": 2, "contenido": "8" },
+          { "colspan": 1, "contenido": "320" }, { "colspan": 1, "contenido": "240" },
+          { "colspan": 1, "contenido": "640" }, { "colspan": 1, "contenido": "480" },
+          { "colspan": 1, "contenido": "800" }, { "colspan": 2, "contenido": "600" },
+          { "colspan": 1, "contenido": "900" }, { "colspan": 2, "contenido": "680" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 2, "contenido": "1\"" }, { "colspan": 2, "contenido": "12" },
+          { "colspan": 1, "contenido": "350" }, { "colspan": 1, "contenido": "265" },
+          { "colspan": 1, "contenido": "710" }, { "colspan": 1, "contenido": "530" },
+          { "colspan": 1, "contenido": "860" }, { "colspan": 2, "contenido": "666" },
+          { "colspan": 1, "contenido": "990" }, { "colspan": 2, "contenido": "740" }
+        ]
+      },
+      {
+        "columnas": [
+          {
+            "colspan": 14,
+            "contenido": "<br><strong>TABLA 4: VARIACIÓN DEL TORQUE POR TIPO DE LUBRICACIÓN O RECUBRIMIENTO</strong>"
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 7, "contenido": "<strong>Tipo de Perno / Condición</strong>" },
+          { "colspan": 7, "contenido": "<strong>Variación del Torque de Apriete</strong>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 7, "contenido": "Corriente Lubricado con Aceite" },
+          { "colspan": 7, "contenido": "Reducir 15 a 25%" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 7, "contenido": "Corriente con Teflón o Grasa" },
+          { "colspan": 7, "contenido": "Reducir 50%" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 7, "contenido": "Cromado Lubricado" },
+          { "colspan": 7, "contenido": "Sin Cambio" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 7, "contenido": "Plateado Cadmio Lubricado" },
+          { "colspan": 7, "contenido": "Reducir 25%" }
+        ]
+      },
+      {
+        "columnas": [
+          { "colspan": 7, "contenido": "Plateado Zinc Lubricado" },
+          { "colspan": 7, "contenido": "Reducir 15%" }
         ]
       }
     ]
