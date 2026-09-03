@@ -6244,7 +6244,7 @@ const especificacionesPernos = {
             "colspan": 2,
             "direction": "row",
             "contenido": [
-              { "contenido": "s" },
+              { "contenido": "a" },
               { "contenido": "Ancho Entre Caras" },
               {
                 "direction": "column",
@@ -6801,7 +6801,7 @@ const especificacionesPernos = {
     "fixedFirstColumn": true,
     "fixedIntersection": true,
     "tipo": 1,
-    "image": "perno-cabeza-avellanada-parker-metrico.png",
+    "image": "perno-cabeza-avellanada-parker-metrico-v2.png",
     "filas": [
       {
         "columnas": [
@@ -8101,7 +8101,7 @@ const especificacionesPernos = {
         "columnas": [
           {
             "colspan": 14,
-            "contenido": "<br><strong>TABLA 3: APRIETE DE PERNOS (TORQUE) SEGÚN GRADO Y CONDICIÓN DE LUBRICACIÓN</strong>"
+            "contenido": "<br><strong>TABLA 3: APRIETE DE PERNOS (TORQUE) SEGÚN GRADO Y CONDICIÓN DE LUBRICACIÓN (Ft/Lb)</strong>"
           }
         ]
       },
