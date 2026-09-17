@@ -8368,5 +8368,1198 @@ const especificacionesPernos = {
         ]
       }
     ]
+  },
+
+  "roscas-unificadas-externas-pulgadas": {
+    "titulo": "Límites de Tamaño para Roscas Externas Unificadas en Pulgadas (ASME B1.1)",
+    "fixedHeader": true,
+    "fixedFirstColumn": false,
+    "fixedIntersection": false,
+    "tipo": 2,
+    "filas": [
+      {
+        "columnas": [
+          { "contenido": "Tamaño<br><small>(Size)</small>" },
+          { "contenido": "Diámetro Nominal<br><small>(Nom. Diameter)</small>" },
+          { "contenido": "Serie de Rosca<br><small>(Thread Series)</small>" },
+          { "contenido": "Clase<br><small>(Class)</small>" },
+          { "contenido": "Diámetro Mayor Máx - Mín<br><small>(Major Dia Max - Min)</small>" },
+          { "contenido": "Diámetro de Paso Máx - Mín<br><small>(Pitch Dia Max - Min)</small>" },
+          { "contenido": "Holgura<br><small>(Allowance)</small>" },
+          { "contenido": "Espesor Revestimiento<br><small>(Max Coating Thickness)</small>" },
+          { "contenido": "Área Esfuerzo Tracción<br><small>(TSA)</small>" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#0 - 80</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.0600" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0595 - 0.0563" }, { "contenido": "0.0600 - 0.0563" }, { "contenido": "0.0600 - 0.0568" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0514 - 0.0496" }, { "contenido": "0.0519 - 0.0496" }, { "contenido": "0.0519 - 0.0506" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0005" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0001" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0018" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#1 - 64</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.0730" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0724 - 0.0686" }, { "contenido": "0.0730 - 0.0686" }, { "contenido": "0.0730 - 0.0692" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0623 - 0.0603" }, { "contenido": "0.0629 - 0.0603" }, { "contenido": "0.0629 - 0.0614" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0026" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#1 - 72</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.0730" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0724 - 0.0689" }, { "contenido": "0.0730 - 0.0689" }, { "contenido": "0.0730 - 0.0695" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0634 - 0.0615" }, { "contenido": "0.0640 - 0.0615" }, { "contenido": "0.0640 - 0.0626" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0028" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#2 - 56</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.0860" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0854 - 0.0813" }, { "contenido": "0.0860 - 0.0813" }, { "contenido": "0.0860 - 0.0819" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0738 - 0.0717" }, { "contenido": "0.0744 - 0.0717" }, { "contenido": "0.0744 - 0.0728" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0037" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#2 - 64</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.0860" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0854 - 0.0816" }, { "contenido": "0.0860 - 0.0816" }, { "contenido": "0.0860 - 0.0822" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0753 - 0.0733" }, { "contenido": "0.0759 - 0.0733" }, { "contenido": "0.0759 - 0.0744" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0039" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#3 - 48</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.0990" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0983 - 0.0938" }, { "contenido": "0.0990 - 0.0938" }, { "contenido": "0.0990 - 0.0945" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0848 - 0.0825" }, { "contenido": "0.0855 - 0.0825" }, { "contenido": "0.0855 - 0.0838" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0049" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#3 - 56</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.0990" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0983 - 0.0942" }, { "contenido": "0.0990 - 0.0942" }, { "contenido": "0.0990 - 0.0949" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0867 - 0.0845" }, { "contenido": "0.0874 - 0.0845" }, { "contenido": "0.0874 - 0.0858" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0052" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#4 - 40</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.1120" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1112 - 0.1061" }, { "contenido": "0.1120 - 0.1061" }, { "contenido": "0.1120 - 0.1069" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0950 - 0.0925" }, { "contenido": "0.0958 - 0.0925" }, { "contenido": "0.0958 - 0.0939" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0008" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0060" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#4 - 48</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.1120" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1113 - 0.1068" }, { "contenido": "0.1120 - 0.1068" }, { "contenido": "0.1120 - 0.1075" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0978 - 0.0954" }, { "contenido": "0.0985 - 0.0954" }, { "contenido": "0.0985 - 0.0967" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0066" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#5 - 40</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.1250" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1242 - 0.1191" }, { "contenido": "0.1250 - 0.1191" }, { "contenido": "0.1250 - 0.1199" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1080 - 0.1054" }, { "contenido": "0.1088 - 0.1054" }, { "contenido": "0.1088 - 0.1069" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0008" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0080" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#5 - 44</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.1250" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1243 - 0.1195" }, { "contenido": "0.1250 - 0.1195" }, { "contenido": "0.1250 - 0.1202" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1095 - 0.1070" }, { "contenido": "0.1102 - 0.1070" }, { "contenido": "0.1102 - 0.1083" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0083" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#6 - 32</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.1380" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1372 - 0.1312" }, { "contenido": "0.1380 - 0.1312" }, { "contenido": "0.1380 - 0.1320" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1169 - 0.1141" }, { "contenido": "0.1177 - 0.1141" }, { "contenido": "0.1177 - 0.1156" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0008" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0091" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#6 - 40</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.1380" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1372 - 0.1321" }, { "contenido": "0.1380 - 0.1321" }, { "contenido": "0.1380 - 0.1329" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1210 - 0.1184" }, { "contenido": "0.1218 - 0.1184" }, { "contenido": "0.1218 - 0.1198" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0008" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0101" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#8 - 32</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.1640" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1631 - 0.1571" }, { "contenido": "0.1640 - 0.1571" }, { "contenido": "0.1640 - 0.1580" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1428 - 0.1399" }, { "contenido": "0.1437 - 0.1399" }, { "contenido": "0.1437 - 0.1415" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0009" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0140" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#8 - 36</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.1640" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1632 - 0.1577" }, { "contenido": "0.1640 - 0.1577" }, { "contenido": "0.1640 - 0.1585" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1452 - 0.1424" }, { "contenido": "0.1460 - 0.1424" }, { "contenido": "0.1460 - 0.1439" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0008" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0147" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#10 - 24</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.1900" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1890 - 0.1818" }, { "contenido": "0.1900 - 0.1818" }, { "contenido": "0.1900 - 0.1828" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1619 - 0.1586" }, { "contenido": "0.1629 - 0.1586" }, { "contenido": "0.1629 - 0.1604" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0010" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0003" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0175" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#10 - 32</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.1900" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1891 - 0.1831" }, { "contenido": "0.1900 - 0.1831" }, { "contenido": "0.1900 - 0.1840" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1688 - 0.1658" }, { "contenido": "0.1697 - 0.1658" }, { "contenido": "0.1697 - 0.1674" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0009" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0002" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0200" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#12 - 24</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.2160" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.2150 - 0.2078" }, { "contenido": "0.2160 - 0.2078" }, { "contenido": "0.2160 - 0.2088" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1879 - 0.1845" }, { "contenido": "0.1889 - 0.1845" }, { "contenido": "0.1889 - 0.1863" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0010" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0003" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0242" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>#12 - 28</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.2160" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.2150 - 0.2085" }, { "contenido": "0.2160 - 0.2085" }, { "contenido": "0.2160 - 0.2095" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.1918 - 0.1886" }, { "contenido": "0.1928 - 0.1886" }, { "contenido": "0.1928 - 0.1904" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0010" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0003" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0258" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1/4 - 20</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.2489 - 0.2367" }, { "contenido": "0.2489 - 0.2408" }, { "contenido": "0.2500 - 0.2408" }, { "contenido": "0.2500 - 0.2419" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.2164 - 0.2108" }, { "contenido": "0.2164 - 0.2127" }, { "contenido": "0.2175 - 0.2127" }, { "contenido": "0.2175 - 0.2147" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0011" }, { "contenido": "0.0011" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0003" }, { "contenido": "0.0003" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0318" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1/4 - 28</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.2490 - 0.2392" }, { "contenido": "0.2490 - 0.2425" }, { "contenido": "0.2500 - 0.2425" }, { "contenido": "0.2500 - 0.2435" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.2258 - 0.2208" }, { "contenido": "0.2258 - 0.2225" }, { "contenido": "0.2268 - 0.2225" }, { "contenido": "0.2268 - 0.2243" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0010" }, { "contenido": "0.0010" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0003" }, { "contenido": "0.0003" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0364" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>5/16 - 18</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.3125" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.3113 - 0.2982" }, { "contenido": "0.3113 - 0.3026" }, { "contenido": "0.3125 - 0.3026" }, { "contenido": "0.3125 - 0.3038" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.2752 - 0.2691" }, { "contenido": "0.2752 - 0.2712" }, { "contenido": "0.2764 - 0.2712" }, { "contenido": "0.2764 - 0.2734" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0012" }, { "contenido": "0.0012" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0003" }, { "contenido": "0.0003" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0524" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>5/16 - 24</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.3125" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.3114 - 0.3006" }, { "contenido": "0.3114 - 0.3042" }, { "contenido": "0.3125 - 0.3042" }, { "contenido": "0.3125 - 0.3053" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.2843 - 0.2788" }, { "contenido": "0.2843 - 0.2806" }, { "contenido": "0.2854 - 0.2806" }, { "contenido": "0.2854 - 0.2827" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0011" }, { "contenido": "0.0011" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0003" }, { "contenido": "0.0003" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0581" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3/8 - 16</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.3750" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.3737 - 0.3595" }, { "contenido": "0.3737 - 0.3643" }, { "contenido": "0.3750 - 0.3643" }, { "contenido": "0.3750 - 0.3656" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.3331 - 0.3266" }, { "contenido": "0.3331 - 0.3287" }, { "contenido": "0.3344 - 0.3287" }, { "contenido": "0.3344 - 0.3311" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0013" }, { "contenido": "0.0013" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0003" }, { "contenido": "0.0003" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0775" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3/8 - 24</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.3750" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.3739 - 0.3631" }, { "contenido": "0.3739 - 0.3667" }, { "contenido": "0.3750 - 0.3667" }, { "contenido": "0.3750 - 0.3678" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.3468 - 0.3411" }, { "contenido": "0.3468 - 0.3430" }, { "contenido": "0.3479 - 0.3430" }, { "contenido": "0.3479 - 0.3450" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0011" }, { "contenido": "0.0011" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0003" }, { "contenido": "0.0003" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.0878" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>7/16 - 14</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.4375" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.4361 - 0.4206" }, { "contenido": "0.4361 - 0.4258" }, { "contenido": "0.4375 - 0.4258" }, { "contenido": "0.4375 - 0.4272" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.3897 - 0.3826" }, { "contenido": "0.3897 - 0.3850" }, { "contenido": "0.3911 - 0.3850" }, { "contenido": "0.3911 - 0.3876" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0014" }, { "contenido": "0.0014" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0004" }, { "contenido": "0.0004" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.1063" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>7/16 - 20</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.4375" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.4362 - 0.4240" }, { "contenido": "0.4362 - 0.4281" }, { "contenido": "0.4375 - 0.4281" }, { "contenido": "0.4375 - 0.4294" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.4037 - 0.3974" }, { "contenido": "0.4037 - 0.3995" }, { "contenido": "0.4050 - 0.3995" }, { "contenido": "0.4050 - 0.4019" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0013" }, { "contenido": "0.0013" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0003" }, { "contenido": "0.0003" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.1187" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1/2 - 13</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.5000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.4985 - 0.4822" }, { "contenido": "0.4985 - 0.4876" }, { "contenido": "0.5000 - 0.4876" }, { "contenido": "0.5000 - 0.4891" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.4485 - 0.4411" }, { "contenido": "0.4485 - 0.4435" }, { "contenido": "0.4500 - 0.4435" }, { "contenido": "0.4500 - 0.4463" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0015" }, { "contenido": "0.0015" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0004" }, { "contenido": "0.0004" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.1419" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1/2 - 20</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.5000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.4987 - 0.4865" }, { "contenido": "0.4987 - 0.4906" }, { "contenido": "0.5000 - 0.4906" }, { "contenido": "0.5000 - 0.4919" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.4662 - 0.4598" }, { "contenido": "0.4662 - 0.4619" }, { "contenido": "0.4675 - 0.4619" }, { "contenido": "0.4675 - 0.4643" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0013" }, { "contenido": "0.0013" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0003" }, { "contenido": "0.0003" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.1600" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>9/16 - 12</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.5625" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.5609 - 0.5437" }, { "contenido": "0.5609 - 0.5495" }, { "contenido": "0.5625 - 0.5495" }, { "contenido": "0.5625 - 0.5511" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.5068 - 0.4990" }, { "contenido": "0.5068 - 0.5016" }, { "contenido": "0.5084 - 0.5016" }, { "contenido": "0.5084 - 0.5045" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0016" }, { "contenido": "0.0016" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0004" }, { "contenido": "0.0004" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.1819" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>9/16 - 18</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.5625" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.5611 - 0.5480" }, { "contenido": "0.5611 - 0.5524" }, { "contenido": "0.5625 - 0.5524" }, { "contenido": "0.5625 - 0.5538" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.5250 - 0.5182" }, { "contenido": "0.5250 - 0.5205" }, { "contenido": "0.5264 - 0.5205" }, { "contenido": "0.5264 - 0.5230" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0014" }, { "contenido": "0.0014" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0004" }, { "contenido": "0.0004" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.2030" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>5/8 - 11</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.6250" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.6233 - 0.6051" }, { "contenido": "0.6233 - 0.6112" }, { "contenido": "0.6250 - 0.6112" }, { "contenido": "0.6250 - 0.6129" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.5643 - 0.5560" }, { "contenido": "0.5643 - 0.5588" }, { "contenido": "0.5660 - 0.5588" }, { "contenido": "0.5660 - 0.5619" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0017" }, { "contenido": "0.0017" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0004" }, { "contenido": "0.0004" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.2260" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>5/8 - 18</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.6250" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.6236 - 0.6105" }, { "contenido": "0.6236 - 0.6149" }, { "contenido": "0.6250 - 0.6149" }, { "contenido": "0.6250 - 0.6163" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.5875 - 0.5805" }, { "contenido": "0.5875 - 0.5828" }, { "contenido": "0.5889 - 0.5828" }, { "contenido": "0.5889 - 0.5854" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0014" }, { "contenido": "0.0014" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0004" }, { "contenido": "0.0004" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.2560" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3/4 - 10</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.7500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.7482 - 0.7288" }, { "contenido": "0.7482 - 0.7353" }, { "contenido": "0.7500 - 0.7353" }, { "contenido": "0.7500 - 0.7371" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.6832 - 0.6744" }, { "contenido": "0.6832 - 0.6773" }, { "contenido": "0.6850 - 0.6773" }, { "contenido": "0.6850 - 0.6806" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0018" }, { "contenido": "0.0018" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0005" }, { "contenido": "0.0005" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.3345" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3/4 - 16</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.7500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.7485 - 0.7343" }, { "contenido": "0.7485 - 0.7391" }, { "contenido": "0.7500 - 0.7391" }, { "contenido": "0.7500 - 0.7406" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.7079 - 0.7004" }, { "contenido": "0.7079 - 0.7029" }, { "contenido": "0.7094 - 0.7029" }, { "contenido": "0.7094 - 0.7056" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0015" }, { "contenido": "0.0015" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0004" }, { "contenido": "0.0004" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.3730" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>7/8 - 9</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.8750" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.8731 - 0.8523" }, { "contenido": "0.8731 - 0.8592" }, { "contenido": "0.8750 - 0.8592" }, { "contenido": "0.8750 - 0.8611" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.8009 - 0.7914" }, { "contenido": "0.8009 - 0.7946" }, { "contenido": "0.8028 - 0.7946" }, { "contenido": "0.8028 - 0.7981" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0019" }, { "contenido": "0.0019" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0005" }, { "contenido": "0.0005" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.4617" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>7/8 - 14</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "0.8750" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.8734 - 0.8579" }, { "contenido": "0.8734 - 0.8631" }, { "contenido": "0.8750 - 0.8631" }, { "contenido": "0.8750 - 0.8647" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.8270 - 0.8189" }, { "contenido": "0.8270 - 0.8216" }, { "contenido": "0.8286 - 0.8216" }, { "contenido": "0.8286 - 0.8245" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0016" }, { "contenido": "0.0016" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0004" }, { "contenido": "0.0004" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.5095" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.0000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.9980 - 0.9755" }, { "contenido": "0.9980 - 0.9830" }, { "contenido": "1.0000 - 0.9830" }, { "contenido": "1.0000 - 0.9850" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.9168 - 0.9067" }, { "contenido": "0.9168 - 0.9101" }, { "contenido": "0.9188 - 0.9101" }, { "contenido": "0.9188 - 0.9137" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0020" }, { "contenido": "0.0020" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0005" }, { "contenido": "0.0005" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.6057" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1 - 12</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.0000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.9982 - 0.9810" }, { "contenido": "0.9982 - 0.9868" }, { "contenido": "1.0000 - 0.9868" }, { "contenido": "1.0000 - 0.9886" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.9441 - 0.9353" }, { "contenido": "0.9441 - 0.9382" }, { "contenido": "0.9459 - 0.9382" }, { "contenido": "0.9459 - 0.9415" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0018" }, { "contenido": "0.0018" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0005" }, { "contenido": "0.0005" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.6630" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1 - 14</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.0000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNS" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.9984 - 0.9881" }, { "contenido": "1.0000 - 0.9881" }, { "contenido": "1.0000 - 0.9897" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.9520 - 0.9467" }, { "contenido": "0.9536 - 0.9467" }, { "contenido": "0.9536 - 0.9496" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0016" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0004" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.6799" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-1/8 - 7</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.1250" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.1228 - 1.0982" }, { "contenido": "1.1228 - 1.1064" }, { "contenido": "1.1250 - 1.1064" }, { "contenido": "1.1250 - 1.1086" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.0300 - 1.0191" }, { "contenido": "1.0300 - 1.0228" }, { "contenido": "1.0322 - 1.0228" }, { "contenido": "1.0322 - 1.0268" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0022" }, { "contenido": "0.0022" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.7633" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-1/8 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.1250" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.1229 - 1.1079" }, { "contenido": "1.1250 - 1.1079" }, { "contenido": "1.1250 - 1.1100" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.0417 - 1.0348" }, { "contenido": "1.0438 - 1.0348" }, { "contenido": "1.0438 - 1.0386" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0021" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0005" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.7905" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-1/8 - 12</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.1250" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.1232 - 1.1060" }, { "contenido": "1.1232 - 1.1118" }, { "contenido": "1.1250 - 1.1118" }, { "contenido": "1.1250 - 1.1136" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.0691 - 1.0601" }, { "contenido": "1.0691 - 1.0631" }, { "contenido": "1.0709 - 1.0631" }, { "contenido": "1.0709 - 1.0664" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0018" }, { "contenido": "0.0018" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0005" }, { "contenido": "0.0005" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.8557" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-1/4 - 7</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.2478 - 1.2232" }, { "contenido": "1.2478 - 1.2314" }, { "contenido": "1.2500 - 1.2314" }, { "contenido": "1.2500 - 1.2336" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.1550 - 1.1439" }, { "contenido": "1.1550 - 1.1476" }, { "contenido": "1.1572 - 1.1476" }, { "contenido": "1.1572 - 1.1517" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0022" }, { "contenido": "0.0022" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.9691" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-1/4 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.2479 - 1.2329" }, { "contenido": "1.2500 - 1.2329" }, { "contenido": "1.2500 - 1.2350" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.1667 - 1.1597" }, { "contenido": "1.1688 - 1.1597" }, { "contenido": "1.1688 - 1.1635" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0021" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0005" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "0.9997" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-1/4 - 12</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.2482 - 1.2310" }, { "contenido": "1.2482 - 1.2368" }, { "contenido": "1.2500 - 1.2368" }, { "contenido": "1.2500 - 1.2386" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.1941 - 1.1849" }, { "contenido": "1.1941 - 1.1879" }, { "contenido": "1.1959 - 1.1879" }, { "contenido": "1.1959 - 1.1913" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0018" }, { "contenido": "0.0018" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0005" }, { "contenido": "0.0005" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "1.0729" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-3/8 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.3750" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.3726 - 1.3453" }, { "contenido": "1.3726 - 1.3544" }, { "contenido": "1.3750 - 1.3544" }, { "contenido": "1.3750 - 1.3568" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.2643 - 1.2523" }, { "contenido": "1.2643 - 1.2563" }, { "contenido": "1.2667 - 1.2563" }, { "contenido": "1.2667 - 1.2607" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0024" }, { "contenido": "0.0024" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "1.1549" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-3/8 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.3750" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.3728 - 1.3578" }, { "contenido": "1.3750 - 1.3578" }, { "contenido": "1.3750 - 1.3600" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.2916 - 1.2844" }, { "contenido": "1.2938 - 1.2844" }, { "contenido": "1.2938 - 1.2884" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0022" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "1.2335" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-3/8 - 12</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.3750" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.3731 - 1.3559" }, { "contenido": "1.3731 - 1.3617" }, { "contenido": "1.3750 - 1.3617" }, { "contenido": "1.3750 - 1.3636" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.3190 - 1.3096" }, { "contenido": "1.3190 - 1.3127" }, { "contenido": "1.3209 - 1.3127" }, { "contenido": "1.3209 - 1.3162" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0019" }, { "contenido": "0.0019" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0005" }, { "contenido": "0.0005" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "1.3147" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-1/2 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.5000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.4976 - 1.4703" }, { "contenido": "1.4976 - 1.4794" }, { "contenido": "1.5000 - 1.4794" }, { "contenido": "1.5000 - 1.4818" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.3893 - 1.3772" }, { "contenido": "1.3893 - 1.3812" }, { "contenido": "1.3917 - 1.3812" }, { "contenido": "1.3917 - 1.3856" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0024" }, { "contenido": "0.0024" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "1.4053" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-1/2 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.5000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.4978 - 1.4828" }, { "contenido": "1.5000 - 1.4828" }, { "contenido": "1.5000 - 1.4850" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.4166 - 1.4093" }, { "contenido": "1.4188 - 1.4093" }, { "contenido": "1.4188 - 1.4133" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0022" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "1.4918" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-1/2 - 12</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.5000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNF" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.4981 - 1.4809" }, { "contenido": "1.4981 - 1.4867" }, { "contenido": "1.5000 - 1.4867" }, { "contenido": "1.5000 - 1.4886" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.4440 - 1.4344" }, { "contenido": "1.4440 - 1.4376" }, { "contenido": "1.4459 - 1.4376" }, { "contenido": "1.4459 - 1.4411" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0019" }, { "contenido": "0.0019" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0005" }, { "contenido": "0.0005" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "1.5810" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-5/8 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.6250" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.6225 - 1.6043" }, { "contenido": "1.6250 - 1.6043" }, { "contenido": "1.6250 - 1.6068" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.5142 - 1.5060" }, { "contenido": "1.5167 - 1.5060" }, { "contenido": "1.5167 - 1.5105" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0025" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "1.6802" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-5/8 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.6250" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.6228 - 1.6078" }, { "contenido": "1.6250 - 1.6078" }, { "contenido": "1.6250 - 1.6100" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.5416 - 1.5342" }, { "contenido": "1.5438 - 1.5342" }, { "contenido": "1.5438 - 1.5382" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0022" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "1.7747" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-3/4 - 5</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.7500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.7473 - 1.7165" }, { "contenido": "1.7473 - 1.7268" }, { "contenido": "1.7500 - 1.7268" }, { "contenido": "1.7500 - 1.7295" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.6174 - 1.6040" }, { "contenido": "1.6174 - 1.6085" }, { "contenido": "1.6201 - 1.6085" }, { "contenido": "1.6201 - 1.6134" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0027" }, { "contenido": "0.0027" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "1.8995" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-3/4 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.7500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.7475 - 1.7293" }, { "contenido": "1.7500 - 1.7293" }, { "contenido": "1.7500 - 1.7318" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.6392 - 1.6309" }, { "contenido": "1.6417 - 1.6309" }, { "contenido": "1.6417 - 1.6354" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0025" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "1.9796" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-3/4 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.7500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.7477 - 1.7327" }, { "contenido": "1.7500 - 1.7327" }, { "contenido": "1.7500 - 1.7350" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.6665 - 1.6590" }, { "contenido": "1.6688 - 1.6590" }, { "contenido": "1.6688 - 1.6631" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0023" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "2.0822" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-7/8 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.8750" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.8725 - 1.8543" }, { "contenido": "1.8750 - 1.8543" }, { "contenido": "1.8750 - 1.8568" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.7642 - 1.7558" }, { "contenido": "1.7667 - 1.7558" }, { "contenido": "1.7667 - 1.7604" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0025" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "2.3036" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>1-7/8 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "1.8750" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.8727 - 1.8577" }, { "contenido": "1.8750 - 1.8577" }, { "contenido": "1.8750 - 1.8600" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.7915 - 1.7838" }, { "contenido": "1.7938 - 1.7838" }, { "contenido": "1.7938 - 1.7881" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0023" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "2.4141" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>2 - 4-1/2</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.0000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.9971 - 1.9641" }, { "contenido": "1.9971 - 1.9751" }, { "contenido": "2.0000 - 1.9751" }, { "contenido": "2.0000 - 1.9780" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.8528 - 1.8385" }, { "contenido": "1.8528 - 1.8433" }, { "contenido": "1.8557 - 1.8433" }, { "contenido": "1.8557 - 1.8486" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0029" }, { "contenido": "0.0029" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "2.4982" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>2 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.0000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.9974 - 1.9792" }, { "contenido": "2.0000 - 1.9792" }, { "contenido": "2.0000 - 1.9818" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.8891 - 1.8805" }, { "contenido": "1.8917 - 1.8805" }, { "contenido": "1.8917 - 1.8853" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0026" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "2.6522" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>2 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.0000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.9977 - 1.9827" }, { "contenido": "2.0000 - 1.9827" }, { "contenido": "2.0000 - 1.9850" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1.9165 - 1.9087" }, { "contenido": "1.9188 - 1.9087" }, { "contenido": "1.9188 - 1.9130" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0023" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "2.7706" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>2-1/4 - 4-1/2</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.2471 - 2.2141" }, { "contenido": "2.2471 - 2.2251" }, { "contenido": "2.2500 - 2.2251" }, { "contenido": "2.2500 - 2.2280" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.1028 - 2.0882" }, { "contenido": "2.1028 - 2.0931" }, { "contenido": "2.1057 - 2.0931" }, { "contenido": "2.1057 - 2.0984" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0029" }, { "contenido": "0.0029" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "3.2477" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>2-1/4 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.2474 - 2.2292" }, { "contenido": "2.2500 - 2.2292" }, { "contenido": "2.2500 - 2.2318" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.1391 - 2.1303" }, { "contenido": "2.1417 - 2.1303" }, { "contenido": "2.1417 - 2.1351" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0026" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "3.4229" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>2-1/4 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.2476 - 2.2326" }, { "contenido": "2.2500 - 2.2326" }, { "contenido": "2.2500 - 2.2350" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.1664 - 2.1584" }, { "contenido": "2.1688 - 2.1584" }, { "contenido": "2.1688 - 2.1628" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0024" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "3.5573" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>2-1/2 - 4</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.5000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.4969 - 2.4612" }, { "contenido": "2.4969 - 2.4731" }, { "contenido": "2.5000 - 2.4731" }, { "contenido": "2.5000 - 2.4762" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.3345 - 2.3190" }, { "contenido": "2.3345 - 2.3241" }, { "contenido": "2.3376 - 2.3241" }, { "contenido": "2.3376 - 2.3298" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0031" }, { "contenido": "0.0031" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0008" }, { "contenido": "0.0008" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "3.9988" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>2-1/2 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.5000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.4973 - 2.4791" }, { "contenido": "2.5000 - 2.4791" }, { "contenido": "2.5000 - 2.4818" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.3890 - 2.3800" }, { "contenido": "2.3917 - 2.3800" }, { "contenido": "2.3917 - 2.3850" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0027" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "4.2918" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>2-1/2 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.5000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.4976 - 2.4826" }, { "contenido": "2.5000 - 2.4826" }, { "contenido": "2.5000 - 2.4850" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.4164 - 2.4082" }, { "contenido": "2.4188 - 2.4082" }, { "contenido": "2.4188 - 2.4127" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0024" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "4.4421" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>2-3/4 - 4</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.7500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.7468 - 2.7111" }, { "contenido": "2.7468 - 2.7230" }, { "contenido": "2.7500 - 2.7230" }, { "contenido": "2.7500 - 2.7262" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.5844 - 2.5686" }, { "contenido": "2.5844 - 2.5739" }, { "contenido": "2.5876 - 2.5739" }, { "contenido": "2.5876 - 2.5797" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0032" }, { "contenido": "0.0032" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0008" }, { "contenido": "0.0008" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "4.9340" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>2-3/4 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.7500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.7473 - 2.7291" }, { "contenido": "2.7500 - 2.7291" }, { "contenido": "2.7500 - 2.7318" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.6390 - 2.6299" }, { "contenido": "2.6417 - 2.6299" }, { "contenido": "2.6417 - 2.6349" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0027" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "5.2588" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>2-3/4 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "2.7500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.7475 - 2.7325" }, { "contenido": "2.7500 - 2.7325" }, { "contenido": "2.7500 - 2.7350" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.6663 - 2.6580" }, { "contenido": "2.6688 - 2.6580" }, { "contenido": "2.6688 - 2.6625" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0025" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0006" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "5.4252" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3 - 4</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "3.0000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.9968 - 2.9611" }, { "contenido": "2.9968 - 2.9730" }, { "contenido": "3.0000 - 2.9730" }, { "contenido": "3.0000 - 2.9762" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.8344 - 2.8183" }, { "contenido": "2.8344 - 2.8237" }, { "contenido": "2.8376 - 2.8237" }, { "contenido": "2.8376 - 2.8296" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0032" }, { "contenido": "0.0032" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0008" }, { "contenido": "0.0008" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "5.9674" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "3.0000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.9972 - 2.9790" }, { "contenido": "3.0000 - 2.9790" }, { "contenido": "3.0000 - 2.9818" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.8889 - 2.8796" }, { "contenido": "2.8917 - 2.8796" }, { "contenido": "2.8917 - 2.8847" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0028" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "6.3241" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "3.0000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.9974 - 2.9824" }, { "contenido": "3.0000 - 2.9824" }, { "contenido": "3.0000 - 2.9850" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2.9162 - 2.9077" }, { "contenido": "2.9188 - 2.9077" }, { "contenido": "2.9188 - 2.9124" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0026" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "6.5063" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3-1/4 - 4</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "3.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.2467 - 3.2110" }, { "contenido": "3.2467 - 3.2229" }, { "contenido": "3.2500 - 3.2229" }, { "contenido": "3.2500 - 3.2262" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.0843 - 3.0680" }, { "contenido": "3.0843 - 3.0734" }, { "contenido": "3.0876 - 3.0734" }, { "contenido": "3.0876 - 3.0794" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0033" }, { "contenido": "0.0033" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0008" }, { "contenido": "0.0008" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "7.0989" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3-1/4 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "3.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.2472 - 3.2290" }, { "contenido": "3.2500 - 3.2290" }, { "contenido": "3.2500 - 3.2318" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.1389 - 3.1294" }, { "contenido": "3.1417 - 3.1294" }, { "contenido": "3.1417 - 3.1346" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0028" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "7.4875" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3-1/4 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "3.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.2474 - 3.2324" }, { "contenido": "3.2500 - 3.2324" }, { "contenido": "3.2500 - 3.2350" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.1662 - 3.1575" }, { "contenido": "3.1688 - 3.1575" }, { "contenido": "3.1688 - 3.1623" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0026" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "7.6857" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3-1/2 - 4</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "3.5000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.4967 - 3.4610" }, { "contenido": "3.4967 - 3.4729" }, { "contenido": "3.5000 - 3.4729" }, { "contenido": "3.5000 - 3.4762" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.3343 - 3.3177" }, { "contenido": "3.3343 - 3.3233" }, { "contenido": "3.3376 - 3.3233" }, { "contenido": "3.3376 - 3.3293" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0033" }, { "contenido": "0.0033" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0008" }, { "contenido": "0.0008" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "8.3286" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3-1/2 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "3.5000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.4971 - 3.4789" }, { "contenido": "3.5000 - 3.4789" }, { "contenido": "3.5000 - 3.4818" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.3888 - 3.3792" }, { "contenido": "3.3917 - 3.3792" }, { "contenido": "3.3917 - 3.3845" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0029" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "8.7491" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3-1/2 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "3.5000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.4974 - 3.4824" }, { "contenido": "3.5000 - 3.4824" }, { "contenido": "3.5000 - 3.4850" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.4162 - 3.4074" }, { "contenido": "3.4188 - 3.4074" }, { "contenido": "3.4188 - 3.4122" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0026" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "8.9632" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3-3/4 - 4</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "3.7500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.7466 - 3.7109" }, { "contenido": "3.7466 - 3.7228" }, { "contenido": "3.7500 - 3.7228" }, { "contenido": "3.7500 - 3.7262" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.5842 - 3.5674" }, { "contenido": "3.5842 - 3.5730" }, { "contenido": "3.5876 - 3.5730" }, { "contenido": "3.5876 - 3.5792" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0034" }, { "contenido": "0.0034" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0009" }, { "contenido": "0.0009" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "9.6565" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3-3/4 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "3.7500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.7471 - 3.7289" }, { "contenido": "3.7500 - 3.7289" }, { "contenido": "3.7500 - 3.7318" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.6388 - 3.6290" }, { "contenido": "3.6417 - 3.6290" }, { "contenido": "3.6417 - 3.6344" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0029" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "10.1089" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>3-3/4 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "3.7500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.7473 - 3.7323" }, { "contenido": "3.7500 - 3.7323" }, { "contenido": "3.7500 - 3.7350" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.6661 - 3.6571" }, { "contenido": "3.6688 - 3.6571" }, { "contenido": "3.6688 - 3.6621" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0027" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "10.3389" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>4 - 4</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "4.0000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UNC" }] },
+          { "direction": "row", "contenido": [{ "contenido": "1A" }, { "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.9966 - 3.9609" }, { "contenido": "3.9966 - 3.9728" }, { "contenido": "4.0000 - 3.9728" }, { "contenido": "4.0000 - 3.9762" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.8342 - 3.8172" }, { "contenido": "3.8342 - 3.8229" }, { "contenido": "3.8376 - 3.8229" }, { "contenido": "3.8376 - 3.8291" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0034" }, { "contenido": "0.0034" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0009" }, { "contenido": "0.0009" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "11.0826" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>4 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "4.0000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.9970 - 3.9788" }, { "contenido": "4.0000 - 3.9788" }, { "contenido": "4.0000 - 3.9818" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.8887 - 3.8788" }, { "contenido": "3.8917 - 3.8788" }, { "contenido": "3.8917 - 3.8843" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0030" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0008" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "11.5668" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>4 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "4.0000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.9973 - 3.9823" }, { "contenido": "4.0000 - 3.9823" }, { "contenido": "4.0000 - 3.9850" }] },
+          { "direction": "row", "contenido": [{ "contenido": "3.9161 - 3.9070" }, { "contenido": "3.9188 - 3.9070" }, { "contenido": "3.9188 - 3.9120" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0027" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "11.8128" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>4-1/4 - 4</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "4.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "4.2466 - 4.2228" }, { "contenido": "4.2500 - 4.2288" }, { "contenido": "4.2500 - 4.2262" }] },
+          { "direction": "row", "contenido": [{ "contenido": "4.0842 - 4.0727" }, { "contenido": "4.0876 - 4.0727" }, { "contenido": "4.0876 - 4.0790" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0034" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0009" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "12.6068" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>4-1/4 - 6</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "4.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "4.2470 - 4.2288" }, { "contenido": "4.2500 - 4.2288" }, { "contenido": "4.2500 - 4.2318" }] },
+          { "direction": "row", "contenido": [{ "contenido": "4.1387 - 4.1286" }, { "contenido": "4.1417 - 4.1286" }, { "contenido": "4.1417 - 4.1342" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0030" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0008" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "13.1229" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>4-1/4 - 8</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "4.2500" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "4.2472 - 4.2322" }, { "contenido": "4.2500 - 4.2322" }, { "contenido": "4.2500 - 4.2350" }] },
+          { "direction": "row", "contenido": [{ "contenido": "4.1660 - 4.1567" }, { "contenido": "4.1688 - 4.1567" }, { "contenido": "4.1688 - 4.1618" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0028" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0007" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "13.3849" }
+        ]
+      },
+      {
+        "columnas": [
+          { "direction": "column", "contenido": [{ "contenido": "<strong>4-1/2 - 4</strong>" }] },
+          { "direction": "column", "contenido": [{ "contenido": "4.5000" }] },
+          { "direction": "column", "contenido": [{ "contenido": "UN" }] },
+          { "direction": "row", "contenido": [{ "contenido": "2A" }, { "contenido": "2A Plated" }, { "contenido": "3A" }] },
+          { "direction": "row", "contenido": [{ "contenido": "4.4965 - 4.4727" }, { "contenido": "4.5000 - 4.4727" }, { "contenido": "4.5000 - 4.4762" }] },
+          { "direction": "row", "contenido": [{ "contenido": "4.3341 - 4.3225" }, { "contenido": "4.3376 - 4.3225" }, { "contenido": "4.3376 - 4.3289" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0035" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "direction": "row", "contenido": [{ "contenido": "0.0009" }, { "contenido": "0.0000" }, { "contenido": "0.0000" }] },
+          { "contenido": "14.2292" }
+        ]
+      }
+    ]
   }
 }
