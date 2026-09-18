@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Productos y Servicios</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Variables de color y tipografía */
+        :root {
+            --primary-color: #1a252f;
+            /* Azul marino industrial */
+            --accent-color: #d35400;
+            /* Naranja técnico */
+            --text-color: #333333;
+            --bg-color: #f8f9fa;
+        }
+
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 3%;
+        }
+
+        /* Tarjetas de sección (Diseño alternado) */
+        .product-section {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 4rem;
+            /* transition: transform 0.3s ease; */
+        }
+
+        .product-section:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Alternar orden en pantallas grandes para efecto Zig-Zag */
+        .product-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        /* Cajas de texto e imagen */
+        .text-content {
+            flex: 1;
+        }
+
+        .image-content {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .image-content img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tipografía interna */
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin-top: 0;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 0.8rem;
+        }
+
+        .product-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .product-section li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .product-section li::before {
+            content: "■";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividad para dispositivos móviles */
+        @media (max-width: 768px) {
+
+            .product-section,
+            .product-section:nth-child(even) {
+                flex-direction: column;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/indusper-brand.png" alt="Indusper - Logo" class="brand-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nuestros-productos.html" class="active">Nuestros productos</a></li>
+            <li><a href="ficha-tecnica.html">Información técnica</a></li>
+            <li><a href="politica-calidad.html">Politica de calidad</a></li>
+        </ul>
+    </nav>
+
+    <main class="technical-sheet-container">
+        <header class="page-header">
+            <h1>Nuestros Productos</h1>
+            <p>Soluciones integrales en fabricación, mecanizado y maestranza</p>
+        </header>
+
+        <div class="container">
+
+            <!-- Sección 1: Pernos y Calidades -->
+            <section class="product-section fade-in">
+                <div class="text-content">
+                    <h2>Área Pernos, Anclajes y Espárragos</h2>
+                    <ul>
+                        <li><strong>Forjamos pernos en todas sus formas de cabezas:</strong> Hexagonal, Parker, Cabeza
+                            Avellanada, Coche, Molino, Lifter, etc.</li>
+                        <li><strong>Diámetros:</strong> Desde ½" (12 mm) hasta 2 ½" (64 mm).</li>
+                        <li><strong>Todas las calidades:</strong> SAE 1020, A36, SAE 1045, SAE 4140, SAE 4340. Aceros
+                            Inoxidables, Titanio, Hastelloy, etc.</li>
+                        <li><strong>Anclajes Especiales:</strong> Stud Bolt y anclajes rectos (Tipo L, Tipo J) hasta
+                            diámetro de 3 ½" en todas las calidades.</li>
+                    </ul>
+                </div>
+                <div class="image-content">
+                    <!-- Imagen placeholder de pernos industriales -->
+                    <img src="img/nuestros-productos/seccion-1.png" alt="Pernos y tuercas industriales">
+                </div>
+            </section>
+
+            <!-- Sección 2: Mecanizado y Laminado -->
+            <section class="product-section fade-in">
+                <div class="text-content">
+                    <h2>Mecanizado y Laminado CNC</h2>
+                    <ul>
+                        <li><strong>Alta precisión:</strong> Fabricación de piezas mecanizadas en tornos convencionales
+                            y
+                            centros de mecanizado CNC.</li>
+                        <li><strong>Laminado de roscas:</strong> Capacidad de laminación para roscas de hasta 64 mm o 2
+                            ½".
+                        </li>
+                    </ul>
+                </div>
+                <div class="image-content">
+                    <!-- Imagen placeholder de mecanizado CNC -->
+                    <img src="img/nuestros-productos/seccion-2.png" alt="Centro de mecanizado CNC y torno">
+                </div>
+            </section>
+
+            <!-- Sección 3: Maestranza -->
+            <section class="product-section fade-in">
+                <div class="text-content">
+                    <h2>Área Maestranza</h2>
+                    <ul>
+                        <li><strong>Soportes para cañerías:</strong> Fabricación a medida según requerimientos del
+                            proyecto.
+                        </li>
+                        <li><strong>Grating dimensionados:</strong> Parrillas metálicas cortadas y adaptadas a
+                            especificación.</li>
+                        <li><strong>Estructuras metálicas:</strong> Diseño y armado de estructuras livianas y medianas.
+                        </li>
+                        <li><strong>Piezas complementarias:</strong> Fabricación de insertos y otras piezas de
+                            maestranza en
+                            general.</li>
+                    </ul>
+                </div>
+                <div class="image-content">
+                    <!-- Imagen placeholder de estructuras de maestranza/soldadura -->
+                    <img src="img/nuestros-productos/seccion-3.png" alt="Soldadura y estructuras de maestranza">
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <div class="footer-column" style="padding-right: 4rem;">
+                <!-- <h3 class="footer-logo">🔩 Indusper</h3> -->
+                <div style="width: 100%;">
+                    <img src="img/indusper-brand.png" alt="Indusper - Logo" style="width: 100%;"
+                        class="footer-brand-img">
+                </div>
+                <p class="footer-description">
+                    Especialistas en fijaciones y soportes de alta resistencia para la minería, construcción e industria
+                    a nivel nacional.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nuestros-productos.html">Nuestros productos</a></li>
+                    <li><a href="ficha-tecnica.html">Información técnica</a></li>
+                    <li><a href="politica-calidad.html">Politica de calidad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <ul class="footer-info">
+                    <li>📍 Antillanca Sur #581. Parque Industrial Vespucio Lo Echevers. Comuna de Pudahuel,Santiago.
+                    </li>
+                    <li>📞 +56 2 443 77 47</li>
+                    <!-- <li>✉️ javierherlagos@gmail.com</li> -->
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Indusper. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
