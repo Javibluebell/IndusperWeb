@@ -54,6 +54,72 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () =>{
+  let div_footer = document.getElementById("dv-footer-container");
+  if (typeof div_footer !== 'undefined' && div_footer !== null) {
+    div_footer.innerHTML = `
+            <div class="footer-column" style="padding-right: 4rem;">
+                <div style="width: 100%;">
+                    <img src="img/indusper-brand.png" alt="Indusper - Logo" style="width: 100%;"
+                        class="footer-brand-img">
+                </div>
+                <p class="footer-description">
+                    Especialistas en fijaciones y soportes de alta resistencia para la minería, construcción e industria
+                    a nivel nacional.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nuestros-productos.html">Nuestros productos</a></li>
+                    <li><a href="ficha-tecnica.html">Información técnica</a></li>
+                    <li><a href="politica-calidad.html">Politica de calidad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <ul class="footer-info">
+                    <li>📍 Antillanca Sur #581. Parque Industrial Vespucio Lo Echevers. Comuna de Pudahuel,Santiago.
+                    </li>
+                    <li>📞 +56 2 443 77 47</li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px"
+                            height="15px" viewBox="0 0 48 48" version="1.1">
+
+                            <title>Whatsapp-color</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+
+                            </defs>
+                            <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Color-" transform="translate(-700.000000, -360.000000)" fill="#67C15E">
+                                    <path
+                                        d="M723.993033,360 C710.762252,360 700,370.765287 700,383.999801 C700,389.248451 701.692661,394.116025 704.570026,398.066947 L701.579605,406.983798 L710.804449,404.035539 C714.598605,406.546975 719.126434,408 724.006967,408 C737.237748,408 748,397.234315 748,384.000199 C748,370.765685 737.237748,360.000398 724.006967,360.000398 L723.993033,360.000398 L723.993033,360 Z M717.29285,372.190836 C716.827488,371.07628 716.474784,371.034071 715.769774,371.005401 C715.529728,370.991464 715.262214,370.977527 714.96564,370.977527 C714.04845,370.977527 713.089462,371.245514 712.511043,371.838033 C711.806033,372.557577 710.056843,374.23638 710.056843,377.679202 C710.056843,381.122023 712.567571,384.451756 712.905944,384.917648 C713.258648,385.382743 717.800808,392.55031 724.853297,395.471492 C730.368379,397.757149 732.00491,397.545307 733.260074,397.27732 C735.093658,396.882308 737.393002,395.527239 737.971421,393.891043 C738.54984,392.25405 738.54984,390.857171 738.380255,390.560912 C738.211068,390.264652 737.745308,390.095816 737.040298,389.742615 C736.335288,389.389811 732.90737,387.696673 732.25849,387.470894 C731.623543,387.231179 731.017259,387.315995 730.537963,387.99333 C729.860819,388.938653 729.198006,389.89831 728.661785,390.476494 C728.238619,390.928051 727.547144,390.984595 726.969123,390.744481 C726.193254,390.420348 724.021298,389.657798 721.340985,387.273388 C719.267356,385.42535 717.856938,383.125756 717.448104,382.434484 C717.038871,381.729275 717.405907,381.319529 717.729948,380.938852 C718.082653,380.501232 718.421026,380.191036 718.77373,379.781688 C719.126434,379.372738 719.323884,379.160897 719.549599,378.681068 C719.789645,378.215575 719.62006,377.735746 719.450874,377.382942 C719.281687,377.030139 717.871269,373.587317 717.29285,372.190836 Z"
+                                        id="Whatsapp">
+
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                        +56 9 8419 5793
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 2500 2500" width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><radialGradient id="0" cx="332.14" cy="2511.81" r="3263.54" gradientUnits="userSpaceOnUse"><stop offset=".09" stop-color="#fa8f21"></stop><stop offset=".78" stop-color="#d82d7e"></stop></radialGradient><radialGradient id="1" cx="1516.14" cy="2623.81" r="2572.12" gradientUnits="userSpaceOnUse"><stop offset=".64" stop-color="#8c3aaa" stop-opacity="0"></stop><stop offset="1" stop-color="#8c3aaa"></stop></radialGradient></defs><path d="M833.4,1250c0-230.11,186.49-416.7,416.6-416.7s416.7,186.59,416.7,416.7-186.59,416.7-416.7,416.7S833.4,1480.11,833.4,1250m-225.26,0c0,354.5,287.36,641.86,641.86,641.86S1891.86,1604.5,1891.86,1250,1604.5,608.14,1250,608.14,608.14,895.5,608.14,1250M1767.27,582.69a150,150,0,1,0,150.06-149.94h-0.06a150.07,150.07,0,0,0-150,149.94M745,2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28,7.27-505.15c5.55-121.87,26-188,43-232.13,22.72-58.36,49.78-100,93.5-143.78s85.32-70.88,143.78-93.5c44-17.16,110.26-37.46,232.13-43,131.76-6.06,171.34-7.27,505-7.27s373.28,1.31,505.15,7.27c121.87,5.55,188,26,232.13,43,58.36,22.62,100,49.78,143.78,93.5s70.78,85.42,93.5,143.78c17.16,44,37.46,110.26,43,232.13,6.06,131.87,7.27,171.34,7.27,505.15s-1.21,373.28-7.27,505.15c-5.55,121.87-25.95,188.11-43,232.13-22.72,58.36-49.78,100-93.5,143.68s-85.42,70.78-143.78,93.5c-44,17.16-110.26,37.46-232.13,43-131.76,6.06-171.34,7.27-505.15,7.27s-373.28-1.21-505-7.27M734.65,7.57c-133.07,6.06-224,27.16-303.41,58.06C349,97.54,279.38,140.35,209.81,209.81S97.54,349,65.63,431.24c-30.9,79.46-52,170.34-58.06,303.41C1.41,867.93,0,910.54,0,1250s1.41,382.07,7.57,515.35c6.06,133.08,27.16,223.95,58.06,303.41,31.91,82.19,74.62,152,144.18,221.43S349,2402.37,431.24,2434.37c79.56,30.9,170.34,52,303.41,58.06C868,2498.49,910.54,2500,1250,2500s382.07-1.41,515.35-7.57c133.08-6.06,223.95-27.16,303.41-58.06,82.19-32,151.86-74.72,221.43-144.18s112.18-139.24,144.18-221.43c30.9-79.46,52.1-170.34,58.06-303.41,6.06-133.38,7.47-175.89,7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95,97.54,2068.86,65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17,1.51,1589.56,0,1250.1,0S868,1.41,734.65,7.57" fill="url(#0)"></path><path d="M833.4,1250c0-230.11,186.49-416.7,416.6-416.7s416.7,186.59,416.7,416.7-186.59,416.7-416.7,416.7S833.4,1480.11,833.4,1250m-225.26,0c0,354.5,287.36,641.86,641.86,641.86S1891.86,1604.5,1891.86,1250,1604.5,608.14,1250,608.14,608.14,895.5,608.14,1250M1767.27,582.69a150,150,0,1,0,150.06-149.94h-0.06a150.07,150.07,0,0,0-150,149.94M745,2267.47c-121.87-5.55-188.11-25.85-232.13-43-58.36-22.72-100-49.78-143.78-93.5s-70.88-85.32-93.5-143.68c-17.16-44-37.46-110.26-43-232.13-6.06-131.76-7.27-171.34-7.27-505.15s1.31-373.28,7.27-505.15c5.55-121.87,26-188,43-232.13,22.72-58.36,49.78-100,93.5-143.78s85.32-70.88,143.78-93.5c44-17.16,110.26-37.46,232.13-43,131.76-6.06,171.34-7.27,505-7.27s373.28,1.31,505.15,7.27c121.87,5.55,188,26,232.13,43,58.36,22.62,100,49.78,143.78,93.5s70.78,85.42,93.5,143.78c17.16,44,37.46,110.26,43,232.13,6.06,131.87,7.27,171.34,7.27,505.15s-1.21,373.28-7.27,505.15c-5.55,121.87-25.95,188.11-43,232.13-22.72,58.36-49.78,100-93.5,143.68s-85.42,70.78-143.78,93.5c-44,17.16-110.26,37.46-232.13,43-131.76,6.06-171.34,7.27-505.15,7.27s-373.28-1.21-505-7.27M734.65,7.57c-133.07,6.06-224,27.16-303.41,58.06C349,97.54,279.38,140.35,209.81,209.81S97.54,349,65.63,431.24c-30.9,79.46-52,170.34-58.06,303.41C1.41,867.93,0,910.54,0,1250s1.41,382.07,7.57,515.35c6.06,133.08,27.16,223.95,58.06,303.41,31.91,82.19,74.62,152,144.18,221.43S349,2402.37,431.24,2434.37c79.56,30.9,170.34,52,303.41,58.06C868,2498.49,910.54,2500,1250,2500s382.07-1.41,515.35-7.57c133.08-6.06,223.95-27.16,303.41-58.06,82.19-32,151.86-74.72,221.43-144.18s112.18-139.24,144.18-221.43c30.9-79.46,52.1-170.34,58.06-303.41,6.06-133.38,7.47-175.89,7.47-515.35s-1.41-382.07-7.47-515.35c-6.06-133.08-27.16-224-58.06-303.41-32-82.19-74.72-151.86-144.18-221.43S2150.95,97.54,2068.86,65.63c-79.56-30.9-170.44-52.1-303.41-58.06C1632.17,1.51,1589.56,0,1250.1,0S868,1.41,734.65,7.57" fill="url(#1)"></path></g></svg>
+                        @ltda.indusper
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 16 16" width="17px" height="17px" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#1877F2" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"></path><path fill="#ffffff" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"></path></g></svg>
+                        Indusper Ltda.
+                    </li>
+                </ul>
+            </div>
+    `;
+  }
+});
+
 const paginaDetalleTecnico = {
 
   init: () => {
@@ -6177,7 +6243,7 @@ const especificacionesPernos = {
   },
 
   "perno-cabeza-hexagonal-metrico": {
-    "titulo": "Perno Cabeza Hexagonal Métrico (ISO 4014 / DIN 931)",
+    "titulo": "Perno Cabeza Hexagonal Estandar Métrico (ISO 4014 / DIN 931)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -6521,6 +6587,163 @@ const especificacionesPernos = {
           { "contenido": "50" }, { "contenido": "50" },
           { "contenido": "115" }, { "contenido": "115" },
           { "contenido": "2" }, { "contenido": "87" }
+        ]
+      }
+    ]
+  },
+
+  "perno-hexagonal-reforzado-metrico": {
+    "titulo": "Perno Hexagonal Métrico Reforzado",
+    "fixedHeader": true,
+    "fixedFirstColumn": true,
+    "fixedIntersection": true,
+    "tipo": 1,
+    "image": "perno-cabeza-hexagonal-reforzado-metrico.png",
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "d" }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "P" }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "b" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "L≤100" },
+                  { "contenido": "L>100" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "ds" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "max" },
+                  { "contenido": "min" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "k" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "max" },
+                  { "contenido": "min" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "s" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "max" },
+                  { "contenido": "min" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "M12" }, { "contenido": "1.75" },
+          { "contenido": "25" }, { "contenido": "32" },
+          { "contenido": "12.70" }, { "contenido": "11.30" },
+          { "contenido": "7.95" }, { "contenido": "7.05" },
+          { "contenido": "21" }, { "contenido": "20.16" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "M16" }, { "contenido": "2.0" },
+          { "contenido": "31" }, { "contenido": "38" },
+          { "contenido": "16.70" }, { "contenido": "15.30" },
+          { "contenido": "10.75" }, { "contenido": "9.25" },
+          { "contenido": "27" }, { "contenido": "26.16" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "M20" }, { "contenido": "2.5" },
+          { "contenido": "36" }, { "contenido": "43" },
+          { "contenido": "20.84" }, { "contenido": "19.16" },
+          { "contenido": "13.40" }, { "contenido": "11.60" },
+          { "contenido": "34" }, { "contenido": "33" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "M22" }, { "contenido": "2.5" },
+          { "contenido": "38" }, { "contenido": "45" },
+          { "contenido": "22.84" }, { "contenido": "21.16" },
+          { "contenido": "14.90" }, { "contenido": "13.10" },
+          { "contenido": "36" }, { "contenido": "35" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "M24" }, { "contenido": "3" },
+          { "contenido": "41" }, { "contenido": "48" },
+          { "contenido": "24.84" }, { "contenido": "23.16" },
+          { "contenido": "15.90" }, { "contenido": "14.10" },
+          { "contenido": "41" }, { "contenido": "40" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "M27" }, { "contenido": "3" },
+          { "contenido": "44" }, { "contenido": "51" },
+          { "contenido": "27.84" }, { "contenido": "26.16" },
+          { "contenido": "17.90" }, { "contenido": "16.10" },
+          { "contenido": "46" }, { "contenido": "45" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "M30" }, { "contenido": "3.5" },
+          { "contenido": "49" }, { "contenido": "56" },
+          { "contenido": "30.84" }, { "contenido": "29.16" },
+          { "contenido": "19.75" }, { "contenido": "17.65" },
+          { "contenido": "50" }, { "contenido": "49" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "M36" }, { "contenido": "4" },
+          { "contenido": "56" }, { "contenido": "63" },
+          { "contenido": "37.00" }, { "contenido": "35.00" },
+          { "contenido": "23.55" }, { "contenido": "21.45" },
+          { "contenido": "60" }, { "contenido": "58.8" }
         ]
       }
     ]
@@ -6942,7 +7165,7 @@ const especificacionesPernos = {
   },
 
   "tuerca-hexagonal-metrica": {
-    "titulo": "Tuerca Hexagonal Métrica (ISO 4032 / DIN 934)",
+    "titulo": "Tuerca Hexagonal Estandar Métrica (ISO 4032 / DIN 934)",
     "fixedHeader": true,
     "fixedFirstColumn": true,
     "fixedIntersection": true,
@@ -7313,8 +7536,263 @@ const especificacionesPernos = {
     ]
   },
 
+  "tuerca-hexagonal-reforzada-metrica": {
+    "titulo": "Tuerca Hexagonal Reforzada Métrica",
+    "fixedHeader": true,
+    "fixedFirstColumn": true,
+    "fixedIntersection": true,
+    "tipo": 1,
+    "image": "tuerca-hexagonal-reforzada-metrica.png",
+    "filas": [
+      {
+        "columnas": [
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Diámetro Nominal de Tuerca y Paso de Rosca" }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Ancho Entre Caras, S" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Máx" },
+                  { "contenido": "Mín" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Ancho Entre Vértices, E" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Máx" },
+                  { "contenido": "Mín" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Espesor M" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Máx" },
+                  { "contenido": "Mín" }
+                ]
+              }
+            ]
+          },
+          {
+            "colspan": 1,
+            "direction": "column",
+            "contenido": [
+              { "contenido": "Diámetro Cara de Apoyo, Dw, Mín" }
+            ]
+          },
+          {
+            "colspan": 2,
+            "direction": "row",
+            "contenido": [
+              { "contenido": "Espesor Cara de Arandela, C" },
+              {
+                "direction": "column",
+                "contenido": [
+                  { "contenido": "Máx" },
+                  { "contenido": "Mín" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M12 x 1.75**" },
+          { "contenido": "21" }, { "contenido": "20.16" },
+          { "contenido": "24.25" }, { "contenido": "22.78" },
+          { "contenido": "12.3" }, { "contenido": "11.9" },
+          { "contenido": "19.2" },
+          { "contenido": "0.8" }, { "contenido": "0.4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M14 x 2**" },
+          { "contenido": "24" }, { "contenido": "23.16" },
+          { "contenido": "27.71" }, { "contenido": "26.17" },
+          { "contenido": "14.3" }, { "contenido": "13.6" },
+          { "contenido": "22" },
+          { "contenido": "0.8" }, { "contenido": "0.4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M16 x 2**" },
+          { "contenido": "27" }, { "contenido": "26.16" },
+          { "contenido": "31.18" }, { "contenido": "29.56" },
+          { "contenido": "17.1" }, { "contenido": "16.4" },
+          { "contenido": "24.9" },
+          { "contenido": "0.8" }, { "contenido": "0.4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M20 x 2.5**" },
+          { "contenido": "34" }, { "contenido": "33" },
+          { "contenido": "39.26" }, { "contenido": "37.29" },
+          { "contenido": "20.7" }, { "contenido": "19.4" },
+          { "contenido": "31.4" },
+          { "contenido": "0.8" }, { "contenido": "0.4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M22 x 2.5**" },
+          { "contenido": "36" }, { "contenido": "35" },
+          { "contenido": "41.57" }, { "contenido": "39.55" },
+          { "contenido": "23.6" }, { "contenido": "22.3" },
+          { "contenido": "33.3" },
+          { "contenido": "0.8" }, { "contenido": "0.4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M24 x 3**" },
+          { "contenido": "41" }, { "contenido": "40" },
+          { "contenido": "47.34" }, { "contenido": "45.2" },
+          { "contenido": "24.2" }, { "contenido": "22.9" },
+          { "contenido": "38" },
+          { "contenido": "0.8" }, { "contenido": "0.4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M27 x 3**" },
+          { "contenido": "46" }, { "contenido": "45" },
+          { "contenido": "53.12" }, { "contenido": "50.85" },
+          { "contenido": "27.6" }, { "contenido": "26.3" },
+          { "contenido": "42.8" },
+          { "contenido": "0.8" }, { "contenido": "0.4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M30 x 3.5**" },
+          { "contenido": "50" }, { "contenido": "49" },
+          { "contenido": "57.74" }, { "contenido": "55.37" },
+          { "contenido": "30.7" }, { "contenido": "29.1" },
+          { "contenido": "46.6" },
+          { "contenido": "0.8" }, { "contenido": "0.4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M36 x 4**" },
+          { "contenido": "60" }, { "contenido": "58.8" },
+          { "contenido": "69.28" }, { "contenido": "66.44" },
+          { "contenido": "36.6" }, { "contenido": "35" },
+          { "contenido": "55.9" },
+          { "contenido": "0.8" }, { "contenido": "0.4" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M42 x 4.5**" },
+          { "contenido": "70" }, { "contenido": "67.9" },
+          { "contenido": "80.83" }, { "contenido": "77.41" },
+          { "contenido": "42" }, { "contenido": "40.4" },
+          { "contenido": "64.5" },
+          { "contenido": "1" }, { "contenido": "0.5" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M48 x 5**" },
+          { "contenido": "80" }, { "contenido": "77.6" },
+          { "contenido": "92.38" }, { "contenido": "88.46" },
+          { "contenido": "48" }, { "contenido": "46.4" },
+          { "contenido": "73.7" },
+          { "contenido": "1" }, { "contenido": "0.5" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M56 x 5.5**" },
+          { "contenido": "90" }, { "contenido": "87.2" },
+          { "contenido": "103.92" }, { "contenido": "99.41" },
+          { "contenido": "56" }, { "contenido": "54.1" },
+          { "contenido": "82.8" },
+          { "contenido": "1" }, { "contenido": "0.5" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M64 x 6**" },
+          { "contenido": "100" }, { "contenido": "96.8" },
+          { "contenido": "115.47" }, { "contenido": "110.35" },
+          { "contenido": "64" }, { "contenido": "62.1" },
+          { "contenido": "92" },
+          { "contenido": "1" }, { "contenido": "0.5" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M72 x 6**" },
+          { "contenido": "110" }, { "contenido": "106.4" },
+          { "contenido": "127.02" }, { "contenido": "121.3" },
+          { "contenido": "72" }, { "contenido": "70" },
+          { "contenido": "101.1" },
+          { "contenido": "1.2" }, { "contenido": "0.6" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M80 x 6**" },
+          { "contenido": "120" }, { "contenido": "116" },
+          { "contenido": "138.56" }, { "contenido": "132.24" },
+          { "contenido": "80" }, { "contenido": "78.1" },
+          { "contenido": "110.2" },
+          { "contenido": "1.2" }, { "contenido": "0.6" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M90 x 56**" },
+          { "contenido": "135" }, { "contenido": "130.5" },
+          { "contenido": "155.88" }, { "contenido": "148.77" },
+          { "contenido": "90" }, { "contenido": "87.8" },
+          { "contenido": "124" },
+          { "contenido": "1.2" }, { "contenido": "0.6" }
+        ]
+      },
+      {
+        "columnas": [
+          { "contenido": "**M100 x 6**" },
+          { "contenido": "150" }, { "contenido": "145" },
+          { "contenido": "173.21" }, { "contenido": "165.3" },
+          { "contenido": "100" }, { "contenido": "97.8" },
+          { "contenido": "137.8" },
+          { "contenido": "1.2" }, { "contenido": "0.6" }
+        ]
+      }
+    ]
+  },
+
   "req-mecanico-iso-898-1": {
-    "titulo": "Requerimientos mecánicos de Pernos, Tornillos y Espárragos Métrica (ISO 898-1)",
+    "titulo": "Requerimientos Mecánicos de Pernos Hexagonales Métricos (ISO 898-1)",
     "fixedHeader": false,
     "fixedFirstColumn": false,
     "fixedIntersection": false,
@@ -7870,7 +8348,7 @@ const especificacionesPernos = {
   },
 
   "torques-pernos-indusper": {
-    "titulo": "Tablas de Torques, Propiedades y Lubricación de Pernos (Aceros Aleados y Carbono)",
+    "titulo": "Tabla de Recomendación de Torques para Pernos Pulgadas (Aceros Aleados y Carbono)",
     "fixedHeader": false,
     "fixedFirstColumn": false,
     "fixedIntersection": false,
