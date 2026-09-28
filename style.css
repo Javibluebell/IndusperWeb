@@ -259,10 +259,25 @@ body {
     width: 100%;
 }
 
+.politica-calidad-1{
+    display: block;
+}
+
+.politica-calidad-2{
+    display: none;
+}
+
 @media (max-width: 769px) {
     .img-politica-calidad {
         width: auto;
     }
+.politica-calidad-1{
+    display: none;
+}
+
+.politica-calidad-2{
+    display: block;
+}
 }
 
 @media (max-width: 450px) {
@@ -1542,6 +1557,60 @@ tbody .flex-direction-column>.flex-item+.flex-item {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
+}
+
+/* Tarjetas de sección (Diseño alternado) */
+.product-section {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+    /* transition: transform 0.3s ease; */
+}
+
+.product-section:hover {
+    transform: translateY(-5px);
+}
+
+/* Alternar orden en pantallas grandes para efecto Zig-Zag */
+.product-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+.product-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-section li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.product-section li::before {
+    content: "■";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+
+    .product-section,
+    .product-section:nth-child(even) {
+        flex-direction: column;
+        padding: 2rem;
+    }
 }
 
 @media (max-width: 768px) {
